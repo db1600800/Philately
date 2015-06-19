@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WelcomeViewController.h"
+#import "MenberMainViewController.h"
 #import "LeftViewController.h"
 #import "SliderViewController.h"
 #import "MainViewController.h"
@@ -21,6 +22,7 @@ bool checkOk=false;
 @implementation AppDelegate
 
 WelcomeViewController *welcomeViewController;
+MenberMainViewController *menberMainViewController;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -29,7 +31,9 @@ WelcomeViewController *welcomeViewController;
     
     WelcomeViewController *welcom=[[WelcomeViewController alloc]initWithNibName:@"WelcomeViewController" bundle:nil];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:welcom];
+      menberMainViewController = [[MenberMainViewController alloc]initWithNibName:@"MenberMainViewController" bundle:nil];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:menberMainViewController];
    
     self.window.rootViewController = navigationController;
     

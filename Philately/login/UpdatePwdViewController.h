@@ -15,12 +15,14 @@
 //请输入旧密码
 @property (weak, nonatomic) IBOutlet UITextField *oldPwdValueEditText;
 //新密码
-@property (weak, nonatomic) IBOutlet UILabel *newPwdTitleTextView;
+
+@property (weak, nonatomic) IBOutlet UITextField *pwd;
 //请输入新密码
-@property (weak, nonatomic) IBOutlet UITextField *newPwdValueEditText;
+
 //确认密码
-@property (weak, nonatomic) IBOutlet UILabel *newPwd2TitleTextView;
+
+@property (weak, nonatomic) IBOutlet UITextField *pwd2;
 //请再输入新密码
-@property (weak, nonatomic) IBOutlet UITextField *newPwd2ValueEditText;
+
 @end
 

@@ -8,13 +8,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpdatePwdViewController">
             <connections>
                 <outlet property="backImageView" destination="T06-gt-Q6d" id="Dvd-sK-rZh"/>
-                <outlet property="newPwd2TitleTextView" destination="sbg-ET-bIK" id="dxc-5H-348"/>
                 <outlet property="newPwd2ValueEditText" destination="ec0-0t-e0L" id="aJn-kc-cV1"/>
-                <outlet property="newPwdTitleTextView" destination="URR-09-44g" id="8kA-Ou-yeL"/>
                 <outlet property="newPwdValueEditText" destination="FYH-cf-M1W" id="8LM-mw-pl5"/>
                 <outlet property="okButton" destination="E42-mf-Zli" id="afx-Q4-s6S"/>
                 <outlet property="oldPwdTitleTextView" destination="EUx-T0-1Hw" id="aPX-4U-gdF"/>
                 <outlet property="oldPwdValueEditText" destination="NWe-cZ-U0Y" id="SMS-EE-zgg"/>
+                <outlet property="pwd" destination="FYH-cf-M1W" id="X0d-Sj-64q"/>
+                <outlet property="pwd2" destination="ec0-0t-e0L" id="8FS-Pe-QTg"/>
                 <outlet property="titleTextView" destination="NZX-65-y6X" id="9LJ-DD-Jd1"/>
                 <outlet property="view" destination="1sv-TJ-Ujb" id="Nm4-xU-d4a"/>
             </connections>
