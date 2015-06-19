@@ -42,6 +42,8 @@ ServiceInvoker *serviceInvoker;
     
     loginViewController = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
     
+    menberMainViewController = [[MenberMainViewController alloc]initWithNibName:@"MenberMainViewController" bundle:nil];
+    
     //loginViewController.view.frame = CGRectMake(0,0,self.contentView.frame.size.width, self.contentView.frame.size.height);
     
     //    self.firstVC = [[HMTFirstViewController alloc] init];
@@ -49,8 +51,8 @@ ServiceInvoker *serviceInvoker;
     [self addChildViewController:loginViewController];
     
     //  默认,第一个视图(你会发现,全程就这一个用了addSubview)
-    [self.contentView addSubview:loginViewController.view];
-    self.currentVc = loginViewController;
+    [self.contentView addSubview:menberMainViewController.view];
+    self.currentVc = menberMainViewController;
     
     [self transitionFromViewController:loginViewController toViewController:loginViewController duration:2.0 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:^(BOOL finished) {
         
@@ -71,7 +73,7 @@ ServiceInvoker *serviceInvoker;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-[self btnTouchMy];
+//[self btnTouchMy];
 
 }
 
@@ -80,7 +82,7 @@ ServiceInvoker *serviceInvoker;
 //登录页
 #define SELECTED_VIEW_CONTROLLER_TAG 98456345
 
-LoginViewController *loginViewController;
+
 -(void)btnTouchMy
 {
     UIView* currentView = [self.contentView viewWithTag:SELECTED_VIEW_CONTROLLER_TAG];
@@ -89,12 +91,13 @@ LoginViewController *loginViewController;
     
    // NSDictionary* data = [_arrayViewcontrollers objectAtIndex:index];
     
-     loginViewController = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+//     loginViewController = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+      menberMainViewController = [[MenberMainViewController alloc]initWithNibName:@"MenberMainViewController" bundle:nil];
     
-    loginViewController.view.tag = SELECTED_VIEW_CONTROLLER_TAG;
-    loginViewController.view.frame = CGRectMake(0,0,self.contentView.frame.size.width, self.contentView.frame.size.height);
+    menberMainViewController.view.tag = SELECTED_VIEW_CONTROLLER_TAG;
+    menberMainViewController.view.frame = CGRectMake(0,0,self.contentView.frame.size.width, self.contentView.frame.size.height);
     
-    [self.view addSubview:loginViewController.view ];
+    [self.view addSubview:menberMainViewController.view ];
     
 }
 

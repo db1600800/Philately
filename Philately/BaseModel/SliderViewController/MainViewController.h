@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenberMainViewController.h"
+#import "LoginViewController.h"
 
 @interface MainViewController : UIViewController
-
+{
+    LoginViewController *loginViewController;
+    MenberMainViewController *menberMainViewController;
+}
 @property (weak, nonatomic) IBOutlet UIView *tab1;
 @property (weak, nonatomic) IBOutlet UIView *tab2;
 @property (weak, nonatomic) IBOutlet UIView *tab3;
