@@ -27,7 +27,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omJ-MR-c6n">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T06-gt-Q6d">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back.png" translatesAutoresizingMaskIntoConstraints="NO" id="T06-gt-Q6d">
                             <rect key="frame" x="8" y="30" width="23" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="NHJ-1y-BRE"/>
@@ -166,4 +166,7 @@
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="back.png" width="23" height="20"/>
+    </resources>
 </document>

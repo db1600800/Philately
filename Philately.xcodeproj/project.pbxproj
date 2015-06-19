@@ -17,6 +17,20 @@
 		5ACFDD171B33BFB00007FE18 /* UpdatePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACFDD151B33BFB00007FE18 /* UpdatePwdViewController.m */; };
 		5ACFDD181B33BFB00007FE18 /* UpdatePwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD161B33BFB00007FE18 /* UpdatePwdViewController.xib */; };
 		5ACFDD1B1B33C1390007FE18 /* RespondParam0006.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACFDD1A1B33C1390007FE18 /* RespondParam0006.m */; };
+		5ACFDD1D1B33EB000007FE18 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD1C1B33EB000007FE18 /* back.png */; };
+		5ACFDD221B33F4BE0007FE18 /* MenberMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACFDD201B33F4BE0007FE18 /* MenberMainViewController.m */; };
+		5ACFDD231B33F4BE0007FE18 /* MenberMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD211B33F4BE0007FE18 /* MenberMainViewController.xib */; };
+		5ACFDD2F1B33F77A0007FE18 /* diyorderformpic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD241B33F77A0007FE18 /* diyorderformpic.png */; };
+		5ACFDD301B33F77A0007FE18 /* myaddresspic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD251B33F77A0007FE18 /* myaddresspic.png */; };
+		5ACFDD311B33F77A0007FE18 /* mybackmoneypic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD261B33F77A0007FE18 /* mybackmoneypic.png */; };
+		5ACFDD321B33F77A0007FE18 /* mybookispic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD271B33F77A0007FE18 /* mybookispic.png */; };
+		5ACFDD331B33F77A0007FE18 /* mychangepic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD281B33F77A0007FE18 /* mychangepic.png */; };
+		5ACFDD341B33F77A0007FE18 /* mymessagepic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD291B33F77A0007FE18 /* mymessagepic.png */; };
+		5ACFDD351B33F77A0007FE18 /* myomplainpic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD2A1B33F77A0007FE18 /* myomplainpic.png */; };
+		5ACFDD361B33F77A0007FE18 /* myorderform.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD2B1B33F77A0007FE18 /* myorderform.png */; };
+		5ACFDD371B33F77A0007FE18 /* newpostorderformpic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD2C1B33F77A0007FE18 /* newpostorderformpic.png */; };
+		5ACFDD381B33F77A0007FE18 /* retailorderformpic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD2D1B33F77A0007FE18 /* retailorderformpic.png */; };
+		5ACFDD391B33F77A0007FE18 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD2E1B33F77A0007FE18 /* right.png */; };
 		5AD3499B1B252EB0001775D4 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD3499A1B252EB0001775D4 /* 8.jpg */; };
 		5AD4A1091B2FDE9100394D6B /* PublicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A67736F1B1710FB002541BE /* PublicFramework.framework */; };
 		5AD4A10A1B2FDE9100394D6B /* PublicFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A67736F1B1710FB002541BE /* PublicFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -124,6 +138,21 @@
 		5ACFDD161B33BFB00007FE18 /* UpdatePwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdatePwdViewController.xib; sourceTree = "<group>"; };
 		5ACFDD191B33C1390007FE18 /* RespondParam0006.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0006.h; sourceTree = "<group>"; };
 		5ACFDD1A1B33C1390007FE18 /* RespondParam0006.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0006.m; sourceTree = "<group>"; };
+		5ACFDD1C1B33EB000007FE18 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		5ACFDD1F1B33F4BE0007FE18 /* MenberMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenberMainViewController.h; sourceTree = "<group>"; };
+		5ACFDD201B33F4BE0007FE18 /* MenberMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenberMainViewController.m; sourceTree = "<group>"; };
+		5ACFDD211B33F4BE0007FE18 /* MenberMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenberMainViewController.xib; sourceTree = "<group>"; };
+		5ACFDD241B33F77A0007FE18 /* diyorderformpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diyorderformpic.png; sourceTree = "<group>"; };
+		5ACFDD251B33F77A0007FE18 /* myaddresspic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myaddresspic.png; sourceTree = "<group>"; };
+		5ACFDD261B33F77A0007FE18 /* mybackmoneypic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mybackmoneypic.png; sourceTree = "<group>"; };
+		5ACFDD271B33F77A0007FE18 /* mybookispic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mybookispic.png; sourceTree = "<group>"; };
+		5ACFDD281B33F77A0007FE18 /* mychangepic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mychangepic.png; sourceTree = "<group>"; };
+		5ACFDD291B33F77A0007FE18 /* mymessagepic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mymessagepic.png; sourceTree = "<group>"; };
+		5ACFDD2A1B33F77A0007FE18 /* myomplainpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myomplainpic.png; sourceTree = "<group>"; };
+		5ACFDD2B1B33F77A0007FE18 /* myorderform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myorderform.png; sourceTree = "<group>"; };
+		5ACFDD2C1B33F77A0007FE18 /* newpostorderformpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newpostorderformpic.png; sourceTree = "<group>"; };
+		5ACFDD2D1B33F77A0007FE18 /* retailorderformpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retailorderformpic.png; sourceTree = "<group>"; };
+		5ACFDD2E1B33F77A0007FE18 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
 		5AD3499A1B252EB0001775D4 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		5AD6573E1B033C97005AF1DF /* Philately.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Philately.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD657421B033C97005AF1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -228,13 +257,6 @@
 			path = welcome;
 			sourceTree = "<group>";
 		};
-		5A1E70ED1B32BA42006F64D8 /* mengber */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = mengber;
-			sourceTree = "<group>";
-		};
 		5A67736A1B1710FB002541BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,9 +289,31 @@
 			path = login;
 			sourceTree = "<group>";
 		};
+		5ACFDD1E1B33F4BE0007FE18 /* menber */ = {
+			isa = PBXGroup;
+			children = (
+				5ACFDD1F1B33F4BE0007FE18 /* MenberMainViewController.h */,
+				5ACFDD201B33F4BE0007FE18 /* MenberMainViewController.m */,
+				5ACFDD211B33F4BE0007FE18 /* MenberMainViewController.xib */,
+			);
+			path = menber;
+			sourceTree = "<group>";
+		};
 		5AD349991B252EB0001775D4 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				5ACFDD241B33F77A0007FE18 /* diyorderformpic.png */,
+				5ACFDD251B33F77A0007FE18 /* myaddresspic.png */,
+				5ACFDD261B33F77A0007FE18 /* mybackmoneypic.png */,
+				5ACFDD271B33F77A0007FE18 /* mybookispic.png */,
+				5ACFDD281B33F77A0007FE18 /* mychangepic.png */,
+				5ACFDD291B33F77A0007FE18 /* mymessagepic.png */,
+				5ACFDD2A1B33F77A0007FE18 /* myomplainpic.png */,
+				5ACFDD2B1B33F77A0007FE18 /* myorderform.png */,
+				5ACFDD2C1B33F77A0007FE18 /* newpostorderformpic.png */,
+				5ACFDD2D1B33F77A0007FE18 /* retailorderformpic.png */,
+				5ACFDD2E1B33F77A0007FE18 /* right.png */,
+				5ACFDD1C1B33EB000007FE18 /* back.png */,
 				5AD863B21B2E72D100312C89 /* vip_shadow@2x.png */,
 				5AD863B01B2E65E500312C89 /* sidebar_bg_mask@2x.png */,
 				5AD863AE1B2E607400312C89 /* sidebar_bg@2x.jpg */,
@@ -301,7 +345,7 @@
 		5AD657401B033C97005AF1DF /* Philately */ = {
 			isa = PBXGroup;
 			children = (
-				5A1E70ED1B32BA42006F64D8 /* mengber */,
+				5ACFDD1E1B33F4BE0007FE18 /* menber */,
 				1840B5F51B31C13A00830235 /* welcome */,
 				5AD8B14F1B311E0000C9806A /* BaseModel */,
 				5AB36C281B27C8090066D06C /* login */,
@@ -547,8 +591,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACFDD361B33F77A0007FE18 /* myorderform.png in Resources */,
 				5AD8B1851B311E0000C9806A /* LeftViewController.xib in Resources */,
 				5AD8B17A1B311E0000C9806A /* LICENSE in Resources */,
+				5ACFDD391B33F77A0007FE18 /* right.png in Resources */,
 				5AD863B31B2E72D100312C89 /* vip_shadow@2x.png in Resources */,
 				5AD863AF1B2E607400312C89 /* sidebar_bg@2x.jpg in Resources */,
 				5AD8B1871B311E0000C9806A /* MainViewController.xib in Resources */,
@@ -557,10 +603,21 @@
 				5AD8B1A81B31618E00C9806A /* SVProgressHUD.bundle in Resources */,
 				5AD863B11B2E65E500312C89 /* sidebar_bg_mask@2x.png in Resources */,
 				5ACFDD181B33BFB00007FE18 /* UpdatePwdViewController.xib in Resources */,
+				5ACFDD231B33F4BE0007FE18 /* MenberMainViewController.xib in Resources */,
 				5AD3499B1B252EB0001775D4 /* 8.jpg in Resources */,
+				5ACFDD371B33F77A0007FE18 /* newpostorderformpic.png in Resources */,
+				5ACFDD1D1B33EB000007FE18 /* back.png in Resources */,
+				5ACFDD301B33F77A0007FE18 /* myaddresspic.png in Resources */,
+				5ACFDD341B33F77A0007FE18 /* mymessagepic.png in Resources */,
+				5ACFDD2F1B33F77A0007FE18 /* diyorderformpic.png in Resources */,
+				5ACFDD311B33F77A0007FE18 /* mybackmoneypic.png in Resources */,
 				5AD6E8911B32570900A71C07 /* RegistViewController.xib in Resources */,
 				5AD657521B033C97005AF1DF /* Images.xcassets in Resources */,
+				5ACFDD351B33F77A0007FE18 /* myomplainpic.png in Resources */,
+				5ACFDD381B33F77A0007FE18 /* retailorderformpic.png in Resources */,
 				5A1E70F01B32C61B006F64D8 /* FindPwdViewController.xib in Resources */,
+				5ACFDD331B33F77A0007FE18 /* mychangepic.png in Resources */,
+				5ACFDD321B33F77A0007FE18 /* mybookispic.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +649,7 @@
 				5AD8B17E1B311E0000C9806A /* SDWebImageDownloader.m in Sources */,
 				5AD8B18F1B311EA600C9806A /* TranMsgHandle.m in Sources */,
 				5AD657441B033C97005AF1DF /* main.m in Sources */,
+				5ACFDD221B33F4BE0007FE18 /* MenberMainViewController.m in Sources */,
 				5AD6574D1B033C97005AF1DF /* ViewController.m in Sources */,
 				5AD8B18C1B311E0000C9806A /* StampTranCall.m in Sources */,
 				5AD8B1921B311F5F00C9806A /* SysBaseInfo.m in Sources */,
