@@ -2,35 +2,29 @@
 
 
 
-#import "FindPwdViewController.h"
+#import "UpdatePwdViewController.h"
 #import "UIImageView+WebCache.h"
 #import <Foundation/Foundation.h>
 #import <PublicFramework/JSONKit.h>
-@implementation FindPwdViewController
-//找回新密码
-@synthesize findpwdButton;
+@implementation UpdatePwdViewController
+//确定
+@synthesize okButton;
 //back
 @synthesize backImageView;
-//找回密码
+//修改密码
 @synthesize titleTextView;
-//手机号码
-@synthesize phoneTitleTextView;
-//请输入手机号
-@synthesize phoneValueEditText;
-//获取验证码
-@synthesize getcodeButton;
-//验证码
-@synthesize codeTitleTextView;
-//请输入验证码
-@synthesize codeValueEditText;
+//旧密码
+@synthesize oldPwdTitleTextView;
+//请输入旧密码
+@synthesize oldPwdValueEditText;
 //新密码
-@synthesize newpwdTitleTextView;
+@synthesize newPwdTitleTextView;
 //请输入新密码
-@synthesize newpwdValueEditText;
-//确认新密码
-@synthesize newpwd2TitleTextView;
+@synthesize newPwdValueEditText;
+//确认密码
+@synthesize newPwd2TitleTextView;
 //请再输入新密码
-@synthesize newpwd2ValueEditText;
+@synthesize newPwd2ValueEditText;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -45,43 +39,39 @@
 //back
 [backImageView setImage:[UIImage imageNamed:@"1.jpeg"]]
 [backImageView setImageWithURL:[NSURL URLWithString:  placeholderImage:[UIImage imageNamed:@"default.jpg"]];
-//找回密码
+//修改密码
 [titleTextView setValue:]
-//手机号码
-[phoneTitleTextView setValue:]
-//请输入手机号
-[phoneValueEditText setValue:]
-//验证码
-[codeTitleTextView setValue:]
-//请输入验证码
-[codeValueEditText setValue:]
+//旧密码
+[oldPwdTitleTextView setValue:]
+//请输入旧密码
+[oldPwdValueEditText setValue:]
 //新密码
-[newpwdTitleTextView setValue:]
+[newPwdTitleTextView setValue:]
 //请输入新密码
-[newpwdValueEditText setValue:]
-//确认新密码
-[newpwd2TitleTextView setValue:]
+[newPwdValueEditText setValue:]
+//确认密码
+[newPwd2TitleTextView setValue:]
 //请再输入新密码
-[newpwd2ValueEditText setValue:]
+[newPwd2ValueEditText setValue:]
 }
 
 
 
 
 
-/*找回密码 0005*/
-NSString  *n0005=@"0005";
-/*找回密码 0005*/
--(void) request0005{
+/*修改登录密码0006*/
+NSString  *n0006=@"0006";
+/*修改登录密码0006*/
+-(void) request0006{
 NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
-/* 手机号码 备注:必填*/
-[businessparam setValue:@"" forKey:@"mobileNo"];
-/* 手机验证码 备注:必填*/
-[businessparam setValue:@"" forKey:@"verificationCode"];
+/* 会员编号 备注:必填*/
+[businessparam setValue:@"" forKey:@"cstmNo"];
+/* 旧密码 备注:必填*/
+[businessparam setValue:@"" forKey:@"oldPassWord"];
 /* 新密码 备注:必填*/
 [businessparam setValue:@"" forKey:@"newPassWord"];
- [serviceInvoker callWebservice:businessparam formName:n0005 ];
-    NSString *baseUrl=@"http://localhost:8080/Serlet/Serverlet0005?parameter=";
+ [serviceInvoker callWebservice:businessparam formName:n0006 ];
+    NSString *baseUrl=@"http://localhost:8080/Serlet/Serverlet0006?parameter=";
     NSString *fullUrl = [baseUrl stringByAppendingString:[businessparam JSONString]];
     NSURL *url = [NSURL URLWithString:[fullUrl stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -114,14 +104,14 @@ NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
 
 
 NSMutableArray *listData=[[NSMutableArray alloc]init];
-/*找回密码 0005*/
-if ([requestCode isEqualToString:n0005]){
+/*修改登录密码0006*/
+if ([requestCode isEqualToString:n0006]){
 NSDictionary *returnData=[root objectForKey:@"returnData"];
 NSDictionary *returnHead=[returnData objectForKey:@"returnHead"];
 NSString *respDesc=[returnHead objectForKey:@"respDesc"];
 NSString *respCode=[returnHead objectForKey:@"respCode"];
 NSDictionary *returnBody=[returnData objectForKey:@"returnBody"];
-RespondParam0005 *commonItem=[[RespondParam0005alloc]init];
+RespondParam0006 *commonItem=[[RespondParam0006alloc]init];
 }
 
 

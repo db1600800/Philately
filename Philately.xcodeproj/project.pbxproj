@@ -13,6 +13,10 @@
 		5A91BD021B32ADE800954BA9 /* FindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A91BD001B32ADE800954BA9 /* FindPwdViewController.m */; };
 		5AC19E7E1B30201E00B8FA31 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC19E7C1B30201E00B8FA31 /* LoginViewController.m */; };
 		5AC19E871B30234C00B8FA31 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC19E861B30234C00B8FA31 /* LoginViewController.xib */; };
+		5ACFDD121B33B9920007FE18 /* RespondParam0005.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACFDD111B33B9920007FE18 /* RespondParam0005.m */; };
+		5ACFDD171B33BFB00007FE18 /* UpdatePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACFDD151B33BFB00007FE18 /* UpdatePwdViewController.m */; };
+		5ACFDD181B33BFB00007FE18 /* UpdatePwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD161B33BFB00007FE18 /* UpdatePwdViewController.xib */; };
+		5ACFDD1B1B33C1390007FE18 /* RespondParam0006.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACFDD1A1B33C1390007FE18 /* RespondParam0006.m */; };
 		5AD3499B1B252EB0001775D4 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD3499A1B252EB0001775D4 /* 8.jpg */; };
 		5AD4A1091B2FDE9100394D6B /* PublicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A67736F1B1710FB002541BE /* PublicFramework.framework */; };
 		5AD4A10A1B2FDE9100394D6B /* PublicFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A67736F1B1710FB002541BE /* PublicFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -113,6 +117,13 @@
 		5AC19E7B1B30201E00B8FA31 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		5AC19E7C1B30201E00B8FA31 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		5AC19E861B30234C00B8FA31 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		5ACFDD101B33B9920007FE18 /* RespondParam0005.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0005.h; sourceTree = "<group>"; };
+		5ACFDD111B33B9920007FE18 /* RespondParam0005.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0005.m; sourceTree = "<group>"; };
+		5ACFDD141B33BFB00007FE18 /* UpdatePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePwdViewController.h; sourceTree = "<group>"; };
+		5ACFDD151B33BFB00007FE18 /* UpdatePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePwdViewController.m; sourceTree = "<group>"; };
+		5ACFDD161B33BFB00007FE18 /* UpdatePwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdatePwdViewController.xib; sourceTree = "<group>"; };
+		5ACFDD191B33C1390007FE18 /* RespondParam0006.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0006.h; sourceTree = "<group>"; };
+		5ACFDD1A1B33C1390007FE18 /* RespondParam0006.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0006.m; sourceTree = "<group>"; };
 		5AD3499A1B252EB0001775D4 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		5AD6573E1B033C97005AF1DF /* Philately.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Philately.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD657421B033C97005AF1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -236,6 +247,13 @@
 		5AB36C281B27C8090066D06C /* login */ = {
 			isa = PBXGroup;
 			children = (
+				5ACFDD191B33C1390007FE18 /* RespondParam0006.h */,
+				5ACFDD1A1B33C1390007FE18 /* RespondParam0006.m */,
+				5ACFDD141B33BFB00007FE18 /* UpdatePwdViewController.h */,
+				5ACFDD151B33BFB00007FE18 /* UpdatePwdViewController.m */,
+				5ACFDD161B33BFB00007FE18 /* UpdatePwdViewController.xib */,
+				5ACFDD101B33B9920007FE18 /* RespondParam0005.h */,
+				5ACFDD111B33B9920007FE18 /* RespondParam0005.m */,
 				5A1E70EF1B32C61B006F64D8 /* FindPwdViewController.xib */,
 				5A91BCFF1B32ADE800954BA9 /* FindPwdViewController.h */,
 				5A91BD001B32ADE800954BA9 /* FindPwdViewController.m */,
@@ -538,6 +556,7 @@
 				5AC19E871B30234C00B8FA31 /* LoginViewController.xib in Resources */,
 				5AD8B1A81B31618E00C9806A /* SVProgressHUD.bundle in Resources */,
 				5AD863B11B2E65E500312C89 /* sidebar_bg_mask@2x.png in Resources */,
+				5ACFDD181B33BFB00007FE18 /* UpdatePwdViewController.xib in Resources */,
 				5AD3499B1B252EB0001775D4 /* 8.jpg in Resources */,
 				5AD6E8911B32570900A71C07 /* RegistViewController.xib in Resources */,
 				5AD657521B033C97005AF1DF /* Images.xcassets in Resources */,
@@ -560,11 +579,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD657471B033C97005AF1DF /* AppDelegate.m in Sources */,
+				5ACFDD171B33BFB00007FE18 /* UpdatePwdViewController.m in Sources */,
 				5AD8B1831B311E0000C9806A /* VCPhotoScrollShow.m in Sources */,
 				5AD8B17C1B311E0000C9806A /* SDImageCache.m in Sources */,
 				5A91BD021B32ADE800954BA9 /* FindPwdViewController.m in Sources */,
 				5AD8B1821B311E0000C9806A /* UIImageView+WebCache.m in Sources */,
+				5ACFDD121B33B9920007FE18 /* RespondParam0005.m in Sources */,
 				5AD8B17D1B311E0000C9806A /* SDWebImageDecoder.m in Sources */,
+				5ACFDD1B1B33C1390007FE18 /* RespondParam0006.m in Sources */,
 				5AD8B1801B311E0000C9806A /* SDWebImagePrefetcher.m in Sources */,
 				5AD8B18A1B311E0000C9806A /* UIViewController+MLTransition.m in Sources */,
 				5AD8B17E1B311E0000C9806A /* SDWebImageDownloader.m in Sources */,
