@@ -19,56 +19,31 @@ ServiceInvoker *serviceInvoker;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    _tabbar = [[TabbarView alloc]initWithFrame:CGRectMake(0, 0
-//, self.tabbarContainer.frame.size.width, self.tabbarContainer.frame.size.height)];
-//    _tabbar.delegate = self;
-//    [self.tabbarContainer addSubview:_tabbar];
+    _tabC = [[UITabBarController alloc] init];
+    [_tabC.tabBar setBackgroundColor:[UIColor clearColor]];
+    [_tabC.view setFrame:self.view.frame];
+    [self.view addSubview:_tabC.view];;
     
     
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(btnTouchMy)];
-    self.tab1.tag=101;
-    [self.tab1 addGestureRecognizer:tapGesture];
- 
+    loginViewController = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    menberMainViewController = [[MenberMainViewController alloc]initWithNibName:@"MenberMainViewController" bundle:nil];
+    
+      _tabC.viewControllers = @[menberMainViewController, loginViewController];
     
     
-
+     [self reloadImage];
     
- 
+//    [[UITabBarItem appearance] setTitleTextAttributes:
+//     [NSDictionary dictionaryWithObjectsAndKeys:RGBA(96, 164, 222, 1), UITextAttributeTextColor, nil]
+//                                             forState:UIControlStateSelected];
+    
+     [_tabC setSelectedIndex:1];
    
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     
-    loginViewController = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
-    
-    menberMainViewController = [[MenberMainViewController alloc]initWithNibName:@"MenberMainViewController" bundle:nil];
-    
-    //loginViewController.view.frame = CGRectMake(0,0,self.contentView.frame.size.width, self.contentView.frame.size.height);
-    
-    //    self.firstVC = [[HMTFirstViewController alloc] init];
-    //    [self.firstVC.view setFrame:CGRectMake(0, 104, 320, 464)];
-    [self addChildViewController:loginViewController];
-    
-    //  默认,第一个视图(你会发现,全程就这一个用了addSubview)
-    [self.contentView addSubview:menberMainViewController.view];
-    self.currentVc = menberMainViewController;
-    
-    [self transitionFromViewController:loginViewController toViewController:loginViewController duration:2.0 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:^(BOOL finished) {
-        
-        if (finished) {
-            
-//            [newController didMoveToParentViewController:self];
-//            [oldController willMoveToParentViewController:nil];
-//            [oldController removeFromParentViewController];
-//            self.currentVC = newController;
-            
-        }else{
-            
-          //  self.currentVC = oldController;
-            
-        }
-    }];
   
 }
 
@@ -83,23 +58,6 @@ ServiceInvoker *serviceInvoker;
 #define SELECTED_VIEW_CONTROLLER_TAG 98456345
 
 
--(void)btnTouchMy
-{
-    UIView* currentView = [self.contentView viewWithTag:SELECTED_VIEW_CONTROLLER_TAG];
-    [currentView removeFromSuperview];
-    
-    
-   // NSDictionary* data = [_arrayViewcontrollers objectAtIndex:index];
-    
-//     loginViewController = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
-      menberMainViewController = [[MenberMainViewController alloc]initWithNibName:@"MenberMainViewController" bundle:nil];
-    
-    menberMainViewController.view.tag = SELECTED_VIEW_CONTROLLER_TAG;
-    menberMainViewController.view.frame = CGRectMake(0,0,self.contentView.frame.size.width, self.contentView.frame.size.height);
-    
-    [self.view addSubview:menberMainViewController.view ];
-    
-}
 
 
 
@@ -118,5 +76,47 @@ ServiceInvoker *serviceInvoker;
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+- (void)reloadImage
+{
+ 
+    
+    NSString *imageName = nil;
+//    if (isIos7 >= 7 && __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1 && [QHConfiguredObj defaultConfigure].nThemeIndex != 0)
+//    {
+//        imageName = @"tabbar_bg_ios7.png";
+//    }else
+    //{
+      //  imageName = @"tabbar_bg.png";
+    //}
+    [_tabC.tabBar setBackgroundImage:[UIImage imageNamed:imageName]];
+    
+    NSArray *ar = _tabC.viewControllers;
+    NSMutableArray *arD = [NSMutableArray new];
+    [ar enumerateObjectsUsingBlock:^(UIViewController *viewController, NSUInteger idx, BOOL *stop)
+     {
+         //        UITabBarItem *item = viewController.tabBarItem;
+         UITabBarItem *item = nil;
+         switch (idx)
+         {
+             case 0:
+             {
+                 item = [[UITabBarItem alloc] initWithTitle:@"我的" image:[[UIImage imageNamed:@"tab_me_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_me_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+                 break;
+             }
+             case 1:
+             {
+                 item = [[UITabBarItem alloc] initWithTitle:@"ni的" image:[[UIImage imageNamed:@"tab_me_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_me_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+                 break;
+             }
+           
+         }
+         viewController.tabBarItem = item;
+         [arD addObject:viewController];
+     }];
+    _tabC.viewControllers = arD;
+}
 
 @end

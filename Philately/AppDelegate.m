@@ -8,12 +8,13 @@
 
 #import "AppDelegate.h"
 #import "WelcomeViewController.h"
-#import "MenberMainViewController.h"
+
 #import "LeftViewController.h"
 #import "SliderViewController.h"
 #import "MainViewController.h"
 #import <CoreGraphics/CGAffineTransform.h>
 #import "MLBlackTransition.h"
+
 @interface AppDelegate ()
 
 @end
@@ -22,18 +23,18 @@ bool checkOk=false;
 @implementation AppDelegate
 
 WelcomeViewController *welcomeViewController;
-MenberMainViewController *menberMainViewController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor clearColor];
     
-    WelcomeViewController *welcom=[[WelcomeViewController alloc]initWithNibName:@"WelcomeViewController" bundle:nil];
+    welcomeViewController=[[WelcomeViewController alloc]initWithNibName:@"WelcomeViewController" bundle:nil];
     
-      menberMainViewController = [[MenberMainViewController alloc]initWithNibName:@"MenberMainViewController" bundle:nil];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:menberMainViewController];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:welcomeViewController];
    
     self.window.rootViewController = navigationController;
     

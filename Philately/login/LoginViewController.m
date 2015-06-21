@@ -38,7 +38,7 @@ StampTranCall *stampTranCall;
     [super viewDidLoad];
     
      stampTranCall=[[StampTranCall alloc] init ];
-    [ stampTranCall jyTranCall:nil  cstmMsg:nil formName:nil business:nil delegate:self];
+    //[ stampTranCall jyTranCall:nil  cstmMsg:nil formName:nil business:nil delegate:self];
 }
 
 -(void) viewWillAppear:(BOOL)animated{

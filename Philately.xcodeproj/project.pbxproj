@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183B309A1B36A13C0028FFA3 /* tab_me_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 183B30981B36A13C0028FFA3 /* tab_me_nor@2x.png */; };
+		183B309B1B36A13C0028FFA3 /* tab_me_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 183B30991B36A13C0028FFA3 /* tab_me_press@2x.png */; };
 		1840B5F91B31C16500830235 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840B5F71B31C16500830235 /* WelcomeViewController.m */; };
 		1840B5FA1B31C16500830235 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1840B5F81B31C16500830235 /* WelcomeViewController.xib */; };
 		5A1E70F01B32C61B006F64D8 /* FindPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1E70EF1B32C61B006F64D8 /* FindPwdViewController.xib */; };
@@ -31,8 +33,6 @@
 		5ACFDD371B33F77A0007FE18 /* newpostorderformpic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD2C1B33F77A0007FE18 /* newpostorderformpic.png */; };
 		5ACFDD381B33F77A0007FE18 /* retailorderformpic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD2D1B33F77A0007FE18 /* retailorderformpic.png */; };
 		5ACFDD391B33F77A0007FE18 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD2E1B33F77A0007FE18 /* right.png */; };
-		5ACFDD3D1B3416A20007FE18 /* ddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACFDD3B1B3416A20007FE18 /* ddViewController.m */; };
-		5ACFDD3E1B3416A20007FE18 /* ddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ACFDD3C1B3416A20007FE18 /* ddViewController.xib */; };
 		5AD3499B1B252EB0001775D4 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD3499A1B252EB0001775D4 /* 8.jpg */; };
 		5AD4A1091B2FDE9100394D6B /* PublicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A67736F1B1710FB002541BE /* PublicFramework.framework */; };
 		5AD4A10A1B2FDE9100394D6B /* PublicFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A67736F1B1710FB002541BE /* PublicFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -123,6 +123,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		183B30981B36A13C0028FFA3 /* tab_me_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_me_nor@2x.png"; sourceTree = "<group>"; };
+		183B30991B36A13C0028FFA3 /* tab_me_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_me_press@2x.png"; sourceTree = "<group>"; };
 		1840B5F61B31C16500830235 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		1840B5F71B31C16500830235 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		1840B5F81B31C16500830235 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
@@ -155,9 +157,6 @@
 		5ACFDD2C1B33F77A0007FE18 /* newpostorderformpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newpostorderformpic.png; sourceTree = "<group>"; };
 		5ACFDD2D1B33F77A0007FE18 /* retailorderformpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retailorderformpic.png; sourceTree = "<group>"; };
 		5ACFDD2E1B33F77A0007FE18 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
-		5ACFDD3A1B3416A20007FE18 /* ddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ddViewController.h; sourceTree = "<group>"; };
-		5ACFDD3B1B3416A20007FE18 /* ddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ddViewController.m; sourceTree = "<group>"; };
-		5ACFDD3C1B3416A20007FE18 /* ddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ddViewController.xib; sourceTree = "<group>"; };
 		5AD3499A1B252EB0001775D4 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		5AD6573E1B033C97005AF1DF /* Philately.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Philately.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD657421B033C97005AF1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -300,9 +299,6 @@
 				5ACFDD1F1B33F4BE0007FE18 /* MenberMainViewController.h */,
 				5ACFDD201B33F4BE0007FE18 /* MenberMainViewController.m */,
 				5ACFDD211B33F4BE0007FE18 /* MenberMainViewController.xib */,
-				5ACFDD3A1B3416A20007FE18 /* ddViewController.h */,
-				5ACFDD3B1B3416A20007FE18 /* ddViewController.m */,
-				5ACFDD3C1B3416A20007FE18 /* ddViewController.xib */,
 			);
 			path = menber;
 			sourceTree = "<group>";
@@ -310,6 +306,8 @@
 		5AD349991B252EB0001775D4 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				183B30981B36A13C0028FFA3 /* tab_me_nor@2x.png */,
+				183B30991B36A13C0028FFA3 /* tab_me_press@2x.png */,
 				5ACFDD241B33F77A0007FE18 /* diyorderformpic.png */,
 				5ACFDD251B33F77A0007FE18 /* myaddresspic.png */,
 				5ACFDD261B33F77A0007FE18 /* mybackmoneypic.png */,
@@ -601,8 +599,10 @@
 			files = (
 				5ACFDD361B33F77A0007FE18 /* myorderform.png in Resources */,
 				5AD8B1851B311E0000C9806A /* LeftViewController.xib in Resources */,
+				183B309A1B36A13C0028FFA3 /* tab_me_nor@2x.png in Resources */,
 				5AD8B17A1B311E0000C9806A /* LICENSE in Resources */,
 				5ACFDD391B33F77A0007FE18 /* right.png in Resources */,
+				183B309B1B36A13C0028FFA3 /* tab_me_press@2x.png in Resources */,
 				5AD863B31B2E72D100312C89 /* vip_shadow@2x.png in Resources */,
 				5AD863AF1B2E607400312C89 /* sidebar_bg@2x.jpg in Resources */,
 				5AD8B1871B311E0000C9806A /* MainViewController.xib in Resources */,
@@ -623,7 +623,6 @@
 				5AD657521B033C97005AF1DF /* Images.xcassets in Resources */,
 				5ACFDD351B33F77A0007FE18 /* myomplainpic.png in Resources */,
 				5ACFDD381B33F77A0007FE18 /* retailorderformpic.png in Resources */,
-				5ACFDD3E1B3416A20007FE18 /* ddViewController.xib in Resources */,
 				5A1E70F01B32C61B006F64D8 /* FindPwdViewController.xib in Resources */,
 				5ACFDD331B33F77A0007FE18 /* mychangepic.png in Resources */,
 				5ACFDD321B33F77A0007FE18 /* mybookispic.png in Resources */,
@@ -652,7 +651,6 @@
 				5AD8B1821B311E0000C9806A /* UIImageView+WebCache.m in Sources */,
 				5ACFDD121B33B9920007FE18 /* RespondParam0005.m in Sources */,
 				5AD8B17D1B311E0000C9806A /* SDWebImageDecoder.m in Sources */,
-				5ACFDD3D1B3416A20007FE18 /* ddViewController.m in Sources */,
 				5ACFDD1B1B33C1390007FE18 /* RespondParam0006.m in Sources */,
 				5AD8B1801B311E0000C9806A /* SDWebImagePrefetcher.m in Sources */,
 				5AD8B18A1B311E0000C9806A /* UIViewController+MLTransition.m in Sources */,
