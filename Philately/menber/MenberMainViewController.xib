@@ -240,7 +240,7 @@
                             </variation>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cI-co-Nm6">
-                            <rect key="frame" x="0.0" y="241" width="600" height="30"/>
+                            <rect key="frame" x="0.0" y="242" width="600" height="30"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retailorderformpic.png" translatesAutoresizingMaskIntoConstraints="NO" id="o5o-9T-BCT">
                                     <rect key="frame" x="40" y="5" width="30" height="30"/>
@@ -531,6 +531,19 @@
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="3" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="GtG-Eo-Cek">
                             <rect key="frame" x="299" y="150" width="3" height="300"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="700" id="DSV-j8-Q1p"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="DSV-j8-Q1p"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="constraints">
+                                    <exclude reference="DSV-j8-Q1p"/>
+                                </mask>
+                            </variation>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.96470590000000001" green="0.96470590000000001" blue="0.96470590000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -544,14 +557,14 @@
                         <constraint firstItem="mgi-jx-8uL" firstAttribute="trailing" secondItem="mNT-m8-DY8" secondAttribute="trailing" id="Cuo-jH-PbE"/>
                         <constraint firstItem="yvC-9A-sLV" firstAttribute="top" secondItem="mNT-m8-DY8" secondAttribute="top" id="DHQ-sd-f5o"/>
                         <constraint firstItem="N0g-zX-Ucg" firstAttribute="trailing" secondItem="mNT-m8-DY8" secondAttribute="trailing" id="FVA-2e-t2H"/>
-                        <constraint firstItem="0cI-co-Nm6" firstAttribute="top" secondItem="Kze-Y0-8nA" secondAttribute="bottom" constant="10" id="GDs-ST-s2g">
+                        <constraint firstItem="0cI-co-Nm6" firstAttribute="top" secondItem="Kze-Y0-8nA" secondAttribute="bottom" constant="11" id="GDs-ST-s2g">
                             <variation key="widthClass=compact" constant="-1"/>
                         </constraint>
                         <constraint firstAttribute="centerY" secondItem="GtG-Eo-Cek" secondAttribute="centerY" id="HR2-9Z-kcE"/>
                         <constraint firstItem="auN-BY-1T7" firstAttribute="top" secondItem="TO8-sy-rAP" secondAttribute="bottom" constant="5" id="Hu0-dC-u3k"/>
                         <constraint firstItem="fDX-p9-MEQ" firstAttribute="leading" secondItem="mNT-m8-DY8" secondAttribute="leading" id="JmV-Ju-Xak"/>
                         <constraint firstAttribute="bottom" secondItem="auN-BY-1T7" secondAttribute="bottom" constant="30" id="MBe-4g-vCA">
-                            <variation key="widthClass=compact" constant="13"/>
+                            <variation key="widthClass=compact" constant="30"/>
                         </constraint>
                         <constraint firstItem="V1L-97-t7p" firstAttribute="top" secondItem="kRQ-d4-hMr" secondAttribute="bottom" constant="-4" id="NWA-wm-VA5"/>
                         <constraint firstItem="yvC-9A-sLV" firstAttribute="centerX" secondItem="GtG-Eo-Cek" secondAttribute="centerX" id="Nkk-QB-n8O"/>
@@ -563,7 +576,7 @@
                         <constraint firstItem="Kze-Y0-8nA" firstAttribute="top" secondItem="8ci-1X-Kyv" secondAttribute="bottom" constant="6" id="Px3-Ew-xVp">
                             <variation key="widthClass=compact" constant="10"/>
                         </constraint>
-                        <constraint firstItem="kRQ-d4-hMr" firstAttribute="top" secondItem="0cI-co-Nm6" secondAttribute="bottom" constant="1" id="QyV-vw-EXi"/>
+                        <constraint firstItem="kRQ-d4-hMr" firstAttribute="top" secondItem="0cI-co-Nm6" secondAttribute="bottom" id="QyV-vw-EXi"/>
                         <constraint firstItem="8ci-1X-Kyv" firstAttribute="leading" secondItem="mNT-m8-DY8" secondAttribute="leading" id="R6Q-eO-QD2"/>
                         <constraint firstAttribute="trailing" secondItem="8ci-1X-Kyv" secondAttribute="trailing" id="RU8-TB-kxQ"/>
                         <constraint firstItem="N0g-zX-Ucg" firstAttribute="top" secondItem="V1L-97-t7p" secondAttribute="bottom" constant="12" id="XCQ-aJ-Eii"/>
