@@ -10,7 +10,7 @@
 #import "MenberMainViewController.h"
 #import "LoginViewController.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController<UITabBarControllerDelegate>
 {
     LoginViewController *loginViewController;
     MenberMainViewController *menberMainViewController;

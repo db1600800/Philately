@@ -5,6 +5,7 @@
 #import "UIImageView+WebCache.h"
 #import <Foundation/Foundation.h>
 #import <PublicFramework/JSONKit.h>
+#import "UpdatePwdViewController.h"
 @implementation MenberMainViewController
 //我的账户
 @synthesize titleTextView;
@@ -80,6 +81,20 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationBarHidden=YES;
+    
+    UITapGestureRecognizer *_left = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handTap)];
+    [self.modifyPwdTextView addGestureRecognizer:_left];
+    
+    
+}
+
+UpdatePwdViewController *updatePwdViewController;
+-(void)handTap
+{
+     updatePwdViewController=[[UpdatePwdViewController alloc] initWithNibName:@"UpdatePwdViewController" bundle:nil];
+    //[self.navigationController pushViewController:updatePwdViewController animated:NO];
+   [self presentViewController:updatePwdViewController animated:NO completion:^{}];
+  
 }
 
 -(void) viewWillAppear:(BOOL)animated{

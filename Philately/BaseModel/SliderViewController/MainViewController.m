@@ -8,11 +8,15 @@
 
 #import "MainViewController.h"
 #import "LoginViewController.h"
+#import  "UpdatePwdViewController.h"
 
 @interface MainViewController ()
 
 @end
 ServiceInvoker *serviceInvoker;
+
+UpdatePwdViewController *updatePwdViewController;
+LoginViewController *loginViewController;
 @implementation MainViewController
 
 - (void)viewDidLoad {
@@ -22,13 +26,21 @@ ServiceInvoker *serviceInvoker;
     _tabC = [[UITabBarController alloc] init];
     [_tabC.tabBar setBackgroundColor:[UIColor clearColor]];
     [_tabC.view setFrame:self.view.frame];
+    _tabC.delegate=self;
+    
     [self.view addSubview:_tabC.view];;
     
     
     loginViewController = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
-    menberMainViewController = [[MenberMainViewController alloc]initWithNibName:@"MenberMainViewController" bundle:nil];
     
-      _tabC.viewControllers = @[menberMainViewController, loginViewController];
+    menberMainViewController = [[MenberMainViewController alloc]initWithNibName:@"MenberMainViewController" bundle:nil];
+    menberMainViewController.title=@"MenberMainViewController";
+    
+       updatePwdViewController = [[UpdatePwdViewController alloc]initWithNibName:@"UpdatePwdViewController" bundle:nil];
+    
+
+    
+      _tabC.viewControllers = @[loginViewController,updatePwdViewController,menberMainViewController];
     
     
      [self reloadImage];
@@ -103,12 +115,17 @@ ServiceInvoker *serviceInvoker;
          {
              case 0:
              {
-                 item = [[UITabBarItem alloc] initWithTitle:@"我的" image:[[UIImage imageNamed:@"tab_me_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_me_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+                 item = [[UITabBarItem alloc] initWithTitle:@"首页" image:[[UIImage imageNamed:@"tab_me_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_me_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
                  break;
              }
              case 1:
              {
-                 item = [[UITabBarItem alloc] initWithTitle:@"ni的" image:[[UIImage imageNamed:@"tab_me_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_me_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+                 item = [[UITabBarItem alloc] initWithTitle:@"购货" image:[[UIImage imageNamed:@"tab_me_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_me_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+                 break;
+             }
+             case 2:
+             {
+                 item = [[UITabBarItem alloc] initWithTitle:@"我的" image:[[UIImage imageNamed:@"tab_me_nor.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_me_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
                  break;
              }
            
@@ -117,6 +134,45 @@ ServiceInvoker *serviceInvoker;
          [arD addObject:viewController];
      }];
     _tabC.viewControllers = arD;
+}
+
+
+
+-(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    
+    if([viewController isMemberOfClass:[MenberMainViewController class]] )
+    {
+    loginViewController=[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    
+    [self presentViewController:loginViewController animated:NO completion:^{}];
+    }
+    
+    NSLog(@"clicked");
+    return YES;
+}
+
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    
+    NSLog(@"%@",viewController.title);
+}
+
+-(void)tabBarController:(UITabBarController *)tabBarController willBeginCustomizingViewControllers:(NSArray *)viewControllers{
+    NSLog(@"will Customize");
+}
+
+-(void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed{
+    if (changed) {
+        NSLog(@"changed!");
+    }else{
+        NSLog(@"not changed");
+    }
+    for (UIViewController *vcs in viewControllers) {
+        NSLog(@"%@",vcs.title);
+    }
+}
+
+-(void)tabBarController:(UITabBarController *)tabBarController DidEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed{
+    
 }
 
 @end

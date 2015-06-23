@@ -31,6 +31,44 @@
 }
 
 -(void) viewWillAppear:(BOOL)animated{
+    
+    UITapGestureRecognizer *back = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)];
+    [self.backImageView addGestureRecognizer:back];
+    
+    UITapGestureRecognizer *okButtonTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(okButtonSel)];
+    [self.okButton addGestureRecognizer:okButtonTap];
+
+    
+}
+
+-(void)okButtonSel
+{
+    [self dismissViewControllerAnimated:NO completion:^(){}];
+}
+-(void)back
+{
+    [self dismissViewControllerAnimated:NO completion:^(){
+        
+        //关掉注册controller
+        
+       // [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_CLOSE_B object:nil userInfo:nil];
+        
+    }];
+    
+   // 有A到B再到C，我现在再C页面返回的时候我想直接跳转到A页面 应该怎么做呢？
+//    
+//    在B中添加监视通知
+//    
+//    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(close) name:NOTIFICATION_CLOSE_B object:nil];
+//    
+//    
+//    -(void) close{
+//        
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//        
+//    }
+
 }
 
 

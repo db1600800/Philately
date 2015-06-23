@@ -39,6 +39,24 @@ StampTranCall *stampTranCall;
     
      stampTranCall=[[StampTranCall alloc] init ];
     //[ stampTranCall jyTranCall:nil  cstmMsg:nil formName:nil business:nil delegate:self];
+    
+    UITapGestureRecognizer *backImageViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backImageViewHandTap)];
+    [backImageView addGestureRecognizer:backImageViewTap];
+    
+    
+    UITapGestureRecognizer *loginButtonTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loginButtonHandTap)];
+    [loginButton addGestureRecognizer:loginButtonTap];
+    
+}
+
+-(void)backImageViewHandTap
+{
+[self dismissViewControllerAnimated:NO completion:^(){}];
+}
+
+-(void)loginButtonHandTap
+{
+[self dismissViewControllerAnimated:NO completion:^(){}];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
