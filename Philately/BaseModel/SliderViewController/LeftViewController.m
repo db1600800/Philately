@@ -108,7 +108,8 @@ NSArray *_arData;
             LoginViewController *themeVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
             [[SliderViewController sharedSliderController] closeSideBarWithAnimate:YES complete:^(BOOL finished)
              {
-                 [[SliderViewController sharedSliderController].navigationController pushViewController:themeVC animated:YES];
+                 //[[SliderViewController sharedSliderController].navigationController pushViewController:themeVC animated:YES];
+                 [self presentViewController:themeVC animated:NO completion:^{}];
              }];
             break;
         }
