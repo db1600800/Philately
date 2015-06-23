@@ -9,7 +9,7 @@
 #import "StampTranCall.h"
 #import "SysBaseInfo.h"
 #import <PublicFramework/OperatorMsg.h>
-#import <SVProgressHUD/SVProgressHUD.h>
+#import "SVProgressHUD.h"
 @implementation StampTranCall
 
 /*

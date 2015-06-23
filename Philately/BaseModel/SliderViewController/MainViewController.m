@@ -9,7 +9,7 @@
 #import "MainViewController.h"
 #import "LoginViewController.h"
 #import  "UpdatePwdViewController.h"
-
+#import "FirstPageViewController.h"
 @interface MainViewController ()
 
 @end
@@ -17,6 +17,7 @@ ServiceInvoker *serviceInvoker;
 
 UpdatePwdViewController *updatePwdViewController;
 LoginViewController *loginViewController;
+FirstPageViewController *firstPageViewController;
 @implementation MainViewController
 
 - (void)viewDidLoad {
@@ -31,7 +32,7 @@ LoginViewController *loginViewController;
     [self.view addSubview:_tabC.view];;
     
     
-    loginViewController = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    firstPageViewController = [[FirstPageViewController alloc]initWithNibName:@"FirstPageViewController" bundle:nil];
     
     menberMainViewController = [[MenberMainViewController alloc]initWithNibName:@"MenberMainViewController" bundle:nil];
     menberMainViewController.title=@"MenberMainViewController";
@@ -40,7 +41,7 @@ LoginViewController *loginViewController;
     
 
     
-      _tabC.viewControllers = @[loginViewController,updatePwdViewController,menberMainViewController];
+      _tabC.viewControllers = @[firstPageViewController,updatePwdViewController,menberMainViewController];
     
     
      [self reloadImage];

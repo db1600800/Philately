@@ -12,6 +12,12 @@
 		1840B5F91B31C16500830235 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840B5F71B31C16500830235 /* WelcomeViewController.m */; };
 		1840B5FA1B31C16500830235 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1840B5F81B31C16500830235 /* WelcomeViewController.xib */; };
 		5A1E70F01B32C61B006F64D8 /* FindPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1E70EF1B32C61B006F64D8 /* FindPwdViewController.xib */; };
+		5A6C911A1B391E2D0064A7D9 /* FirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C91181B391E2D0064A7D9 /* FirstPageViewController.m */; };
+		5A6C911B1B391E2D0064A7D9 /* FirstPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C91191B391E2D0064A7D9 /* FirstPageViewController.xib */; };
+		5A6C911F1B391F5E0064A7D9 /* FirstPageHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C911D1B391F5E0064A7D9 /* FirstPageHeadView.m */; };
+		5A6C91201B391F5E0064A7D9 /* FirstPageHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C911E1B391F5E0064A7D9 /* FirstPageHeadView.xib */; };
+		5A6C91241B391FFB0064A7D9 /* FirstPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C91221B391FFB0064A7D9 /* FirstPageTableViewCell.m */; };
+		5A6C91251B391FFB0064A7D9 /* FirstPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C91231B391FFB0064A7D9 /* FirstPageTableViewCell.xib */; };
 		5A91BD021B32ADE800954BA9 /* FindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A91BD001B32ADE800954BA9 /* FindPwdViewController.m */; };
 		5AC19E7E1B30201E00B8FA31 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC19E7C1B30201E00B8FA31 /* LoginViewController.m */; };
 		5AC19E871B30234C00B8FA31 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC19E861B30234C00B8FA31 /* LoginViewController.xib */; };
@@ -130,6 +136,15 @@
 		1840B5F81B31C16500830235 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		5A1E70EF1B32C61B006F64D8 /* FindPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindPwdViewController.xib; sourceTree = "<group>"; };
 		5A6773691B1710FB002541BE /* PublicFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PublicFramework.xcodeproj; path = PublicFramework/PublicFramework.xcodeproj; sourceTree = "<group>"; };
+		5A6C91171B391E2D0064A7D9 /* FirstPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPageViewController.h; sourceTree = "<group>"; };
+		5A6C91181B391E2D0064A7D9 /* FirstPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageViewController.m; sourceTree = "<group>"; };
+		5A6C91191B391E2D0064A7D9 /* FirstPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstPageViewController.xib; sourceTree = "<group>"; };
+		5A6C911C1B391F5E0064A7D9 /* FirstPageHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPageHeadView.h; sourceTree = "<group>"; };
+		5A6C911D1B391F5E0064A7D9 /* FirstPageHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageHeadView.m; sourceTree = "<group>"; };
+		5A6C911E1B391F5E0064A7D9 /* FirstPageHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstPageHeadView.xib; sourceTree = "<group>"; };
+		5A6C91211B391FFB0064A7D9 /* FirstPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPageTableViewCell.h; sourceTree = "<group>"; };
+		5A6C91221B391FFB0064A7D9 /* FirstPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageTableViewCell.m; sourceTree = "<group>"; };
+		5A6C91231B391FFB0064A7D9 /* FirstPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstPageTableViewCell.xib; sourceTree = "<group>"; };
 		5A91BCFF1B32ADE800954BA9 /* FindPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPwdViewController.h; sourceTree = "<group>"; };
 		5A91BD001B32ADE800954BA9 /* FindPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPwdViewController.m; sourceTree = "<group>"; };
 		5AC19E7B1B30201E00B8FA31 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -254,6 +269,15 @@
 		1840B5F51B31C13A00830235 /* welcome */ = {
 			isa = PBXGroup;
 			children = (
+				5A6C911C1B391F5E0064A7D9 /* FirstPageHeadView.h */,
+				5A6C91211B391FFB0064A7D9 /* FirstPageTableViewCell.h */,
+				5A6C91221B391FFB0064A7D9 /* FirstPageTableViewCell.m */,
+				5A6C91231B391FFB0064A7D9 /* FirstPageTableViewCell.xib */,
+				5A6C911D1B391F5E0064A7D9 /* FirstPageHeadView.m */,
+				5A6C911E1B391F5E0064A7D9 /* FirstPageHeadView.xib */,
+				5A6C91171B391E2D0064A7D9 /* FirstPageViewController.h */,
+				5A6C91181B391E2D0064A7D9 /* FirstPageViewController.m */,
+				5A6C91191B391E2D0064A7D9 /* FirstPageViewController.xib */,
 				1840B5F61B31C16500830235 /* WelcomeViewController.h */,
 				1840B5F71B31C16500830235 /* WelcomeViewController.m */,
 				1840B5F81B31C16500830235 /* WelcomeViewController.xib */,
@@ -597,11 +621,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6C911B1B391E2D0064A7D9 /* FirstPageViewController.xib in Resources */,
 				5ACFDD361B33F77A0007FE18 /* myorderform.png in Resources */,
 				5AD8B1851B311E0000C9806A /* LeftViewController.xib in Resources */,
 				183B309A1B36A13C0028FFA3 /* tab_me_nor@2x.png in Resources */,
 				5AD8B17A1B311E0000C9806A /* LICENSE in Resources */,
 				5ACFDD391B33F77A0007FE18 /* right.png in Resources */,
+				5A6C91251B391FFB0064A7D9 /* FirstPageTableViewCell.xib in Resources */,
 				183B309B1B36A13C0028FFA3 /* tab_me_press@2x.png in Resources */,
 				5AD863B31B2E72D100312C89 /* vip_shadow@2x.png in Resources */,
 				5AD863AF1B2E607400312C89 /* sidebar_bg@2x.jpg in Resources */,
@@ -619,6 +645,7 @@
 				5ACFDD341B33F77A0007FE18 /* mymessagepic.png in Resources */,
 				5ACFDD2F1B33F77A0007FE18 /* diyorderformpic.png in Resources */,
 				5ACFDD311B33F77A0007FE18 /* mybackmoneypic.png in Resources */,
+				5A6C91201B391F5E0064A7D9 /* FirstPageHeadView.xib in Resources */,
 				5AD6E8911B32570900A71C07 /* RegistViewController.xib in Resources */,
 				5AD657521B033C97005AF1DF /* Images.xcassets in Resources */,
 				5ACFDD351B33F77A0007FE18 /* myomplainpic.png in Resources */,
@@ -644,13 +671,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD657471B033C97005AF1DF /* AppDelegate.m in Sources */,
+				5A6C91241B391FFB0064A7D9 /* FirstPageTableViewCell.m in Sources */,
 				5ACFDD171B33BFB00007FE18 /* UpdatePwdViewController.m in Sources */,
 				5AD8B1831B311E0000C9806A /* VCPhotoScrollShow.m in Sources */,
 				5AD8B17C1B311E0000C9806A /* SDImageCache.m in Sources */,
 				5A91BD021B32ADE800954BA9 /* FindPwdViewController.m in Sources */,
+				5A6C911F1B391F5E0064A7D9 /* FirstPageHeadView.m in Sources */,
 				5AD8B1821B311E0000C9806A /* UIImageView+WebCache.m in Sources */,
 				5ACFDD121B33B9920007FE18 /* RespondParam0005.m in Sources */,
 				5AD8B17D1B311E0000C9806A /* SDWebImageDecoder.m in Sources */,
+				5A6C911A1B391E2D0064A7D9 /* FirstPageViewController.m in Sources */,
 				5ACFDD1B1B33C1390007FE18 /* RespondParam0006.m in Sources */,
 				5AD8B1801B311E0000C9806A /* SDWebImagePrefetcher.m in Sources */,
 				5AD8B18A1B311E0000C9806A /* UIViewController+MLTransition.m in Sources */,
@@ -783,7 +813,7 @@
 		5AD657651B033C97005AF1DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -811,7 +841,7 @@
 		5AD657661B033C97005AF1DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
