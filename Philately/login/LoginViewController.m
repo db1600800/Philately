@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 #import <PublicFramework/JSONKit.h>
 #import "StampTranCall.h"
+#import "SliderViewController.h"
 @implementation LoginViewController
 //back
 @synthesize backImageView;
@@ -52,11 +53,14 @@ StampTranCall *stampTranCall;
 -(void)backImageViewHandTap
 {
 [self dismissViewControllerAnimated:NO completion:^(){}];
+    [self.navigationController popoverPresentationController];
 }
 
 -(void)loginButtonHandTap
 {
 [self dismissViewControllerAnimated:NO completion:^(){}];
+    [[SliderViewController sharedSliderController].navigationController popoverPresentationController];
+ 
 }
 
 -(void) viewWillAppear:(BOOL)animated{

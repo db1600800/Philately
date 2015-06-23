@@ -25,8 +25,10 @@ NSArray *_arData;
     
     [self.tableview setDataSource:self];//指定数据委托
     
-    _arData = @[@[@"开通会员", @"vip_shadow.png"],
-                @[@"QQ钱包", @"vip_shadow.png"],
+    _arData = @[@[@"帮助中心", @"vip_shadow.png"],
+                @[@"版本升级", @"vip_shadow.png"],
+                 @[@"关于", @"vip_shadow.png"],
+                 @[@"咨询", @"vip_shadow.png"]
             ];
     
   
@@ -103,7 +105,7 @@ NSArray *_arData;
     {
         case 1:
         {
-            MainViewController *themeVC = [[MainViewController alloc] init];
+            LoginViewController *themeVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
             [[SliderViewController sharedSliderController] closeSideBarWithAnimate:YES complete:^(BOOL finished)
              {
                  [[SliderViewController sharedSliderController].navigationController pushViewController:themeVC animated:YES];
