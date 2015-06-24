@@ -19,6 +19,7 @@
 		1841DB281B39B10800255BBB /* money.png in Resources */ = {isa = PBXBuildFile; fileRef = 1841DB251B39B10800255BBB /* money.png */; };
 		1841DB291B39B10800255BBB /* query.png in Resources */ = {isa = PBXBuildFile; fileRef = 1841DB261B39B10800255BBB /* query.png */; };
 		5A1E70F01B32C61B006F64D8 /* FindPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1E70EF1B32C61B006F64D8 /* FindPwdViewController.xib */; };
+		5A5084D91B3A95DD0001450E /* OrderFormDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5084D81B3A95DD0001450E /* OrderFormDetailViewController.xib */; };
 		5A6C911A1B391E2D0064A7D9 /* FirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C91181B391E2D0064A7D9 /* FirstPageViewController.m */; };
 		5A6C911B1B391E2D0064A7D9 /* FirstPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C91191B391E2D0064A7D9 /* FirstPageViewController.xib */; };
 		5A6C911F1B391F5E0064A7D9 /* FirstPageHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C911D1B391F5E0064A7D9 /* FirstPageHeadView.m */; };
@@ -51,7 +52,6 @@
 		5AD4A10A1B2FDE9100394D6B /* PublicFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A67736F1B1710FB002541BE /* PublicFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5AD62B451B3A39D2006F609A /* RespondParam0040.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD62B441B3A39D2006F609A /* RespondParam0040.m */; };
 		5AD62B4F1B3A4EE0006F609A /* OrderFormDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD62B471B3A4EE0006F609A /* OrderFormDetailViewController.m */; };
-		5AD62B501B3A4EE0006F609A /* OrderFormDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD62B481B3A4EE0006F609A /* OrderFormDetailViewController.xib */; };
 		5AD62B511B3A4EE0006F609A /* RespondParam0041.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD62B4A1B3A4EE0006F609A /* RespondParam0041.m */; };
 		5AD62B521B3A4EE0006F609A /* RespondParam0042.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD62B4C1B3A4EE0006F609A /* RespondParam0042.m */; };
 		5AD62B531B3A4EE0006F609A /* RespondParam0043.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD62B4E1B3A4EE0006F609A /* RespondParam0043.m */; };
@@ -157,6 +157,7 @@
 		1841DB251B39B10800255BBB /* money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money.png; sourceTree = "<group>"; };
 		1841DB261B39B10800255BBB /* query.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = query.png; sourceTree = "<group>"; };
 		5A1E70EF1B32C61B006F64D8 /* FindPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindPwdViewController.xib; sourceTree = "<group>"; };
+		5A5084D81B3A95DD0001450E /* OrderFormDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderFormDetailViewController.xib; sourceTree = "<group>"; };
 		5A6773691B1710FB002541BE /* PublicFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PublicFramework.xcodeproj; path = PublicFramework/PublicFramework.xcodeproj; sourceTree = "<group>"; };
 		5A6C91171B391E2D0064A7D9 /* FirstPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPageViewController.h; sourceTree = "<group>"; };
 		5A6C91181B391E2D0064A7D9 /* FirstPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageViewController.m; sourceTree = "<group>"; };
@@ -199,7 +200,6 @@
 		5AD62B441B3A39D2006F609A /* RespondParam0040.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0040.m; sourceTree = "<group>"; };
 		5AD62B461B3A4EE0006F609A /* OrderFormDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFormDetailViewController.h; sourceTree = "<group>"; };
 		5AD62B471B3A4EE0006F609A /* OrderFormDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFormDetailViewController.m; sourceTree = "<group>"; };
-		5AD62B481B3A4EE0006F609A /* OrderFormDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderFormDetailViewController.xib; sourceTree = "<group>"; };
 		5AD62B491B3A4EE0006F609A /* RespondParam0041.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0041.h; sourceTree = "<group>"; };
 		5AD62B4A1B3A4EE0006F609A /* RespondParam0041.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0041.m; sourceTree = "<group>"; };
 		5AD62B4B1B3A4EE0006F609A /* RespondParam0042.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0042.h; sourceTree = "<group>"; };
@@ -323,7 +323,6 @@
 			children = (
 				5AD62B461B3A4EE0006F609A /* OrderFormDetailViewController.h */,
 				5AD62B471B3A4EE0006F609A /* OrderFormDetailViewController.m */,
-				5AD62B481B3A4EE0006F609A /* OrderFormDetailViewController.xib */,
 				5AD62B491B3A4EE0006F609A /* RespondParam0041.h */,
 				5AD62B4A1B3A4EE0006F609A /* RespondParam0041.m */,
 				5AD62B4B1B3A4EE0006F609A /* RespondParam0042.h */,
@@ -338,6 +337,7 @@
 				1841DB191B39B07D00255BBB /* OrderFormListViewController.h */,
 				1841DB1A1B39B07D00255BBB /* OrderFormListViewController.m */,
 				1841DB1B1B39B07D00255BBB /* OrderFormListViewController.xib */,
+				5A5084D81B3A95DD0001450E /* OrderFormDetailViewController.xib */,
 			);
 			path = orderForm;
 			sourceTree = "<group>";
@@ -690,7 +690,6 @@
 				5ACFDD391B33F77A0007FE18 /* right.png in Resources */,
 				5A6C91251B391FFB0064A7D9 /* FirstPageTableViewCell.xib in Resources */,
 				183B309B1B36A13C0028FFA3 /* tab_me_press@2x.png in Resources */,
-				5AD62B501B3A4EE0006F609A /* OrderFormDetailViewController.xib in Resources */,
 				5AD863B31B2E72D100312C89 /* vip_shadow@2x.png in Resources */,
 				5AD863AF1B2E607400312C89 /* sidebar_bg@2x.jpg in Resources */,
 				5AD8B1871B311E0000C9806A /* MainViewController.xib in Resources */,
@@ -713,6 +712,7 @@
 				5ACFDD2F1B33F77A0007FE18 /* diyorderformpic.png in Resources */,
 				5ACFDD311B33F77A0007FE18 /* mybackmoneypic.png in Resources */,
 				5A6C91201B391F5E0064A7D9 /* FirstPageHeadView.xib in Resources */,
+				5A5084D91B3A95DD0001450E /* OrderFormDetailViewController.xib in Resources */,
 				5AD6E8911B32570900A71C07 /* RegistViewController.xib in Resources */,
 				5AD657521B033C97005AF1DF /* Images.xcassets in Resources */,
 				5ACFDD351B33F77A0007FE18 /* myomplainpic.png in Resources */,

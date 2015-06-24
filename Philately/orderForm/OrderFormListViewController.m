@@ -100,24 +100,24 @@ static NSString *CellIdentifier = @"OrderFormListTableViewCell";
     {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"OrderFormListTableViewCell" owner:self options:nil] lastObject];
     }
-    //订单号
-    cell.orderFormNumTitleTextView.text= [listData objectAtIndex:indexPath.row].orderFormNumTitleTextView;
-    //7899898
-    cell.orderFormNumValueTextView.text= [listData objectAtIndex:indexPath.row].orderFormNumValueTextView;
-    //订单金额
-    cell.orderFormMoneyTitleTextView.text= [listData objectAtIndex:indexPath.row].orderFormMoneyTitleTextView;
-    //money
-    [cell.moneyImageView setImageWithURL:[NSURL URLWithString:[listData objectAtIndex:indexPath.row].moneyImageView placeholderImage:[UIImage imageNamed:@"default.jpg"]];
-     //243
-     cell.orderFormMoneyValueTextView.text= [listData objectAtIndex:indexPath.row].orderFormMoneyValueTextView;
-     //下单时间
-     cell.orderFormTimeTitleTextView.text= [listData objectAtIndex:indexPath.row].orderFormTimeTitleTextView;
-     //23434343
-     cell.orderFormTimeTextView.text= [listData objectAtIndex:indexPath.row].orderFormTimeTextView;
-     //订单状态
-     cell.orderFormStatteTitleTextView.text= [listData objectAtIndex:indexPath.row].orderFormStatteTitleTextView;
-     //等待支付
-     cell.orderFormStateValueTextView.text= [listData objectAtIndex:indexPath.row].orderFormStateValueTextView;
+//    //订单号
+//    cell.orderFormNumTitleTextView.text= [listData objectAtIndex:indexPath.row].orderFormNumTitleTextView;
+//    //7899898
+//    cell.orderFormNumValueTextView.text= [listData objectAtIndex:indexPath.row].orderFormNumValueTextView;
+//    //订单金额
+//    cell.orderFormMoneyTitleTextView.text= [listData objectAtIndex:indexPath.row].orderFormMoneyTitleTextView;
+//    //money
+//    [cell.moneyImageView setImageWithURL:[NSURL URLWithString:[listData objectAtIndex:indexPath.row].moneyImageView placeholderImage:[UIImage imageNamed:@"default.jpg"]];
+//     //243
+//     cell.orderFormMoneyValueTextView.text= [listData objectAtIndex:indexPath.row].orderFormMoneyValueTextView;
+//     //下单时间
+//     cell.orderFormTimeTitleTextView.text= [listData objectAtIndex:indexPath.row].orderFormTimeTitleTextView;
+//     //23434343
+//     cell.orderFormTimeTextView.text= [listData objectAtIndex:indexPath.row].orderFormTimeTextView;
+//     //订单状态
+//     cell.orderFormStatteTitleTextView.text= [listData objectAtIndex:indexPath.row].orderFormStatteTitleTextView;
+//     //等待支付
+//     cell.orderFormStateValueTextView.text= [listData objectAtIndex:indexPath.row].orderFormStateValueTextView;
      return cell;
      
      }
@@ -234,71 +234,71 @@ static NSString *CellIdentifier = @"OrderFormListTableViewCell";
                      [businessparam setValue:@"" forKey:@"startDate"];
                  }
                  
-                 [serviceInvoker callWebservice:businessparam formName:n0040 ];
-                 NSString *baseUrl=@"http://localhost:8080/Serlet/Serverlet0040?parameter=";
-                 NSString *fullUrl = [baseUrl stringByAppendingString:[businessparam JSONString]];
-                 NSURL *url = [NSURL URLWithString:[fullUrl stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
-                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-                 [request setHTTPMethod:@"GET"];
-                 [request setTimeoutInterval:30.0];
-                 
-                 NSOperationQueue *queue = [[NSOperationQueue alloc]init];
-                 [NSURLConnection sendAsynchronousRequest:request
-                                                    queue:queue
-                                        completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
-                                            if (error) {
-                                                NSLog(@"Httperror:%@%d", error.localizedDescription,error.code);
-                                            }else{
-                                                
-                                                NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
-                                                
-                                                NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                                
-                                                NSLog(@"HttpResponseCode:%d", responseCode);
-                                                NSLog(@"HttpResponseBody %@",responseString);
-                                                dispatch_async(dispatch_get_main_queue(), ^{
-                                                    [self.tableView reloadData];
-                                                });
-                                            }
-                                        }];
-                 }
-                 
-                 @end
-                 
-                 
-                 
-                 NSMutableArray *listData=[[NSMutableArray alloc]init];
-              /*订单查询0040*/
-                 if ([requestCode isEqualToString:n0040]){
-                     NSDictionary *returnData=[root objectForKey:@"returnData"];
-                     NSDictionary *returnHead=[returnData objectForKey:@"returnHead"];
-                     NSString *respDesc=[returnHead objectForKey:@"respDesc"];
-                     NSString *respCode=[returnHead objectForKey:@"respCode"];
-                     NSDictionary *returnBody=[returnData objectForKey:@"returnBody"];
-                     RespondParam0040 *commonItem=[[RespondParam0040alloc]init];
-                     /* 最大记录数 备注:*/
-                     commonItem.totalNum=[returnDataBody objectForKey:@"totalNum"];
-                     /* 返回的记录数 备注:循环域开始*/
-                     commonItem.recordNum=[returnDataBody objectForKey:@"recordNum"];
-                     /* 订单号 备注:*/
-                     commonItem.orderNo=[returnDataBody objectForKey:@"orderNo"];
-                     /* 业务代号 备注:*/
-                     commonItem.busiNo=[returnDataBody objectForKey:@"busiNo"];
-                     /* 订单总金额 备注:*/
-                     commonItem.orderAmt=[returnDataBody objectForKey:@"orderAmt"];
-                     /* 下单日期 备注:格式:yyyymmdd*/
-                     commonItem.bookDate=[returnDataBody objectForKey:@"bookDate"];
-                     /* 支付状态 备注:*/
-                     commonItem.payStatus=[returnDataBody objectForKey:@"payStatus"];
-                     /* 处理状态 备注:*/
-                     commonItem.dealStatus=[returnDataBody objectForKey:@"dealStatus"];
-                     /* 渠道代号 备注:*/
-                     commonItem.channelNo=[returnDataBody objectForKey:@"channelNo"];
-                     /* 返回的记录数 备注:循环域结束*/
-                     commonItem.recordNum=[returnDataBody objectForKey:@"recordNum"];
-                 }
-                 
-                 
+//                 [serviceInvoker callWebservice:businessparam formName:n0040 ];
+//                 NSString *baseUrl=@"http://localhost:8080/Serlet/Serverlet0040?parameter=";
+//                 NSString *fullUrl = [baseUrl stringByAppendingString:[businessparam JSONString]];
+//                 NSURL *url = [NSURL URLWithString:[fullUrl stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
+//                 NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+//                 [request setHTTPMethod:@"GET"];
+//                 [request setTimeoutInterval:30.0];
+//                 
+//                 NSOperationQueue *queue = [[NSOperationQueue alloc]init];
+//                 [NSURLConnection sendAsynchronousRequest:request
+//                                                    queue:queue
+//                                        completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
+//                                            if (error) {
+//                                                NSLog(@"Httperror:%@%d", error.localizedDescription,error.code);
+//                                            }else{
+//                                                
+//                                                NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
+//                                                
+//                                                NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//                                                
+//                                                NSLog(@"HttpResponseCode:%d", responseCode);
+//                                                NSLog(@"HttpResponseBody %@",responseString);
+//                                                dispatch_async(dispatch_get_main_queue(), ^{
+//                                                    [self.tableView reloadData];
+//                                                });
+//                                            }
+//                                        }];
+//                 }
+//                 
+//                 @end
+//                 
+//                 
+//                 
+//                 NSMutableArray *listData=[[NSMutableArray alloc]init];
+//              /*订单查询0040*/
+//                 if ([requestCode isEqualToString:n0040]){
+//                     NSDictionary *returnData=[root objectForKey:@"returnData"];
+//                     NSDictionary *returnHead=[returnData objectForKey:@"returnHead"];
+//                     NSString *respDesc=[returnHead objectForKey:@"respDesc"];
+//                     NSString *respCode=[returnHead objectForKey:@"respCode"];
+//                     NSDictionary *returnBody=[returnData objectForKey:@"returnBody"];
+//                     RespondParam0040 *commonItem=[[RespondParam0040alloc]init];
+//                     /* 最大记录数 备注:*/
+//                     commonItem.totalNum=[returnDataBody objectForKey:@"totalNum"];
+//                     /* 返回的记录数 备注:循环域开始*/
+//                     commonItem.recordNum=[returnDataBody objectForKey:@"recordNum"];
+//                     /* 订单号 备注:*/
+//                     commonItem.orderNo=[returnDataBody objectForKey:@"orderNo"];
+//                     /* 业务代号 备注:*/
+//                     commonItem.busiNo=[returnDataBody objectForKey:@"busiNo"];
+//                     /* 订单总金额 备注:*/
+//                     commonItem.orderAmt=[returnDataBody objectForKey:@"orderAmt"];
+//                     /* 下单日期 备注:格式:yyyymmdd*/
+//                     commonItem.bookDate=[returnDataBody objectForKey:@"bookDate"];
+//                     /* 支付状态 备注:*/
+//                     commonItem.payStatus=[returnDataBody objectForKey:@"payStatus"];
+//                     /* 处理状态 备注:*/
+//                     commonItem.dealStatus=[returnDataBody objectForKey:@"dealStatus"];
+//                     /* 渠道代号 备注:*/
+//                     commonItem.channelNo=[returnDataBody objectForKey:@"channelNo"];
+//                     /* 返回的记录数 备注:循环域结束*/
+//                     commonItem.recordNum=[returnDataBody objectForKey:@"recordNum"];
+//                 }
+//                 
+              
                  
                  
                  
