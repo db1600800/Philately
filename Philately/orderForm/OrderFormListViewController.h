@@ -7,7 +7,7 @@
 //list
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableDictionary *cacheCells;
- NSMutableArray *sectionAZDicArray;
+ //NSMutableArray *sectionAZDicArray;
 //back
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 //新邮预订订单

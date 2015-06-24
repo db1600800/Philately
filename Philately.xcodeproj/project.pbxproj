@@ -15,7 +15,6 @@
 		1841DB1F1B39B07D00255BBB /* OrderFormListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1841DB181B39B07D00255BBB /* OrderFormListTableViewCell.xib */; };
 		1841DB201B39B07D00255BBB /* OrderFormListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1841DB1A1B39B07D00255BBB /* OrderFormListViewController.m */; };
 		1841DB211B39B07D00255BBB /* OrderFormListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1841DB1B1B39B07D00255BBB /* OrderFormListViewController.xib */; };
-		1841DB221B39B07D00255BBB /* RespondParam0040.m in Sources */ = {isa = PBXBuildFile; fileRef = 1841DB1D1B39B07D00255BBB /* RespondParam0040.m */; };
 		1841DB271B39B10800255BBB /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1841DB241B39B10800255BBB /* down.png */; };
 		1841DB281B39B10800255BBB /* money.png in Resources */ = {isa = PBXBuildFile; fileRef = 1841DB251B39B10800255BBB /* money.png */; };
 		1841DB291B39B10800255BBB /* query.png in Resources */ = {isa = PBXBuildFile; fileRef = 1841DB261B39B10800255BBB /* query.png */; };
@@ -50,6 +49,12 @@
 		5AD3499B1B252EB0001775D4 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD3499A1B252EB0001775D4 /* 8.jpg */; };
 		5AD4A1091B2FDE9100394D6B /* PublicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A67736F1B1710FB002541BE /* PublicFramework.framework */; };
 		5AD4A10A1B2FDE9100394D6B /* PublicFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A67736F1B1710FB002541BE /* PublicFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5AD62B451B3A39D2006F609A /* RespondParam0040.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD62B441B3A39D2006F609A /* RespondParam0040.m */; };
+		5AD62B4F1B3A4EE0006F609A /* OrderFormDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD62B471B3A4EE0006F609A /* OrderFormDetailViewController.m */; };
+		5AD62B501B3A4EE0006F609A /* OrderFormDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD62B481B3A4EE0006F609A /* OrderFormDetailViewController.xib */; };
+		5AD62B511B3A4EE0006F609A /* RespondParam0041.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD62B4A1B3A4EE0006F609A /* RespondParam0041.m */; };
+		5AD62B521B3A4EE0006F609A /* RespondParam0042.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD62B4C1B3A4EE0006F609A /* RespondParam0042.m */; };
+		5AD62B531B3A4EE0006F609A /* RespondParam0043.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD62B4E1B3A4EE0006F609A /* RespondParam0043.m */; };
 		5AD657441B033C97005AF1DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD657431B033C97005AF1DF /* main.m */; };
 		5AD657471B033C97005AF1DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD657461B033C97005AF1DF /* AppDelegate.m */; };
 		5AD6574A1B033C97005AF1DF /* PublicLibUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AD657481B033C97005AF1DF /* PublicLibUI.xcdatamodeld */; };
@@ -148,8 +153,6 @@
 		1841DB191B39B07D00255BBB /* OrderFormListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFormListViewController.h; sourceTree = "<group>"; };
 		1841DB1A1B39B07D00255BBB /* OrderFormListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFormListViewController.m; sourceTree = "<group>"; };
 		1841DB1B1B39B07D00255BBB /* OrderFormListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderFormListViewController.xib; sourceTree = "<group>"; };
-		1841DB1C1B39B07D00255BBB /* RespondParam0040.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0040.h; sourceTree = "<group>"; };
-		1841DB1D1B39B07D00255BBB /* RespondParam0040.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0040.m; sourceTree = "<group>"; };
 		1841DB241B39B10800255BBB /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
 		1841DB251B39B10800255BBB /* money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money.png; sourceTree = "<group>"; };
 		1841DB261B39B10800255BBB /* query.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = query.png; sourceTree = "<group>"; };
@@ -192,6 +195,17 @@
 		5ACFDD2D1B33F77A0007FE18 /* retailorderformpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retailorderformpic.png; sourceTree = "<group>"; };
 		5ACFDD2E1B33F77A0007FE18 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
 		5AD3499A1B252EB0001775D4 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		5AD62B431B3A39D2006F609A /* RespondParam0040.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0040.h; sourceTree = "<group>"; };
+		5AD62B441B3A39D2006F609A /* RespondParam0040.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0040.m; sourceTree = "<group>"; };
+		5AD62B461B3A4EE0006F609A /* OrderFormDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFormDetailViewController.h; sourceTree = "<group>"; };
+		5AD62B471B3A4EE0006F609A /* OrderFormDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFormDetailViewController.m; sourceTree = "<group>"; };
+		5AD62B481B3A4EE0006F609A /* OrderFormDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderFormDetailViewController.xib; sourceTree = "<group>"; };
+		5AD62B491B3A4EE0006F609A /* RespondParam0041.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0041.h; sourceTree = "<group>"; };
+		5AD62B4A1B3A4EE0006F609A /* RespondParam0041.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0041.m; sourceTree = "<group>"; };
+		5AD62B4B1B3A4EE0006F609A /* RespondParam0042.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0042.h; sourceTree = "<group>"; };
+		5AD62B4C1B3A4EE0006F609A /* RespondParam0042.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0042.m; sourceTree = "<group>"; };
+		5AD62B4D1B3A4EE0006F609A /* RespondParam0043.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0043.h; sourceTree = "<group>"; };
+		5AD62B4E1B3A4EE0006F609A /* RespondParam0043.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0043.m; sourceTree = "<group>"; };
 		5AD6573E1B033C97005AF1DF /* Philately.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Philately.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD657421B033C97005AF1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD657431B033C97005AF1DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -307,14 +321,23 @@
 		1841DB151B39B07D00255BBB /* orderForm */ = {
 			isa = PBXGroup;
 			children = (
+				5AD62B461B3A4EE0006F609A /* OrderFormDetailViewController.h */,
+				5AD62B471B3A4EE0006F609A /* OrderFormDetailViewController.m */,
+				5AD62B481B3A4EE0006F609A /* OrderFormDetailViewController.xib */,
+				5AD62B491B3A4EE0006F609A /* RespondParam0041.h */,
+				5AD62B4A1B3A4EE0006F609A /* RespondParam0041.m */,
+				5AD62B4B1B3A4EE0006F609A /* RespondParam0042.h */,
+				5AD62B4C1B3A4EE0006F609A /* RespondParam0042.m */,
+				5AD62B4D1B3A4EE0006F609A /* RespondParam0043.h */,
+				5AD62B4E1B3A4EE0006F609A /* RespondParam0043.m */,
+				5AD62B431B3A39D2006F609A /* RespondParam0040.h */,
+				5AD62B441B3A39D2006F609A /* RespondParam0040.m */,
 				1841DB161B39B07D00255BBB /* OrderFormListTableViewCell.h */,
 				1841DB171B39B07D00255BBB /* OrderFormListTableViewCell.m */,
 				1841DB181B39B07D00255BBB /* OrderFormListTableViewCell.xib */,
 				1841DB191B39B07D00255BBB /* OrderFormListViewController.h */,
 				1841DB1A1B39B07D00255BBB /* OrderFormListViewController.m */,
 				1841DB1B1B39B07D00255BBB /* OrderFormListViewController.xib */,
-				1841DB1C1B39B07D00255BBB /* RespondParam0040.h */,
-				1841DB1D1B39B07D00255BBB /* RespondParam0040.m */,
 			);
 			path = orderForm;
 			sourceTree = "<group>";
@@ -667,6 +690,7 @@
 				5ACFDD391B33F77A0007FE18 /* right.png in Resources */,
 				5A6C91251B391FFB0064A7D9 /* FirstPageTableViewCell.xib in Resources */,
 				183B309B1B36A13C0028FFA3 /* tab_me_press@2x.png in Resources */,
+				5AD62B501B3A4EE0006F609A /* OrderFormDetailViewController.xib in Resources */,
 				5AD863B31B2E72D100312C89 /* vip_shadow@2x.png in Resources */,
 				5AD863AF1B2E607400312C89 /* sidebar_bg@2x.jpg in Resources */,
 				5AD8B1871B311E0000C9806A /* MainViewController.xib in Resources */,
@@ -717,6 +741,7 @@
 				5A6C91241B391FFB0064A7D9 /* FirstPageTableViewCell.m in Sources */,
 				5ACFDD171B33BFB00007FE18 /* UpdatePwdViewController.m in Sources */,
 				5AD8B1831B311E0000C9806A /* VCPhotoScrollShow.m in Sources */,
+				5AD62B531B3A4EE0006F609A /* RespondParam0043.m in Sources */,
 				5AD8B17C1B311E0000C9806A /* SDImageCache.m in Sources */,
 				5A91BD021B32ADE800954BA9 /* FindPwdViewController.m in Sources */,
 				5A6C911F1B391F5E0064A7D9 /* FirstPageHeadView.m in Sources */,
@@ -727,6 +752,7 @@
 				5ACFDD1B1B33C1390007FE18 /* RespondParam0006.m in Sources */,
 				5AD8B1801B311E0000C9806A /* SDWebImagePrefetcher.m in Sources */,
 				5AD8B18A1B311E0000C9806A /* UIViewController+MLTransition.m in Sources */,
+				5AD62B511B3A4EE0006F609A /* RespondParam0041.m in Sources */,
 				1841DB1E1B39B07D00255BBB /* OrderFormListTableViewCell.m in Sources */,
 				5AD8B17E1B311E0000C9806A /* SDWebImageDownloader.m in Sources */,
 				5AD8B18F1B311EA600C9806A /* TranMsgHandle.m in Sources */,
@@ -744,13 +770,15 @@
 				5AD8B18B1B311E0000C9806A /* SliderViewController.m in Sources */,
 				1841DB201B39B07D00255BBB /* OrderFormListViewController.m in Sources */,
 				5AD8B1881B311E0000C9806A /* MLBlackTransition.m in Sources */,
+				5AD62B521B3A4EE0006F609A /* RespondParam0042.m in Sources */,
 				5AD8B1891B311E0000C9806A /* MLTransitionAnimation.m in Sources */,
 				5AD8B1861B311E0000C9806A /* MainViewController.m in Sources */,
 				1840B5F91B31C16500830235 /* WelcomeViewController.m in Sources */,
 				5AD8B17F1B311E0000C9806A /* SDWebImageManager.m in Sources */,
 				5AD8B17B1B311E0000C9806A /* README.md in Sources */,
 				5AD8B1841B311E0000C9806A /* LeftViewController.m in Sources */,
-				1841DB221B39B07D00255BBB /* RespondParam0040.m in Sources */,
+				5AD62B451B3A39D2006F609A /* RespondParam0040.m in Sources */,
+				5AD62B4F1B3A4EE0006F609A /* OrderFormDetailViewController.m in Sources */,
 				5AC19E7E1B30201E00B8FA31 /* LoginViewController.m in Sources */,
 				5AD8B1951B31200C00C9806A /* TermTypeInfo.m in Sources */,
 			);
