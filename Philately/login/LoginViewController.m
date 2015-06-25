@@ -7,6 +7,7 @@
 #import <PublicFramework/JSONKit.h>
 #import "StampTranCall.h"
 #import "SliderViewController.h"
+#import "PromptError.h"
 @implementation LoginViewController
 //back
 @synthesize backImageView;
@@ -47,6 +48,9 @@ StampTranCall *stampTranCall;
     
     UITapGestureRecognizer *loginButtonTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loginButtonHandTap)];
     [loginButton addGestureRecognizer:loginButtonTap];
+    
+    UITapGestureRecognizer *codeButtonTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapToGenerateCode)];
+    [codePicImageView addGestureRecognizer:codeButtonTap];
     
 }
 
@@ -98,5 +102,66 @@ StampTranCall *stampTranCall;
     
 }
 
+
+
+- (void)onTapToGenerateCode {
+    
+    
+
+    float red = arc4random() % 100 / 100.0;
+    float green = arc4random() % 100 / 100.0;
+    float blue = arc4random() % 100 / 100.0;
+    UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:0.2];
+    [self.codePicImageView setBackgroundColor:color];
+    // @} end 生成背景色
+//
+    // @{
+    // @name 生成文字
+    const int count = 5;
+    char data[count];
+    for (int x = 0; x < count; x++) {
+        int j = '0' + (arc4random_uniform(75));
+        if((j >= 58 && j <= 64) || (j >= 91 && j <= 96)){
+            --x;
+        }else{
+            data[x] = (char)j;
+        }
+    }
+    NSString *text = [[NSString alloc] initWithBytes:data
+                                              length:count encoding:NSUTF8StringEncoding];
+      validateCode= text;
+  
+    
+       [self.codePicImageView setText:validateCode];
+}
+
+
+
+- (IBAction)backgroud:(id)sender {
+    // 发送resignFirstResponder.
+    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
+}
+
+- (IBAction)username:(id)sender {
+    
+    [pwdValueEditText becomeFirstResponder];
+    
+    
+}
+
+- (IBAction)pwd:(id)sender {
+    
+    [codeValueEditText becomeFirstResponder];
+    [self onTapToGenerateCode ];
+}
+
+- (IBAction)code:(id)sender {
+    [loginButton becomeFirstResponder];
+    if([self.codeValueEditText.text isEqualToString:validateCode])
+    {
+        [PromptError toast:nil errorMSg:@"请输入验证码"];
+    }
+    
+}
 @end
 

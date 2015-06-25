@@ -14,7 +14,7 @@
 #import <CoreGraphics/CGAffineTransform.h>
 #import "MLBlackTransition.h"
 
-
+#import "PromptError.h"
 @interface WelcomeViewController ()
 
 @end
@@ -26,7 +26,7 @@ ServiceInvoker *serviceInvoker;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
+    [PromptError prompt];
     
 
        serviceInvoker=[[ServiceInvoker alloc]init];

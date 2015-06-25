@@ -6,6 +6,9 @@
 #import "StampTranCall.h"
 
 @interface LoginViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,StampTranCallDelegate>
+{
+    NSString *validateCode;
+}
 //back
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 //用户登录
@@ -25,10 +28,18 @@
 //请输入验证码
 @property (weak, nonatomic) IBOutlet UITextField *codeValueEditText;
 //codePic
-@property (weak, nonatomic) IBOutlet UIImageView *codePicImageView;
+@property (weak, nonatomic) IBOutlet UILabel *codePicImageView;
 //忘记密码
+
 @property (weak, nonatomic) IBOutlet UIButton *forgetPwdButton;
 //登录
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+
+- (IBAction)backgroud:(id)sender;
+
+- (IBAction)username:(id)sender;
+- (IBAction)pwd:(id)sender;
+- (IBAction)code:(id)sender;
+
 @end
 

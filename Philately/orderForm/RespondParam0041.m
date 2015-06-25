@@ -17,7 +17,8 @@
 @synthesize payStatus;
 /* 处理状态 备注:*/
 @synthesize dealStatus;
-/* 配送方式 备注:自提方式：自提网点代号 、自提码生效；寄递方式：收件人信息 生效*/
+/* 配送方式 备注:自提方式：自提网点代号 、自提码生效；
+寄递方式：收件人信息 生效*/
 @synthesize shipType;
 /* 自提网点代号 备注:*/
 @synthesize brchNo;
@@ -92,7 +93,7 @@
 /* 配送费用 备注:*/
 @synthesize subShipFee;
 /* 子订单数量 备注:循环域结束*/
-@synthesize subOrderNum;
+//@synthesize subOrderNum;
 /* 子订单号 备注:*/
 @synthesize subOrderNo2;
 /* 处理时间 备注:yymmddhhmmss*/

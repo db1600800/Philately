@@ -11,7 +11,7 @@
 //业务类型:
 @property (weak, nonatomic) IBOutlet UILabel *businessTypeValueTextView;
 //新邮预订
-@property (weak, nonatomic) IBOutlet UILabel *businessTypeValueTextView;
+@property (weak, nonatomic) IBOutlet UILabel *businessTypeTitleTextView;
 //订单号:
 @property (weak, nonatomic) IBOutlet UILabel *orderNoTitleTextView;
 //1343434
