@@ -194,9 +194,9 @@ cell.productNameTextView.text= ((RespondParam0032*)[listData objectAtIndex:index
 return size.height+1;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 88;
-}
+//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return 88;
+//}
 
 //点击后，过段时间cell自动取消选中
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
