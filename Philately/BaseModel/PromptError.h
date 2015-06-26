@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <PublicFramework/ErrorMsg.h>
 @interface PromptError : NSObject
 
-+(void) prompt;
++(void) changeShowErrorMsg:(ErrorMsg*)errorMsg title:(NSString*)title;
 +(void) toast:(NSString*)errorCode errorMSg:(NSString*)errorMsg;
 @end

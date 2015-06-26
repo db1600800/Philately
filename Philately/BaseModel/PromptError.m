@@ -11,7 +11,7 @@
 #import "Sql.h"
 @implementation PromptError
 
-+(void) prompt
++(void) changeShowErrorMsg:(ErrorMsg*)errorMsg title:(NSString*)title;
 {
     
     Sql *sql=[[Sql alloc] init];

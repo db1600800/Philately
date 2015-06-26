@@ -26,7 +26,7 @@ ServiceInvoker *serviceInvoker;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [PromptError prompt];
+    [PromptError changeShowErrorMsg:nil title:nil];
     
 
        serviceInvoker=[[ServiceInvoker alloc]init];

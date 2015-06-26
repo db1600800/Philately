@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import  "UpdatePwdViewController.h"
 #import "FirstPageViewController.h"
+#import "OrderFormDetailViewController.h"
 @interface MainViewController ()
 
 @end
@@ -18,6 +19,7 @@ ServiceInvoker *serviceInvoker;
 UpdatePwdViewController *updatePwdViewController;
 LoginViewController *loginViewController;
 FirstPageViewController *firstPageViewController;
+OrderFormDetailViewController *orderFormDetailViewController;
 @implementation MainViewController
 
 - (void)viewDidLoad {
@@ -39,9 +41,10 @@ FirstPageViewController *firstPageViewController;
     
        updatePwdViewController = [[UpdatePwdViewController alloc]initWithNibName:@"UpdatePwdViewController" bundle:nil];
     
+      orderFormDetailViewController = [[OrderFormDetailViewController alloc] initWithNibName:@"OrderFormDetailViewController" bundle:nil];
 
     
-      _tabC.viewControllers = @[firstPageViewController,updatePwdViewController,menberMainViewController];
+      _tabC.viewControllers = @[firstPageViewController,orderFormDetailViewController,menberMainViewController];
     
     
      [self reloadImage];

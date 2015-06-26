@@ -9,7 +9,7 @@
 #import "LeftViewController.h"
 #import "SliderViewController.h"
 #import "MainViewController.h"
-//#import "OrderFormDetailViewController.h"
+#import "ShoppingCarViewController.h"
 @interface LeftViewController ()
 
 @end
@@ -107,12 +107,12 @@ NSArray *_arData;
         case 1:
         {
             LoginViewController *themeVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-//            OrderFormDetailViewController *orderFormDetailViewController = [[OrderFormDetailViewController alloc] initWithNibName:@"OrderFormDetailViewController" bundle:nil];
+            ShoppingCarViewController *orderFormDetailViewController = [[ShoppingCarViewController alloc] initWithNibName:@"ShoppingCarViewController" bundle:nil];
             
             [[SliderViewController sharedSliderController] closeSideBarWithAnimate:YES complete:^(BOOL finished)
              {
-                 //[[SliderViewController sharedSliderController].navigationController pushViewController:themeVC animated:YES];
-                 [self presentViewController:themeVC animated:NO completion:^{}];
+                 [[SliderViewController sharedSliderController].navigationController pushViewController:orderFormDetailViewController animated:YES];
+                 //[self presentViewController:orderFormDetailViewController animated:NO completion:^{}];
              }];
             break;
         }

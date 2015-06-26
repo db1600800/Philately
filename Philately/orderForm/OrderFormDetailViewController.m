@@ -11,73 +11,73 @@
 @synthesize backImageView;
 //订单详情
 @synthesize titleTextView;
-//业务类型:
-@synthesize businessTypeValueTextView;
-//新邮预订
+//业务类型
 @synthesize businessTypeTitleTextView;
+//新邮预订
+@synthesize businessTypeValueTextView;
 //订单号:
-@synthesize orderNoTitleTextView;
-//1343434
-@synthesize orderNoValueTextView;
+@synthesize orderFormNoTitleTextView;
+//13434
+@synthesize orderFormNoValueTextView;
 //订单状态
 @synthesize orderFormStateTitleTextView;
 //已支付
 @synthesize orderFromStateValueTextView;
 //下单时间
 @synthesize orderFormTimeTitleTextView;
-//201514
+//20150303
 @synthesize orderFormTimeValueTextView;
-//处理状态:
-@synthesize orderFormDealStateTitleTextView;
+//处理状态
+@synthesize dealStateTitleTextView;
 //未处理
-@synthesize orderFormDealStateValueTextView;
+@synthesize dealStateValueTextView;
 //已支付
-@synthesize alreadyPayTitleTextView;
-//233
-@synthesize alreadyPayValueTextView;
-//订单金额:
-@synthesize orderFormMoneyTitleTextView;
-//253
-@synthesize orderFormMoneyValueTextView;
-//补款:
+@synthesize aleadyPayTitleTextView;
+//233.00
+@synthesize aleadyPayValueTextView;
+//订单金额
+@synthesize totalMoneyTitleTextView;
+//253.00
+@synthesize totalMoneyValueTextView;
+//补款
 @synthesize needPayTitleTextView;
-//20
+//¥20
 @synthesize needPayValueTextView;
 //配送方式
 @synthesize deliverWayTitleTextView;
-//自提网点:
+//自提
 @synthesize deliverWayTextView;
-//广东省天河
+//广州市区
 @synthesize deliverWayAddressTextView;
 //收货人信息
 @synthesize receiverInfoTitleTextView;
-//广州市
-@synthesize receiverAddressTextView;
 //周小五
 @synthesize receiverNameTextView;
-//343243
+//158444399
 @synthesize receiverPhoneTextView;
+//广州市
+@synthesize receiverAddressTextView;
 //商品信息
-@synthesize productInfoTitleTextView;
-//容器
-@synthesize productContainerTextView;
+@synthesize productTitleTextView;
 //发票信息
-@synthesize invoiceInfoTitleTextView;
-//营销员号
-@synthesize salerNoTitleTextView;
-//222343
-@synthesize salerNoValueTextView;
+@synthesize invoiceInfoTextView;
 //个人发票
 @synthesize invoiceTypeTextView;
 //李四
 @synthesize invoiceUserNameTextView;
-//去补款20
-@synthesize needPayButton;
+//营销员号
+@synthesize salerNoTitleTextView;
+//3443
+@synthesize salerNoValueTextView;
+//去补款20元
+@synthesize gotoPayButton;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
   UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handTap)];
    // [self.modifyPwdTextView addGestureRecognizer:tap];
+    
+    self.scrollview.contentSize= CGSizeMake(320,610);
 }
 
 //-(void)handTap{
@@ -95,70 +95,68 @@
 //[backImageView setImageWithURL:[NSURL URLWithString:  placeholderImage:[UIImage imageNamed:@"default.jpg"]];
 ////订单详情
 //[titleTextView setValue:]
-////业务类型:
-//[businessTypeValueTextView setValue:]
+////业务类型
+//[businessTypeTitleTextView setValue:]
 ////新邮预订
 //[businessTypeValueTextView setValue:]
 ////订单号:
-//[orderNoTitleTextView setValue:]
-////1343434
-//[orderNoValueTextView setValue:]
+//[orderFormNoTitleTextView setValue:]
+////13434
+//[orderFormNoValueTextView setValue:]
 ////订单状态
 //[orderFormStateTitleTextView setValue:]
 ////已支付
 //[orderFromStateValueTextView setValue:]
 ////下单时间
 //[orderFormTimeTitleTextView setValue:]
-////201514
+////20150303
 //[orderFormTimeValueTextView setValue:]
-////处理状态:
-//[orderFormDealStateTitleTextView setValue:]
+////处理状态
+//[dealStateTitleTextView setValue:]
 ////未处理
-//[orderFormDealStateValueTextView setValue:]
+//[dealStateValueTextView setValue:]
 ////已支付
-//[alreadyPayTitleTextView setValue:]
-////233
-//[alreadyPayValueTextView setValue:]
-////订单金额:
-//[orderFormMoneyTitleTextView setValue:]
-////253
-//[orderFormMoneyValueTextView setValue:]
-////补款:
+//[aleadyPayTitleTextView setValue:]
+////233.00
+//[aleadyPayValueTextView setValue:]
+////订单金额
+//[totalMoneyTitleTextView setValue:]
+////253.00
+//[totalMoneyValueTextView setValue:]
+////补款
 //[needPayTitleTextView setValue:]
-////20
+////¥20
 //[needPayValueTextView setValue:]
 ////配送方式
 //[deliverWayTitleTextView setValue:]
-////自提网点:
+////自提
 //[deliverWayTextView setValue:]
-////广东省天河
+////广州市区
 //[deliverWayAddressTextView setValue:]
 ////收货人信息
 //[receiverInfoTitleTextView setValue:]
-////广州市
-//[receiverAddressTextView setValue:]
 ////周小五
 //[receiverNameTextView setValue:]
-////343243
+////158444399
 //[receiverPhoneTextView setValue:]
+////广州市
+//[receiverAddressTextView setValue:]
 ////商品信息
-//[productInfoTitleTextView setValue:]
-////容器
-//[productContainerTextView setValue:]
+//[productTitleTextView setValue:]
 ////发票信息
-//[invoiceInfoTitleTextView setValue:]
-////营销员号
-//[salerNoTitleTextView setValue:]
-////222343
-//[salerNoValueTextView setValue:]
+//[invoiceInfoTextView setValue:]
 ////个人发票
 //[invoiceTypeTextView setValue:]
 ////李四
 //[invoiceUserNameTextView setValue:]
+////营销员号
+//[salerNoTitleTextView setValue:]
+////3443
+//[salerNoValueTextView setValue:]
 }
 
 
-@end
+
 
 
 ///*订单详情0041*/
@@ -200,8 +198,8 @@
 //}
 //
 //
-
-
+//
+//
 ///*订单取消0042*/
 //NSString  *n0042=@"0042";
 ///*订单取消0042*/
@@ -280,11 +278,11 @@
 //                               }
 //                           }];
 //}
-//
-//@end
-//
-//
-//
+
+@end
+
+
+
 //NSMutableArray *listData=[[NSMutableArray alloc]init];
 ///*订单详情0041*/
 //if ([requestCode isEqualToString:n0041]){
@@ -446,6 +444,6 @@
 //NSDictionary *returnBody=[returnData objectForKey:@"returnBody"];
 //RespondParam0043 *commonItem=[[RespondParam0043alloc]init];
 //}
-
+//
 
 

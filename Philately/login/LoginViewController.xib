@@ -210,9 +210,9 @@
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="4Iz-y7-Awb"/>
                             <exclude reference="KoV-fu-84j"/>
                             <exclude reference="zkk-hw-Z2v"/>
+                            <exclude reference="4Iz-y7-Awb"/>
                         </mask>
                     </variation>
                     <variation key="widthClass=compact">
