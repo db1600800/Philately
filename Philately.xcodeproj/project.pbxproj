@@ -86,6 +86,14 @@
 		5AD657611B033C97005AF1DF /* PublicLibUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD657601B033C97005AF1DF /* PublicLibUITests.m */; };
 		5AD6E8901B32570900A71C07 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6E88E1B32570900A71C07 /* RegistViewController.m */; };
 		5AD6E8911B32570900A71C07 /* RegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6E88F1B32570900A71C07 /* RegistViewController.xib */; };
+		5AD77C0B1B3EA07C001D1BE9 /* RespondParam0027.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD77C041B3EA07C001D1BE9 /* RespondParam0027.m */; };
+		5AD77C0C1B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD77C061B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.m */; };
+		5AD77C0D1B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD77C071B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.xib */; };
+		5AD77C0E1B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD77C091B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.m */; };
+		5AD77C0F1B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD77C0A1B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.xib */; };
+		5AD77C131B3EA0A3001D1BE9 /* hotproduct.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD77C101B3EA0A3001D1BE9 /* hotproduct.png */; };
+		5AD77C141B3EA0A3001D1BE9 /* linehead.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD77C111B3EA0A3001D1BE9 /* linehead.png */; };
+		5AD77C151B3EA0A3001D1BE9 /* shoppingcarempty.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD77C121B3EA0A3001D1BE9 /* shoppingcarempty.png */; };
 		5AD863AF1B2E607400312C89 /* sidebar_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD863AE1B2E607400312C89 /* sidebar_bg@2x.jpg */; };
 		5AD863B11B2E65E500312C89 /* sidebar_bg_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD863B01B2E65E500312C89 /* sidebar_bg_mask@2x.png */; };
 		5AD863B31B2E72D100312C89 /* vip_shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD863B21B2E72D100312C89 /* vip_shadow@2x.png */; };
@@ -274,6 +282,17 @@
 		5AD6E88D1B32570900A71C07 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		5AD6E88E1B32570900A71C07 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		5AD6E88F1B32570900A71C07 /* RegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistViewController.xib; sourceTree = "<group>"; };
+		5AD77C031B3EA07C001D1BE9 /* RespondParam0027.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0027.h; sourceTree = "<group>"; };
+		5AD77C041B3EA07C001D1BE9 /* RespondParam0027.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0027.m; sourceTree = "<group>"; };
+		5AD77C051B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCarEmptyTableViewCell.h; sourceTree = "<group>"; };
+		5AD77C061B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarEmptyTableViewCell.m; sourceTree = "<group>"; };
+		5AD77C071B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingCarEmptyTableViewCell.xib; sourceTree = "<group>"; };
+		5AD77C081B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCarEmptyViewController.h; sourceTree = "<group>"; };
+		5AD77C091B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCarEmptyViewController.m; sourceTree = "<group>"; };
+		5AD77C0A1B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingCarEmptyViewController.xib; sourceTree = "<group>"; };
+		5AD77C101B3EA0A3001D1BE9 /* hotproduct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotproduct.png; sourceTree = "<group>"; };
+		5AD77C111B3EA0A3001D1BE9 /* linehead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linehead.png; sourceTree = "<group>"; };
+		5AD77C121B3EA0A3001D1BE9 /* shoppingcarempty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoppingcarempty.png; sourceTree = "<group>"; };
 		5AD8639C1B2E5C2800312C89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5AD863AE1B2E607400312C89 /* sidebar_bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sidebar_bg@2x.jpg"; sourceTree = "<group>"; };
 		5AD863B01B2E65E500312C89 /* sidebar_bg_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidebar_bg_mask@2x.png"; sourceTree = "<group>"; };
@@ -438,6 +457,14 @@
 		5AD342D21B3D4414008FFF19 /* shoppingcar */ = {
 			isa = PBXGroup;
 			children = (
+				5AD77C031B3EA07C001D1BE9 /* RespondParam0027.h */,
+				5AD77C041B3EA07C001D1BE9 /* RespondParam0027.m */,
+				5AD77C051B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.h */,
+				5AD77C061B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.m */,
+				5AD77C071B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.xib */,
+				5AD77C081B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.h */,
+				5AD77C091B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.m */,
+				5AD77C0A1B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.xib */,
 				5AD342E91B3D5020008FFF19 /* RespondParam0032.h */,
 				5AD342EA1B3D5020008FFF19 /* RespondParam0032.m */,
 				5AD342EB1B3D5020008FFF19 /* RespondParam0034.h */,
@@ -463,6 +490,9 @@
 		5AD349991B252EB0001775D4 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				5AD77C101B3EA0A3001D1BE9 /* hotproduct.png */,
+				5AD77C111B3EA0A3001D1BE9 /* linehead.png */,
+				5AD77C121B3EA0A3001D1BE9 /* shoppingcarempty.png */,
 				5AD342DD1B3D4470008FFF19 /* add.png */,
 				5AD342DE1B3D4470008FFF19 /* cancelx.png */,
 				5AD342DF1B3D4470008FFF19 /* firstpageheadline.png */,
@@ -779,10 +809,12 @@
 				5AD342DA1B3D4415008FFF19 /* ShoppingCarTableViewCell.xib in Resources */,
 				5AD342C91B3D2AC7008FFF19 /* OrderFormListTableViewCell.xib in Resources */,
 				5AD8B1851B311E0000C9806A /* LeftViewController.xib in Resources */,
+				5AD77C141B3EA0A3001D1BE9 /* linehead.png in Resources */,
 				183B309A1B36A13C0028FFA3 /* tab_me_nor@2x.png in Resources */,
 				5AD8B17A1B311E0000C9806A /* LICENSE in Resources */,
 				5ACFDD391B33F77A0007FE18 /* right.png in Resources */,
 				5AD342B61B3CE66F008FFF19 /* OrderFormDetailViewController.xib in Resources */,
+				5AD77C0F1B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.xib in Resources */,
 				5A6C91251B391FFB0064A7D9 /* FirstPageTableViewCell.xib in Resources */,
 				183B309B1B36A13C0028FFA3 /* tab_me_press@2x.png in Resources */,
 				5AD863B31B2E72D100312C89 /* vip_shadow@2x.png in Resources */,
@@ -798,6 +830,7 @@
 				5ACFDD181B33BFB00007FE18 /* UpdatePwdViewController.xib in Resources */,
 				1841DB271B39B10800255BBB /* down.png in Resources */,
 				5AD342E61B3D4470008FFF19 /* productpic.png in Resources */,
+				5AD77C0D1B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.xib in Resources */,
 				5ACFDD231B33F4BE0007FE18 /* MenberMainViewController.xib in Resources */,
 				1841DB291B39B10800255BBB /* query.png in Resources */,
 				5AD3499B1B252EB0001775D4 /* 8.jpg in Resources */,
@@ -807,9 +840,11 @@
 				5ACFDD1D1B33EB000007FE18 /* back.png in Resources */,
 				5ACFDD301B33F77A0007FE18 /* myaddresspic.png in Resources */,
 				5ACFDD341B33F77A0007FE18 /* mymessagepic.png in Resources */,
+				5AD77C131B3EA0A3001D1BE9 /* hotproduct.png in Resources */,
 				5AD342DC1B3D4415008FFF19 /* ShoppingCarViewController.xib in Resources */,
 				5AD342E71B3D4470008FFF19 /* reduce.png in Resources */,
 				5AD342F61B3D7093008FFF19 /* dddTableViewCell.xib in Resources */,
+				5AD77C151B3EA0A3001D1BE9 /* shoppingcarempty.png in Resources */,
 				5ACFDD2F1B33F77A0007FE18 /* diyorderformpic.png in Resources */,
 				5ACFDD311B33F77A0007FE18 /* mybackmoneypic.png in Resources */,
 				5A6C91201B391F5E0064A7D9 /* FirstPageHeadView.xib in Resources */,
@@ -868,6 +903,7 @@
 				5AD8B18C1B311E0000C9806A /* StampTranCall.m in Sources */,
 				5AD8B1921B311F5F00C9806A /* SysBaseInfo.m in Sources */,
 				5AD8B1811B311E0000C9806A /* UIButton+WebCache.m in Sources */,
+				5AD77C0B1B3EA07C001D1BE9 /* RespondParam0027.m in Sources */,
 				5AD6574A1B033C97005AF1DF /* PublicLibUI.xcdatamodeld in Sources */,
 				5AD8B19E1B3121CD00C9806A /* CstmMsg.m in Sources */,
 				5AD8B1A91B31618E00C9806A /* SVProgressHUD.m in Sources */,
@@ -879,9 +915,11 @@
 				5AD8B1881B311E0000C9806A /* MLBlackTransition.m in Sources */,
 				5AD342B81B3CE66F008FFF19 /* RespondParam0042.m in Sources */,
 				5AD342F51B3D7093008FFF19 /* dddTableViewCell.m in Sources */,
+				5AD77C0C1B3EA07C001D1BE9 /* ShoppingCarEmptyTableViewCell.m in Sources */,
 				5AD8B1891B311E0000C9806A /* MLTransitionAnimation.m in Sources */,
 				5AD342D91B3D4415008FFF19 /* ShoppingCarTableViewCell.m in Sources */,
 				5AD342FA1B3D70CA008FFF19 /* ffffViewController.m in Sources */,
+				5AD77C0E1B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.m in Sources */,
 				5AD8B1861B311E0000C9806A /* MainViewController.m in Sources */,
 				1840B5F91B31C16500830235 /* WelcomeViewController.m in Sources */,
 				5A73E14F1B3BD05D00BAFD78 /* OMGToast.m in Sources */,
