@@ -8,6 +8,7 @@
 #import <PublicFramework/JSONKit.h>
 #import "ShoppingCarTableViewCell.h"
 #import "RespondParam0032.h"
+#import <UIKit/NSStringDrawing.h>
 //注入table功能
  NSString *CellIdentifier = @"ShoppingCarTableViewCell";
 @implementation ShoppingCarViewController
@@ -56,13 +57,6 @@ NSMutableArray *listData;
 
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-//    
-//    NSMutableDictionary *sectionADic=[sectionAZDicArray objectAtIndex:section];  
-//    
-//    NSMutableDictionary *sectionHeaderDic=[sectionADic objectForKey:@"SectionHeaderDic"];
-//    
-//    NSString *title= [sectionHeaderDic objectForKey:@"title"];
-//    
 //    return title;
 //  
 //}
@@ -84,10 +78,7 @@ NSMutableArray *listData;
 
 //指定每个分区中有多少行，默认为1
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-   // NSMutableDictionary *sectionADic=[sectionAZDicArray objectAtIndex:section];
-    
-    //NSMutableArray *sectionChirldsArray=[sectionADic objectForKey:@"SectionChirldsArray"];
+ 
     
     return  [listData count];
     
@@ -103,6 +94,21 @@ NSMutableArray *listData;
     }
 //四方连限购
 cell.productNameTextView.text= ((RespondParam0032*)[listData objectAtIndex:indexPath.row]).shoppingCartID;
+
+    
+
+    
+    cell.checkOneButton.tag=(indexPath.section)*1000+indexPath.row;
+    
+    [cell.checkOneButton addTarget:self action:@selector(checkOneButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+   // [cell.checkOneButton  setImage:[UIImage imageNamed:@"checkbox_off.png"] forState:UIControlStateNormal];
+   // [cell.checkOneButton  setImage:[UIImage imageNamed:@"checkbox_on.png"] forState:UIControlStateSelected];
+
+  //  [myTextField addTarget:self action:@selector(textFieldEditingChanged:) forControlEvents:UIControlEventEditingChanged];
+    
+ 
+    
 ////四方连加
 ////[cell.fourAddImageView setImageWithURL:[NSURL URLWithString:[listData objectAtIndex:indexPath.row].fourAddImageView placeholderImage:[UIImage imageNamed:@"default.jpg"]];
 ////四方连数量
@@ -140,6 +146,13 @@ cell.productNameTextView.text= ((RespondParam0032*)[listData objectAtIndex:index
 return cell;
     
 }
+-(void)checkOneButtonClicked:(UIButton *)btn{
+    int tab=btn.tag;
+    int row= btn.tag%1000;
+    int section=btn.tag/1000;
+   // btn.selected = !btn.selected 用与button做checkBox
+    
+}
 
 //关键方法，获取复用的Cell后模拟赋值，然后取得Cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -151,52 +164,20 @@ if (!cell) {
   [self.cacheCells setObject:cell forKey:reuseIdentifier];
 }
 
-    NSString *d= ((RespondParam0032*)[listData objectAtIndex:indexPath.row]).shoppingCartID;
-//四方连限购
-cell.productNameTextView.text= ((RespondParam0032*)[listData objectAtIndex:indexPath.row]).shoppingCartID;
-    [cell.productNameTextView setText:d];
-////四方连加
-//[cell.fourAddImageView setImageWithURL:[NSURL URLWithString:[listData objectAtIndex:indexPath.row].fourAddImageView placeholderImage:[UIImage imageNamed:@"default.jpg"]];
-////四方连数量
-//cell.fourNumEditText.text= ()[listData objectAtIndex:indexPath.row].fourNumEditText;
-////fourReduce
-//[cell.fourReduceImageView setImageWithURL:[NSURL URLWithString:[listData objectAtIndex:indexPath.row].fourReduceImageView placeholderImage:[UIImage imageNamed:@"default.jpg"]];
-////四方连
-//cell.fourCheckTitleTextView.text= [listData objectAtIndex:indexPath.row].fourCheckTitleTextView;
-////限购五套
-//cell.oneLimitTextView.text= [listData objectAtIndex:indexPath.row].oneLimitTextView;
-////加
-//[cell.oneAddImageView setImageWithURL:[NSURL URLWithString:[listData objectAtIndex:indexPath.row].oneAddImageView placeholderImage:[UIImage imageNamed:@"default.jpg"]];
-////单套数量
-//cell.oneNumEditText.text= [listData objectAtIndex:indexPath.row].oneNumEditText;
-////减少
-//[cell.reduceImageView setImageWithURL:[NSURL URLWithString:[listData objectAtIndex:indexPath.row].reduceImageView placeholderImage:[UIImage imageNamed:@"default.jpg"]];
-////单套
-//cell.checkOneTitleTextView.text= [listData objectAtIndex:indexPath.row].checkOneTitleTextView;
-////36.00
-//cell.fourPriceTextView.text= [listData objectAtIndex:indexPath.row].fourPriceTextView;
-////四方红
-//cell.fourTextView.text= [listData objectAtIndex:indexPath.row].fourTextView;
-////12.00
-//cell.onePriceTextView.text= [listData objectAtIndex:indexPath.row].onePriceTextView;
-////单套
-//cell.oneTextView.text= [listData objectAtIndex:indexPath.row].oneTextView;
-////产品名字
-//cell.productNameTextView.text= [listData objectAtIndex:indexPath.row].productNameTextView;
-////productPic
-//[cell.productPicImageView setImageWithURL:[NSURL URLWithString:[listData objectAtIndex:indexPath.row].productPicImageView placeholderImage:[UIImage imageNamed:@"default.jpg"]];
-////cancelX
-//[cell.cancelXImageView setImageWithURL:[NSURL URLWithString:[listData objectAtIndex:indexPath.row].cancelXImageView placeholderImage:[UIImage imageNamed:@"default.jpg"]];
-////shoppingCarCheck
-//[cell.shoppingCarCheckImageView setImageWithURL:[NSURL URLWithString:[listData objectAtIndex:indexPath.row].shoppingCarCheckImageView placeholderImage:[UIImage imageNamed:@"default.jpg"]];
 
  CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-return size.height+1;
+    
+    int height=cell.contentView.frame.size.height;
+    
+return height;
 }
 
-//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 88;
-//}
+
+
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 88;
+}
 
 //点击后，过段时间cell自动取消选中
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -228,6 +209,10 @@ return size.height+1;
 NSString  *n0032=@"0032";
 /*购物车查询0032*/
 -(void) request0032{
+    
+      RespondParam0032 *a=[[RespondParam0032 alloc]init];
+    a.shoppingCartID=@"dd";
+    [listData addObject:a];
 NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
 /* 会员编号 备注:必填*/
 [businessparam setValue:@"" forKey:@"cstmNo"];
@@ -235,7 +220,7 @@ NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
 [businessparam setValue:@"" forKey:@"busiNo"];
 // [serviceInvoker callWebservice:businessparam formName:n0032 ];
     
-    NSString *baseUrl=@"http://localhost:8080/Serlet/Serverlet0032?parameter=";
+    NSString *baseUrl=@"http://localhost:8080/Servlet/Serverlet0032?parameter=";
     NSString *fullUrl = [baseUrl stringByAppendingString:[businessparam JSONString]];
     NSURL *url = [NSURL URLWithString:[fullUrl stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -294,6 +279,9 @@ NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
                                        commonItem.gmtModify=[returnDataBody objectForKey:@"gmtModify"];
                                        /* 返回的记录数 备注:循环域结束*/
                                       // commonItem.recordNum=[returnDataBody objectForKey:@"recordNum"];
+                                       [listData addObject:commonItem];
+                                       [listData addObject:commonItem];
+                                       [listData addObject:commonItem];
                                        [listData addObject:commonItem];
                                    }
 
@@ -426,6 +414,29 @@ NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
 
 
 
-
-
+//NSString+Ext.h
+//@interface NSString (Ext)
+//- (CGSize)calculateSize:(CGSize)size font:(UIFont *)font;
+//@end
+//
+//@implementation NSString (Ext)
+//- (CGSize)calculateSize:(CGSize)size font:(UIFont *)font {
+//    CGSize expectedLabelSize = CGSizeZero;
+//    
+//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+//        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+//        paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+//        NSDictionary *attributes = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paragraphStyle.copy};
+//        
+//        expectedLabelSize = [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
+//    }
+//    else {
+//        expectedLabelSize = [self sizeWithFont:font
+//                             constrainedToSize:size
+//                                 lineBreakMode:NSLineBreakByWordWrapping];
+//    }
+//    
+//    return CGSizeMake(ceil(expectedLabelSize.width), ceil(expectedLabelSize.height));
+//}
+//@end
 

@@ -39,7 +39,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="四方连" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IFi-Xn-dMu">
-                                <rect key="frame" x="48" y="149" width="70" height="19"/>
+                                <rect key="frame" x="48" y="149" width="54" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.39215686999999999" green="0.39215686999999999" blue="0.39215686999999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,15 +82,6 @@
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7ee-DQ-oWM">
-                                <rect key="frame" x="20" y="111" width="23" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.8745098" green="0.44313725999999998" blue="0.24313725999999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.972549" green="0.41176469999999998" blue="0.17647060000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="check">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RLb-Mp-LmK">
                                 <rect key="frame" x="212" y="85" width="80" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -138,6 +129,12 @@
                                 <rect key="frame" x="6" y="7" width="26" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7ee-DQ-oWM">
+                                <rect key="frame" x="22" y="112" width="21" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98823530000000004" green="0.37254903" blue="0.16470588999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.972549" green="0.41176469999999998" blue="0.17647060000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -145,7 +142,22 @@
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
+                <outlet property="cancelXImageView" destination="uWA-9k-HhS" id="YEM-D1-tAi"/>
+                <outlet property="checkOneButton" destination="7ee-DQ-oWM" id="315-tu-CFn"/>
+                <outlet property="content" destination="061-WJ-w0M" id="ATQ-8K-mpb"/>
+                <outlet property="fourCheckButton" destination="Sa1-h8-rVs" id="1uV-9U-3hh"/>
+                <outlet property="fourLimitTextView" destination="ksk-WM-tBz" id="UVW-uc-g8A"/>
+                <outlet property="fourNumEditText" destination="2IY-B8-2V6" id="t53-QH-Rk8"/>
+                <outlet property="fourPriceTextView" destination="RLb-Mp-LmK" id="HNE-ed-2UR"/>
+                <outlet property="fourReduceImageView" destination="zst-EI-gLC" id="Kbj-PY-Uni"/>
+                <outlet property="oneAddImageView" destination="YI6-QD-7pi" id="CWl-BJ-YnF"/>
+                <outlet property="oneLimitTextView" destination="wyE-Nb-hy5" id="sCB-km-TsF"/>
+                <outlet property="oneNumEditText" destination="7BX-fu-VvS" id="EhZ-S9-XZg"/>
+                <outlet property="onePriceTextView" destination="nh3-Xe-RLT" id="wz9-dm-HV4"/>
                 <outlet property="productNameTextView" destination="ceu-Lq-CAP" id="y6S-eR-PZR"/>
+                <outlet property="productPicImageView" destination="gv3-JZ-E67" id="7cl-AP-cxX"/>
+                <outlet property="reduceImageView" destination="jC6-La-w9F" id="VIl-Kv-VJf"/>
+                <outlet property="shoppingCarCheckImageView" destination="fJT-m0-K2y" id="Dhi-uL-DZW"/>
             </connections>
             <point key="canvasLocation" x="280" y="203.5"/>
         </tableViewCell>

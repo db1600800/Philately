@@ -41,5 +41,7 @@
 @synthesize fourAddImageView;
 //四方连限购
 @synthesize fourLimitTextView;
+@synthesize row;
+@synthesize section;
 @end
 

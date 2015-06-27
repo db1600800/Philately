@@ -39,6 +39,11 @@
 //四方连加
 @property (weak, nonatomic) IBOutlet UIImageView *fourAddImageView;
 //四方连限购
+@property (weak, nonatomic) IBOutlet UIView *content;
 @property (weak, nonatomic) IBOutlet UILabel *fourLimitTextView;
+
+@property ( nonatomic) int row;
+@property ( nonatomic) int section;
+
 @end
 
