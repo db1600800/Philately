@@ -8,7 +8,7 @@
 #import <PublicFramework/JSONKit.h>
 #import "OrderFormListTableViewCell.h"
 //注入table功能
-static NSString *CellIdentifier = @"OrderFormListTableViewCell";
+ NSString *OrderFormListCellIdentifier = @"OrderFormListTableViewCell";
 @implementation OrderFormListViewController
 @synthesize cacheCells;
 //list
@@ -38,7 +38,7 @@ static NSString *CellIdentifier = @"OrderFormListTableViewCell";
     
     //使用自定义的Cell,需要向UITableView进行注册
     UINib *cellNib = [UINib nibWithNibName:@"OrderFormListTableViewCell" bundle:nil];
-    [tableView registerNib:cellNib forCellReuseIdentifier:CellIdentifier];
+    [tableView registerNib:cellNib forCellReuseIdentifier:OrderFormListCellIdentifier];
    // UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handTap)];
     //[self.modifyPwdTextView addGestureRecognizer:tap];
 }
@@ -95,7 +95,7 @@ static NSString *CellIdentifier = @"OrderFormListTableViewCell";
 ////绘制Cell
 //-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    
-//    OrderFormListTableViewCell *cell = (OrderFormListTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    OrderFormListTableViewCell *cell = (OrderFormListTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:OrderFormListCellIdentifier];
 //    if (!cell)
 //    {
 //        cell = [[[NSBundle mainBundle] loadNibNamed:@"OrderFormListTableViewCell" owner:self options:nil] lastObject];
@@ -125,10 +125,10 @@ static NSString *CellIdentifier = @"OrderFormListTableViewCell";
 //     //关键方法，获取复用的Cell后模拟赋值，然后取得Cell高度
 //     - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 //         
-//         NSString *reuseIdentifier = CellIdentifier;
+//         NSString *reuseIdentifier = OrderFormListCellIdentifier;
 //         OrderFormListTableViewCell *cell= [self.cacheCells objectForKey:reuseIdentifier];
 //         if (!cell) {
-//             cell=[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//             cell=[self.tableView dequeueReusableCellWithIdentifier:OrderFormListCellIdentifier];
 //             [self.cacheCells setObject:cell forKey:reuseIdentifier];
 //         }
 //         

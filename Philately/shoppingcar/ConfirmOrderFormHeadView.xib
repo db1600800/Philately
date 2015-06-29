@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmOrderFormViewController">
+            <connections>
+                <outlet property="deliverMoneyTitleTextView" destination="HkZ-1d-v73" id="B0o-HL-62d"/>
+                <outlet property="deliverMoneyValueTextView" destination="fn3-a1-Kbs" id="fol-yQ-em0"/>
+                <outlet property="deliverWayTitleTextView" destination="28t-rh-FIp" id="2LU-Qp-jP8"/>
+                <outlet property="emsCheckButton" destination="58q-sm-os9" id="EsH-hL-pbg"/>
+                <outlet property="emsTextView" destination="tJY-wj-E0f" id="7LD-KX-y08"/>
+                <outlet property="invoiceCheckButton" destination="pRC-up-lfs" id="bq0-dX-PXK"/>
+                <outlet property="invoiceHeadTitleTextView" destination="FaM-sQ-BBB" id="JB2-P6-ume"/>
+                <outlet property="invoiceHeadValueEditText" destination="Gli-eR-tz0" id="yVt-BN-P96"/>
+                <outlet property="invoiceTitleTextView" destination="dSq-kV-gSD" id="zuL-AA-JV9"/>
+                <outlet property="invoiceTypeCompanyCheckButton" destination="vtb-R6-EOU" id="3ci-hs-nFG"/>
+                <outlet property="invoiceTypeCompanyTileTextView" destination="7zF-zi-3Ai" id="U4q-x8-KQL"/>
+                <outlet property="invoiceTypePesonCheckButton" destination="35z-ZD-9zR" id="hrf-QG-nAe"/>
+                <outlet property="invoiceTypePesonTitleTextView" destination="4of-55-OE7" id="WTL-K0-Zf3"/>
+                <outlet property="invoiceTypeTitleTextView" destination="rFO-kR-avq" id="t5T-64-Wfp"/>
+                <outlet property="lineblcakImageView" destination="ZHW-5U-5ZV" id="T2E-oB-eDn"/>
+                <outlet property="smallPackCheckButton" destination="UrH-iD-bnb" id="ftR-lN-zHd"/>
+                <outlet property="smallpackTitleTextView" destination="XeH-kl-5AG" id="fAc-Oq-Cvw"/>
+                <outlet property="totalmoneyTextView" destination="blM-Fp-E3Y" id="IyL-bs-psc"/>
+                <outlet property="totalmoneyValueTextView" destination="rkL-60-QXe" id="IYN-ee-SHI"/>
+                <outlet property="view" destination="hDL-tb-9K4" id="TT9-hU-zpa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDL-tb-9K4">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gli-eR-tz0">
+                    <rect key="frame" x="71" y="161" width="100" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="发票抬头:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaM-sQ-BBB">
+                    <rect key="frame" x="6" y="163" width="80" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.59215689999999999" green="0.59215689999999999" blue="0.59215689999999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lineblcak.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZHW-5U-5ZV">
+                    <rect key="frame" x="7" y="153" width="47" height="4"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="单位" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zF-zi-3Ai">
+                    <rect key="frame" x="267" y="141" width="80" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.38039215999999998" green="0.38039215999999998" blue="0.38039215999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtb-R6-EOU">
+                    <rect key="frame" x="239" y="136" width="21" height="14"/>
+                    <color key="backgroundColor" red="0.99607842999999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.95686274999999998" green="0.37254903" blue="0.15294118000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="invoiceTypeCompanyCheck">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="个人" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4of-55-OE7">
+                    <rect key="frame" x="182" y="136" width="80" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.41176469999999998" green="0.41176469999999998" blue="0.41176469999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35z-ZD-9zR">
+                    <rect key="frame" x="155" y="136" width="29" height="21"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="invoiceTypePesonCheck">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="发票类型" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFO-kR-avq">
+                    <rect key="frame" x="5" y="136" width="80" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.41568628000000002" green="0.41568628000000002" blue="0.41568628000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRC-up-lfs">
+                    <rect key="frame" x="265" y="113" width="27" height="14"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.94117649999999997" green="0.34509804999999999" blue="0.15294118000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="invoiceCheck">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="开具发票" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSq-kV-gSD">
+                    <rect key="frame" x="5" y="115" width="80" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.39607843999999998" green="0.39607843999999998" blue="0.39607843999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dll-fE-PYF">
+                    <rect key="frame" x="12" y="83" width="285" height="20"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="90元" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkL-60-QXe">
+                            <rect key="frame" x="237" y="6" width="80" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.30980393000000001" green="0.30980393000000001" blue="0.30980393000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="小记:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blM-Fp-E3Y">
+                            <rect key="frame" x="197" y="3" width="80" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.40392157000000001" green="0.40392157000000001" blue="0.40392157000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10元" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn3-a1-Kbs">
+                            <rect key="frame" x="128" y="6" width="80" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.20784314000000001" green="0.20784314000000001" blue="0.20784314000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="寄递费" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkZ-1d-v73">
+                            <rect key="frame" x="77" y="4" width="80" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.36470590000000003" green="0.36470590000000003" blue="0.36470590000000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMZ-lG-xCU">
+                    <rect key="frame" x="6" y="62" width="279" height="16"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="国内小包" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeH-kl-5AG">
+                            <rect key="frame" x="175" y="0.0" width="80" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.29803922999999999" green="0.29803922999999999" blue="0.29803922999999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrH-iD-bnb">
+                            <rect key="frame" x="143" y="1" width="22" height="11"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="smallpackCheck">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ems" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJY-wj-E0f">
+                            <rect key="frame" x="95" y="1" width="80" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.35686275000000001" green="0.35686275000000001" blue="0.35686275000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58q-sm-os9">
+                            <rect key="frame" x="66" y="1" width="22" height="11"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.98039215999999996" green="0.40000000000000002" blue="0.16470588999999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="emsCheck">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="配送方式:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28t-rh-FIp">
+                            <rect key="frame" x="9" y="5" width="80" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.36078431999999999" green="0.36078431999999999" blue="0.36078431999999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="lineblcak.png" width="47" height="4"/>
+    </resources>
+</document>

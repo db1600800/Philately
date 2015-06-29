@@ -10,7 +10,7 @@
 #import "RespondParam0032.h"
 #import <UIKit/NSStringDrawing.h>
 //注入table功能
- NSString *CellIdentifier = @"ShoppingCarTableViewCell";
+ NSString *ShoppingCarIdentifier = @"ShoppingCarTableViewCell";
 @implementation ShoppingCarViewController
 @synthesize cacheCells;
 //list
@@ -26,6 +26,7 @@
 //提交订单
 @synthesize commitOrderFormButton;
 NSMutableArray *listData;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -36,7 +37,7 @@ NSMutableArray *listData;
     
     //使用自定义的Cell,需要向UITableView进行注册
     UINib *cellNib = [UINib nibWithNibName:@"ShoppingCarTableViewCell" bundle:nil];
-    [tableView registerNib:cellNib forCellReuseIdentifier:CellIdentifier];
+    [tableView registerNib:cellNib forCellReuseIdentifier:ShoppingCarIdentifier];
   UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handTap)];
     //[self.modifyPwdTextView addGestureRecognizer:tap];
     
@@ -87,7 +88,7 @@ NSMutableArray *listData;
 //绘制Cell
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
- ShoppingCarTableViewCell *cell = (ShoppingCarTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+ ShoppingCarTableViewCell *cell = (ShoppingCarTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:ShoppingCarIdentifier];
     if (!cell)
     {
        cell = [[[NSBundle mainBundle] loadNibNamed:@"ShoppingCarTableViewCell" owner:self options:nil] lastObject];
@@ -157,10 +158,10 @@ return cell;
 //关键方法，获取复用的Cell后模拟赋值，然后取得Cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-NSString *reuseIdentifier = CellIdentifier;
+NSString *reuseIdentifier = ShoppingCarIdentifier;
 ShoppingCarTableViewCell *cell= [self.cacheCells objectForKey:reuseIdentifier];
 if (!cell) {
-  cell=[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  cell=[self.tableView dequeueReusableCellWithIdentifier:ShoppingCarIdentifier];
   [self.cacheCells setObject:cell forKey:reuseIdentifier];
 }
 

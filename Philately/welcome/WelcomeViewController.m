@@ -31,8 +31,8 @@ ServiceInvoker *serviceInvoker;
 
        serviceInvoker=[[ServiceInvoker alloc]init];
         [serviceInvoker  setDelegate:self];
-    [serviceInvoker appSignIn:@"gd.proj183.ios.new" appVersion:@"1.0" ];
-    
+    [serviceInvoker appSignIn:@"stampStore_IOS" appVersion:@"1.0" ];
+    //stampStore_IOS gd.proj183.ios.new
 //  AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 //    appDelegate.
    

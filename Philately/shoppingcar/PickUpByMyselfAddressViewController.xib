@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickUpByMyselfAddressViewController">
+            <connections>
+                        <outlet property="tableView" destination="7rK-UG-91W" id="82g-3X-GTh"/>
+                        <outlet property="sureButton" destination="gvO-NN-4qf" id="otv-zY-Wbz"/>
+                        <outlet property="agreemsgTextView" destination="1jA-2b-HJV" id="CDe-TE-3gk"/>
+                        <outlet property="checkAgressButton" destination="Oap-MI-Y1T" id="GjY-6A-bdG"/>
+                        <outlet property="queryImageView" destination="p4J-FK-EgQ" id="rtw-4I-a5V"/>
+                        <outlet property="streemTextView" destination="NUF-qP-nPV" id="Qil-ti-UyB"/>
+                        <outlet property="cityTextView" destination="FCq-bS-vrT" id="xB7-WZ-f4F"/>
+                        <outlet property="lineverticalImageView" destination="3xz-a2-Huf" id="NU6-TW-r3u"/>
+                        <outlet property="downImageView" destination="gbN-Ym-sS8" id="AzZ-JV-kLs"/>
+                        <outlet property="proviceTextView" destination="bQt-zC-6GN" id="FQm-Ff-74o"/>
+                        <outlet property="titleTextView" destination="viL-a9-hrE" id="Wtu-os-FPF"/>
+                        <outlet property="backButton" destination="eWx-GH-uzG" id="Joh-UX-kMh"/>
+                <outlet property="view" destination="Aim-Sv-W0Y" id="zws-DE-C8Y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+
+
+
+                    <view key="view" translatesAutoresizingMaskIntoConstraints="NO" contentMode="scaleToFill" id="Aim-Sv-W0Y">
+<rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+ <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7rK-UG-91W">
+ <rect key="frame" x="17" y="91" width="262" height="390"/>
+  </tableView>
+ <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmE-OL-C7H">
+<rect key="frame" x="12" y="522" width="276" height="36"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvO-NN-4qf">
+                                <rect key="frame" x="225" y="14" width="53" height="13"/>
+                                <color key="backgroundColor" red="0.9882353" green="0.37254903" blue="0.15686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1.0" green="0.92941177" blue="0.89411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="确定">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我已阅读并同意自提协议" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jA-2b-HJV">
+                                        <rect key="frame" x="38" y="14" width="80" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.38431373" green="0.38431373" blue="0.38431373" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oap-MI-Y1T">
+                                <rect key="frame" x="5" y="10" width="12" height="17"/>
+                                <color key="backgroundColor" red="1.0" green="1.0" blue="1.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1.0" green="1.0" blue="1.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="checkAgress"  backgroundImage="check">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1.0" green="1.0" blue="1.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+ <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mp6-Gz-lDv">
+<rect key="frame" x="8" y="51" width="291" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+ <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="query.png" translatesAutoresizingMaskIntoConstraints="NO" id="p4J-FK-EgQ">
+ <rect key="frame" x="263" y="5" width="18" height="15"/>
+ </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="厚街" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUF-qP-nPV">
+                                        <rect key="frame" x="168" y="6" width="80" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.38039216" green="0.38039216" blue="0.38039216" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="东莞市" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCq-bS-vrT">
+                                        <rect key="frame" x="89" y="5" width="80" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.38039216" green="0.38039216" blue="0.38039216" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+ <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linevertical.png" translatesAutoresizingMaskIntoConstraints="NO" id="3xz-a2-Huf">
+ <rect key="frame" x="71" y="6" width="6" height="11"/>
+ </imageView>
+ <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down.png" translatesAutoresizingMaskIntoConstraints="NO" id="gbN-Ym-sS8">
+ <rect key="frame" x="52" y="7" width="11" height="10"/>
+ </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="广东" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQt-zC-6GN">
+                                        <rect key="frame" x="9" y="4" width="80" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.8156863" green="0.42745098" blue="0.30588236" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1.0" green="1.0" blue="1.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+ <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="it2-ue-Ahg">
+<rect key="frame" x="8" y="17" width="290" height="28"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择自提点" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viL-a9-hrE">
+                                        <rect key="frame" x="106" y="2" width="80" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1.0" green="1.0" blue="1.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWx-GH-uzG">
+                                <rect key="frame" x="5" y="6" width="16" height="14"/>
+                                <color key="backgroundColor" red="0.9882353" green="0.3764706" blue="0.15294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1.0" green="0.9647059" blue="1.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="back"  backgroundImage="back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9882353" green="0.37254903" blue="0.15686275" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9607843" green="0.9607843" blue="0.9607843" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+</objects>
+</document>
+

@@ -16,6 +16,6 @@
 /* 图片ID 备注:*/
 @synthesize merchPicID;
 /* 本次返回的记录数 备注:循环域结束*/
-@synthesize recordNum;
+//@synthesize recordNum;
 @end
 

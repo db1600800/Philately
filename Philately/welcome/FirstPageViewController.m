@@ -11,8 +11,8 @@
 //table
 
 //注入table功能
- static NSString *CellIdentifier = @"FirstPageTableViewCell";
- static NSString *HeadIdentifier = @"FirstPageHeadView";
+  NSString *FirstPageCellIdentifier = @"FirstPageTableViewCell";
+  NSString *HeadIdentifier = @"FirstPageHeadView";
 
 @synthesize tableView;
 
@@ -114,7 +114,7 @@ NSArray * imageArr;//图片路径字符串数组
 //绘制Cell
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    FirstPageTableViewCell *cell = (FirstPageTableViewCell*)[self.tableView  dequeueReusableCellWithIdentifier:CellIdentifier];
+    FirstPageTableViewCell *cell = (FirstPageTableViewCell*)[self.tableView  dequeueReusableCellWithIdentifier:FirstPageCellIdentifier];
                                                              
     if (!cell)
     {
@@ -130,10 +130,10 @@ NSArray * imageArr;//图片路径字符串数组
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    NSString *reuseIdentifier = CellIdentifier;
+    NSString *reuseIdentifier = FirstPageCellIdentifier;
     FirstPageTableViewCell *cell= [self.cacheCells objectForKey:reuseIdentifier];
     if (!cell) {
-        cell=[self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        cell=[self.tableView dequeueReusableCellWithIdentifier:FirstPageCellIdentifier];
         [self.cacheCells setObject:cell forKey:reuseIdentifier];
     }
     

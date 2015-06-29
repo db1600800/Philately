@@ -21,6 +21,6 @@
 //list
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableDictionary *cacheCells;
- NSMutableArray *sectionAZDicArray;
+// NSMutableArray *sectionAZDicArray;
 @end
 
