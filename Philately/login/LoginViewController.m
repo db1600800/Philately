@@ -54,6 +54,7 @@ StampTranCall *stampTranCall;
     
     UITapGestureRecognizer *codeButtonTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapToGenerateCode)];
     [codePicImageView addGestureRecognizer:codeButtonTap];
+    codeValueEditText.delegate=self;
     
 }
 
@@ -334,6 +335,17 @@ NSString  *n0008=@"JY0008";
 }
 
 
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    NSLog(@"begin");
+    [self onTapToGenerateCode ];
+    return YES;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    NSLog(@"end");
+    return YES;
+}
 
 
 

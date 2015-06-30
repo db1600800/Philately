@@ -5,7 +5,7 @@
 #import <UIKit/UIKit.h>
 #import "StampTranCall.h"
 
-@interface LoginViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,StampTranCallDelegate>
+@interface LoginViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,StampTranCallDelegate,UITextFieldDelegate>
 {
     NSString *validateCode;
 }
