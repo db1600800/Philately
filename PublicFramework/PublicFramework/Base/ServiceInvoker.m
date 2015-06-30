@@ -313,7 +313,7 @@ NSMutableDictionary *cachebusinessParameter;
     
 }
 
--(void) checkUpdates{
+-(void) checkUpdates:(NSString*)appId appVersion:(NSString*)appVersion{
     
     NSString*configVer = [[GSConfigManager sharedInstance] findValueFromConfigFileByKey:@"A-CONFIGVERSION"];
     if(configVer==nil)
@@ -324,8 +324,11 @@ NSMutableDictionary *cachebusinessParameter;
     self.formName=@"checkUpdates";
     
     NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
-    NSString *appID=[userDefault objectForKey:@"appId"];
-    NSString *appVer=[userDefault objectForKey:@"appVer"];
+    [userDefault setObject:appId forKey:@"appId"];
+    [userDefault setObject:appVersion forKey:@"appVer"];
+    
+    NSString *appID=appId;//[userDefault objectForKey:@"appId"];
+    NSString *appVer=appVersion;//[userDefault objectForKey:@"appVer"];
     
     // 获取接入平台RSA公钥报文组装
     NSMutableDictionary *rootParam = [[NSMutableDictionary alloc ] init];

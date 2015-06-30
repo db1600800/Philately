@@ -42,7 +42,7 @@
 -(void) appSignIn;
 -(void) callWebservice:(NSString*) requestStr  formName:(NSString*) formName;
 
--(void) checkUpdates;
+-(void) checkUpdates:(NSString*)appId appVersion:(NSString*)appVersion;
 
 -(void) clearService;
 -(void) rsaPublicKey ;
