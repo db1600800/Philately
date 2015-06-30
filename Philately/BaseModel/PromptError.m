@@ -9,23 +9,40 @@
 #import "PromptError.h"
 #import "OMGToast.h"
 #import "Sql.h"
+#import "ErrorObject.h"
 @implementation PromptError
 
-+(void) changeShowErrorMsg:(ErrorMsg*)errorMsg title:(NSString*)title;
++(void) changeShowErrorMsg:(MsgReturn*)errorMsg title:(NSString*)title;
 {
     
     Sql *sql=[[Sql alloc] init];
-    NSString *msg=[sql selectCODESYSCHANGE:@"WG1001"];
-    
-    NSString *errorType=@"1";
-    
-    if([errorType isEqualToString:@"1"])
+   
+    ErrorObject *error1=[sql selectPM_CODEERRORMSG:errorMsg.errorCode];
+    if(error1==nil || (error1!=nil && error1.errorDesc==nil))
     {
+        error1=[[ErrorObject alloc] init];
+        error1.errorDesc=errorMsg.errorDesc;
+        error1.errorCode=errorMsg.errorCode;
+        error1.errorType=errorMsg.errorType;
+        
+    }
+    
+     ErrorObject *error2=[sql selectPM_DESCERRORMSG:error1];
+    
+    
+    if (error2.errorType==nil) {
+       error2.errorType=@"01";
+    }
+  
+  
+    
+    if([error2.errorType isEqualToString:@"01"])
+    { //对话框
    
         
     //初始化AlertView
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示"
-                                                    message:msg
+                                                    message:error2.errorDesc
                                                    delegate:nil
                                           cancelButtonTitle:@"确定"
                                           otherButtonTitles:nil,nil];
@@ -51,7 +68,7 @@
     //显示AlertView
     [alert show];
     
-    }else if([errorType isEqualToString:@"0"])
+    }else if([error2.errorType isEqualToString:@"02"])
     {
     
 //    [OMGToast showWithText:@"中间显示" duration:5];
@@ -60,16 +77,20 @@
 //    [OMGToast showWithText:@"加入\\n也可以\n显示\n多\n行" topOffset:300 duration:5];
     //[OMGToast showWithText:@"距离下方3像素" bottomOffset:3 duration:5];
     
-    [OMGToast showWithText:msg bottomOffset:10 duration:5];
+    [OMGToast showWithText:error2.errorDesc bottomOffset:10 duration:5];
+    }else if([error2.errorType isEqualToString:@"03"])
+    {
+        
+       
     }
 }
 
-+(void) toast:(NSString*)errorCode errorMSg:(NSString*)errorMsg
+
++(void) toast:(NSString*)errorMsg
 {
-    if(errorCode==nil)
-    {
+ 
       [OMGToast showWithText:errorMsg  bottomOffset:10 duration:5];
-    }
+    
 
 }
 

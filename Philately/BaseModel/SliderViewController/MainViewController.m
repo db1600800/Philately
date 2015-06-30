@@ -144,7 +144,7 @@ OrderFormDetailViewController *orderFormDetailViewController;
 
 -(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
     
-    if([viewController isMemberOfClass:[MenberMainViewController class]] )
+    if([viewController isMemberOfClass:[MenberMainViewController class]] && [CstmMsg sharedInstance].cstmNo==nil )
     {
     loginViewController=[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
     

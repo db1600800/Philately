@@ -15,8 +15,9 @@
 
 @interface StampTranCall : NSObject<ServiceInvokerDelegate>
 {
- ServiceInvoker  *serviceInvoker;
+
 }
++ (StampTranCall *) sharedInstance;
 
 @property (strong, nonatomic) id<StampTranCallDelegate>  delegate;
 

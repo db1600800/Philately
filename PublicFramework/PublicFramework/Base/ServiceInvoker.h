@@ -23,12 +23,12 @@
 @interface ServiceInvoker : NSObject 
 {
     
-    int mMsgSeqNo ;// 报文流水号
+     // 报文流水号
     
 }
 
 
-@property (nonatomic,assign) id<ServiceInvokerDelegate> delegate;
+@property (nonatomic,strong) id<ServiceInvokerDelegate> delegate;
 @property (nonatomic,assign) NSString* formName;
 @property (nonatomic,assign) NSString* callServiceFormName;
 @property (nonatomic,assign) NSString* willDo;
@@ -37,7 +37,7 @@
 @property (nonatomic,assign) NSString*sUpdateAction;
 @property (nonatomic,assign) NSString*sUpdateStatus;
 @property (nonatomic,assign) NSString*sConfigUpdateStatus;
-
++(ServiceInvoker*) sharedInstance;
 -(void)appSignIn:(NSString*)appId appVersion:(NSString*)appVersion;
 -(void) appSignIn;
 -(void) callWebservice:(NSString*) requestStr  formName:(NSString*) formName;

@@ -18,4 +18,37 @@
 }
 */
 
+
+
+//实现一个创建单例对象的类方法
+
+static SysBaseInfo *objName = nil;
+
++ (SysBaseInfo *) sharedInstance{
+    static dispatch_once_t oneToken = 0;
+    dispatch_once(&oneToken, ^{
+        objName = [[super allocWithZone: NULL] init];
+    });
+    return objName;
+}
+
+//重写几个方法，防止创建单例对象时出现错误
+-(id) init{
+    if(self = [super init])
+    {
+        //初始化单例对象的各种属性
+    }
+    return self;
+}
+
++(id)allocWithZone: (struct _NSZone *) zone{
+    return [self sharedInstance];
+}
+
+//这是单例对象遵循<NSCopying>协议时需要实现的方法
+-(id) copyWithZone: (struct _NSZone *)zone{
+    return self;
+}
+
+
 @end

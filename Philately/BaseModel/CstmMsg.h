@@ -28,5 +28,6 @@
 @property (strong, nonatomic) NSString  *verifiMobileNo;
 @property (strong, nonatomic) TermTypeInfo  *termTypeInfo;
 
++ (CstmMsg *) sharedInstance;
 -(void) clearCstmMsg;
 @end

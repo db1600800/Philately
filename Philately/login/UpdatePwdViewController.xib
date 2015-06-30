@@ -178,6 +178,6 @@
         </view>
     </objects>
     <resources>
-        <image name="back.png" width="23" height="20"/>
+        <image name="back.png" width="19" height="21"/>
     </resources>
 </document>

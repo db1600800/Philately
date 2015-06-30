@@ -41,9 +41,10 @@ typedef enum{
 
 @interface GSNetService : NSObject
 AS_SINGLETON(GSNetService)
-@property (nonatomic,assign) id<GSDrawbackDelegate,GSNetServiceDelegate> delegate;
+@property (nonatomic,strong) id<GSDrawbackDelegate,GSNetServiceDelegate> delegate;
+
 @property (nonatomic,assign,setter = requestTimeOut:) NSInteger requestTimeout;
-@property (nonatomic,copy) NSString *lastFormName;
+@property (nonatomic,strong) NSString *lastFormName;
 @property (strong) NSString * errorcode;
 @property (strong) NSString * errortxt;
 //@property (nonatomic,assign) BOOL testValue;//lib变化检测

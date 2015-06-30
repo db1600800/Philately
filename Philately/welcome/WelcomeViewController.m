@@ -15,6 +15,8 @@
 #import "MLBlackTransition.h"
 
 #import "PromptError.h"
+#import "SysBaseInfo.h"
+#import "PromptError.h"
 @interface WelcomeViewController ()
 
 @end
@@ -25,16 +27,12 @@ ServiceInvoker *serviceInvoker;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    [PromptError changeShowErrorMsg:nil title:nil];
-    
 
        serviceInvoker=[[ServiceInvoker alloc]init];
         [serviceInvoker  setDelegate:self];
-    [serviceInvoker appSignIn:@"stampStore_IOS" appVersion:@"1.0" ];
-    //stampStore_IOS gd.proj183.ios.new
-//  AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//    appDelegate.
+   
+       [serviceInvoker checkUpdates];
+    
    
 }
 
@@ -62,16 +60,24 @@ ServiceInvoker *serviceInvoker;
     //签到失败
     if([msgReturn.formName isEqualToString:@"appSignIn"]  && [msgReturn.errorCode isEqualToString:ERROR_SINGIN_ERROR])
     {
-        
-    }else if(msgReturn.formName!=nil && [msgReturn.errorCode isEqualToString:ERROR_FAILED])
-    {//交易失败
-        
-        
+        return;
     }
-    else  if([msgReturn.formName isEqualToString:@"checkUpdates"]  && [msgReturn.errorCode isEqualToString:ERROR_SERVICE_IN_ERROR] )
-    {
+    
+    
+    
+    
+     if(msgReturn.formName!=nil && [msgReturn.formName isEqualToString:@"checkUpdates"])
+    {    //版本检测失败
         //appver超了
         
+        [PromptError toast:msgReturn.errorDesc];
+        return;
+    }
+    
+    if(msgReturn.formName!=nil && [msgReturn.errorCode isEqualToString:ERROR_FAILED])
+    {//交易失败
+        
+        return;
     }
     
     else
@@ -89,6 +95,8 @@ ServiceInvoker *serviceInvoker;
     
 }
 
+
+
 //业务请求返回数据
 -(void)serviceInvokerReturnData:(MsgReturn*)msgReturn
 {
@@ -97,6 +105,16 @@ ServiceInvoker *serviceInvoker;
     if([msgReturn.errorCode isEqualToString:ERROR_SUCCESS] && [msgReturn.formName isEqualToString:@"appSignIn"])
     {
       
+        SysBaseInfo *sysBaseInfo=[SysBaseInfo sharedInstance];
+      
+        sysBaseInfo.appID=@"stampStore_IOS";
+        sysBaseInfo.appVersion=@"1.0";
+        sysBaseInfo.appConfigVersion=@"1.0";
+        sysBaseInfo.curTermType=@"02";//终端类型 02ios
+        sysBaseInfo.curTermNo=@"";//当时终端号 android ios为空
+        sysBaseInfo.channelNo=@"16";//渠道号 android ios 16
+        sysBaseInfo.IP=@"";
+        sysBaseInfo.tranNum=@"";//终端流水号 暂时为空
         
         NSLog(@"%@",@"签到成功");
         // [zhuangTextView setText:@"签到成功"];
@@ -137,7 +155,11 @@ ServiceInvoker *serviceInvoker;
     {
         //配置文件更新成功
         
-        NSLog(@"%@",@"版本检测成功");
+         NSLog(@"%@",@"版本检测成功");
+        
+      
+        
+         [serviceInvoker appSignIn:@"stampStore_IOS" appVersion:@"1.0" ];
         
     }
     

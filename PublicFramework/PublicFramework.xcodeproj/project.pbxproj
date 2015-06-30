@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A333C0D1B42771000B59AB3 /* Sql.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A333C0B1B42771000B59AB3 /* Sql.h */; };
+		5A333C0E1B42771000B59AB3 /* Sql.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A333C0C1B42771000B59AB3 /* Sql.m */; };
+		5A333C111B42774600B59AB3 /* ErrorObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A333C0F1B42774600B59AB3 /* ErrorObject.h */; };
+		5A333C121B42774600B59AB3 /* ErrorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A333C101B42774600B59AB3 /* ErrorObject.m */; };
+		5A333C141B42776B00B59AB3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A333C131B42776B00B59AB3 /* libsqlite3.0.dylib */; };
 		5A6771B71B16FED4002541BE /* PublicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6771AB1B16FED3002541BE /* PublicFramework.framework */; };
 		5A6771BE1B16FED4002541BE /* PublicFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6771BD1B16FED4002541BE /* PublicFrameworkTests.m */; };
 		5A6772941B16FF17002541BE /* GSConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A6771C91B16FF17002541BE /* GSConfigManager.h */; };
@@ -210,6 +215,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A333C0B1B42771000B59AB3 /* Sql.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sql.h; sourceTree = "<group>"; };
+		5A333C0C1B42771000B59AB3 /* Sql.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sql.m; sourceTree = "<group>"; };
+		5A333C0F1B42774600B59AB3 /* ErrorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorObject.h; sourceTree = "<group>"; };
+		5A333C101B42774600B59AB3 /* ErrorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorObject.m; sourceTree = "<group>"; };
+		5A333C131B42776B00B59AB3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		5A6771AB1B16FED3002541BE /* PublicFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PublicFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6771AF1B16FED3002541BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6771B61B16FED4002541BE /* PublicFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PublicFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -416,6 +426,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A333C141B42776B00B59AB3 /* libsqlite3.0.dylib in Frameworks */,
 				5A6773741B17118B002541BE /* libz.dylib in Frameworks */,
 				5A67735B1B1700A5002541BE /* libxml2.dylib in Frameworks */,
 				5A6772D11B16FF18002541BE /* libssl.a in Frameworks */,
@@ -437,6 +448,7 @@
 		5A6771A11B16FED3002541BE = {
 			isa = PBXGroup;
 			children = (
+				5A333C131B42776B00B59AB3 /* libsqlite3.0.dylib */,
 				5A6773731B17118B002541BE /* libz.dylib */,
 				5A67735A1B1700A5002541BE /* libxml2.dylib */,
 				5A6771AD1B16FED3002541BE /* PublicFramework */,
@@ -491,6 +503,10 @@
 		5A6771C71B16FF17002541BE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				5A333C0F1B42774600B59AB3 /* ErrorObject.h */,
+				5A333C101B42774600B59AB3 /* ErrorObject.m */,
+				5A333C0B1B42771000B59AB3 /* Sql.h */,
+				5A333C0C1B42771000B59AB3 /* Sql.m */,
 				5A6771D01B16FF17002541BE /* ErrorMsg.h */,
 				5A6771D41B16FF17002541BE /* MsgReturn.h */,
 				5A6771D51B16FF17002541BE /* MsgReturn.m */,
@@ -883,6 +899,7 @@
 				5A6772D21B16FF18002541BE /* NSData+Base64.h in Headers */,
 				5A6772DB1B16FF18002541BE /* blowfish.h in Headers */,
 				5A6772CD1B16FF17002541BE /* PersisctencesData.h in Headers */,
+				5A333C0D1B42771000B59AB3 /* Sql.h in Headers */,
 				5A6772ED1B16FF18002541BE /* ebcdic.h in Headers */,
 				5A6773101B16FF18002541BE /* srp.h in Headers */,
 				5AC19E781B3009CF00B8FA31 /* zip.h in Headers */,
@@ -925,6 +942,7 @@
 				5A6773271B16FF18002541BE /* CXMLDocument_CreationExtensions.h in Headers */,
 				5A6773181B16FF18002541BE /* tls1.h in Headers */,
 				5A6773051B16FF18002541BE /* pkcs12.h in Headers */,
+				5A333C111B42774600B59AB3 /* ErrorObject.h in Headers */,
 				5A6772F91B16FF18002541BE /* md4.h in Headers */,
 				5A6773131B16FF18002541BE /* ssl2.h in Headers */,
 				5A6772F61B16FF18002541BE /* krb5_asn.h in Headers */,
@@ -1050,6 +1068,7 @@
 				5A6772A01B16FF17002541BE /* CPSinvoke.m in Sources */,
 				5AC19E731B3009CF00B8FA31 /* mztools.c in Sources */,
 				5A6772D51B16FF18002541BE /* NSString+Base64.m in Sources */,
+				5A333C121B42774600B59AB3 /* ErrorObject.m in Sources */,
 				5A6772C71B16FF17002541BE /* SoapReachability.m in Sources */,
 				5A6772A61B16FF17002541BE /* CPSServices.m in Sources */,
 				5A6772C11B16FF17002541BE /* SoapNil.m in Sources */,
@@ -1078,6 +1097,7 @@
 				5A6773311B16FF18002541BE /* CXMLDocument_PrivateExtensions.m in Sources */,
 				5A67733F1B16FF18002541BE /* CXMLNode_XPathExtensions.m in Sources */,
 				5A6772CE1B16FF18002541BE /* PersisctencesData.m in Sources */,
+				5A333C0E1B42771000B59AB3 /* Sql.m in Sources */,
 				5A6773221B16FF18002541BE /* RSAUtil.m in Sources */,
 				5A6772B01B16FF17002541BE /* NSMutableArray+Soap.m in Sources */,
 				5A6772971B16FF17002541BE /* NSData+Base64.m in Sources */,

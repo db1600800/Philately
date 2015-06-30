@@ -18,7 +18,7 @@ static const NSString *url_webservice_path=@"/services/ChinaPostService";
 static const int TIMEOUT=30000;
 //便民121.8.157.221:9090   邮票192.168.248.90:9011（公网地址：61.144.23.88
 static const NSString *server_url=@"61.144.23.88";//215环境  //164测试环境  121.8.157.202:9090
-//static const NSString *baseserver_url=@"http://121.8.157.221/services/ChinaPostMobileService?wsdl";//旧版底座接口用
+
 
 
 #endif

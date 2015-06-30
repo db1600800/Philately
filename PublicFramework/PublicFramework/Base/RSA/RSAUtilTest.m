@@ -61,7 +61,7 @@
     NSString *decryptString = [rsaUtil decryptLongString:KeyTypePrivate rsa:privateRSA paddingType:RSA_PADDING_TYPE_PKCS1 encryptText:edata usingEncoding:NSUTF8StringEncoding];
     
     NSString *aa=[decryptString base64DecodedString];
-    NSLog(@"\n plain text :%@",aa);
+   // NSLog(@"\n respond :%@",aa);
     
     
 

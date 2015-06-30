@@ -31,6 +31,8 @@
 @synthesize sConfigUpdateStatus;
 @synthesize callServiceFormName;
 
+static int mMsgSeqNo ;
+
 -(void)appSignIn:(NSString*)appId appVersion:(NSString*)appVersion {
     
     
@@ -119,6 +121,7 @@
     [message setValue:publicKeyStringX509 forKey:@"appKey"];
     
     NSUserDefaults *userdefalut=[NSUserDefaults standardUserDefaults];
+   
     NSString *logicId=[userdefalut objectForKey:@"logicId"];
     if(logicId==NULL)
     {
@@ -224,6 +227,8 @@ NSMutableDictionary *cachebusinessParameter;
     NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
     NSString *appId= [userDefault objectForKey:@"appId"];
     NSString *appVer=[userDefault objectForKey:@"appVer"];
+   
+    
     
     NSString *publicKeyStringX509Server=  [userDefault  objectForKey:@"publicKeyStringX509Server"];
     NSString *publicKeyStringX509ServerVer= [userDefault objectForKey:@"publicKeyStringX509ServerVer"];
@@ -489,8 +494,10 @@ int  errorCountFlag=0;
                 
                 NSString *logicId= [paramdic objectForKey:@"logicId"];
                 [userdefalut setObject:logicId forKey:@"logicId"];
+                
                 [userdefalut synchronize];
                 
+                mMsgSeqNo=1;
                 //签到成功 回调
                 MsgReturn *msgReturn=[[MsgReturn alloc ] init ];
                 msgReturn.errorCode=ERROR_SUCCESS;
@@ -734,7 +741,7 @@ int  errorCountFlag=0;
                 NSStringEncoding gbkEncoding =CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
                 NSMutableString*decryptString = [[NSMutableString alloc] initWithData:[decryptStringBase64 base64DecodedData] encoding:gbkEncoding];
                 
-                NSLog(@"\n plain text :%@\n",decryptString);
+                NSLog(@"\n respond %@ :%@\n",self.formName,decryptString);
                 
                 
                 NSDictionary *paramdic=[self jsonString2Dic:[decryptString dataUsingEncoding:NSUTF8StringEncoding] ];
@@ -834,7 +841,7 @@ int  errorCountFlag=0;
             {
                 //交易失败  回调
                 MsgReturn *msgReturn=[[MsgReturn alloc ] init ];
-                msgReturn.errorCode=ERROR_FAILED;
+                msgReturn.errorCode=err_code;
                 msgReturn.errorDesc=ERROR_TEXT_FAILED;
                 msgReturn.formName=self.formName;
                 
@@ -869,7 +876,9 @@ int  errorCountFlag=0;
 -(BOOL)downloadFileAndUNZip:(NSString*) urlAsString configPath:(NSString*)configPath
 {
     
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+
     path = [path stringByAppendingPathComponent:@"securedDirectory"];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -1043,9 +1052,35 @@ int  errorCountFlag=0;
 
 
 
+//实现一个创建单例对象的类方法
 
+static ServiceInvoker *objName = nil;
 
++ (ServiceInvoker *) sharedInstance{
+    static dispatch_once_t oneToken = 0;
+    dispatch_once(&oneToken, ^{
+        objName = [[super allocWithZone: NULL] init];
+    });
+    return objName;
+}
 
+//重写几个方法，防止创建单例对象时出现错误
+-(id) init{
+    if(self = [super init])
+    {
+        //初始化单例对象的各种属性
+    }
+    return self;
+}
+
++(id)allocWithZone: (struct _NSZone *) zone{
+    return [self sharedInstance];
+}
+
+//这是单例对象遵循<NSCopying>协议时需要实现的方法
+-(id) copyWithZone: (struct _NSZone *)zone{
+    return self;
+}
 
 
 @end

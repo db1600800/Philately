@@ -65,7 +65,7 @@
     [tempPublic appendBytes:PublicKey length:PublicKeyLen];
     NSString *publicKeyX509String=[tempPublic base64EncodedStringWithOptions:0];
     
-    NSLog(@"publicKeyX509: %@",publicKeyX509String);
+   // NSLog(@"publicKeyX509: %@",publicKeyX509String);
     
     return publicKeyX509String;
 }
@@ -87,7 +87,7 @@
     [tempPublic appendBytes:PublicKey length:PublicKeyLen];
     NSString *publicKeyPKCS1String=[tempPublic base64EncodedStringWithOptions:0];
     
-    NSLog(@"publicKeyPKCS1: %@",publicKeyPKCS1String);
+    //NSLog(@"publicKeyPKCS1: %@",publicKeyPKCS1String);
     return @"";
 }
 
@@ -455,7 +455,7 @@ NSMutableString * newStrPublicKey = [[NSMutableString alloc] init];
         NSData *from = [plainTextData subdataWithRange:NSMakeRange(currentLength, trueBlockSize)];
         
         NSString *beforencrystring=[NSString stringWithCString:[from bytes]  encoding:NSUTF8StringEncoding];
-        NSLog(@"\n加密\n%@\n",beforencrystring);
+       // NSLog(@"\n加密\n%@\n",beforencrystring);
         
         
         if(beforencrystring==nil)
@@ -472,7 +472,7 @@ NSMutableString * newStrPublicKey = [[NSMutableString alloc] init];
                     continue;
                 }else{
                     trueBlockSize=i;
-                    NSLog(@"\n加密\n%@\n",beforencrystring);
+                  //  NSLog(@"\n加密\n%@\n",beforencrystring);
                     currentLength=currentLength+i;
                     break;
                 }
@@ -552,7 +552,7 @@ NSMutableString * newStrPublicKey = [[NSMutableString alloc] init];
         NSData *from = [plainTextData subdataWithRange:NSMakeRange(currentLength, trueBlockSize)];
         
         NSString *beforencrystring=[NSString stringWithCString:[from bytes]  encoding:NSUTF8StringEncoding];
-        NSLog(@"\n加密\n%@\n",beforencrystring);
+       // NSLog(@"\n加密\n%@\n",beforencrystring);
         
         
          if(beforencrystring==nil)
@@ -569,7 +569,7 @@ NSMutableString * newStrPublicKey = [[NSMutableString alloc] init];
                      continue;
                  }else{
                      trueBlockSize=i;
-                     NSLog(@"\n加密\n%@\n",beforencrystring);
+                    // NSLog(@"\n加密\n%@\n",beforencrystring);
                      currentLength=currentLength+i;
                      break;
                  }
@@ -607,7 +607,7 @@ NSMutableString * newStrPublicKey = [[NSMutableString alloc] init];
         NSString *decrystring=[[NSString alloc] initWithCString:privateto
                                 encoding:NSUTF8StringEncoding];
         int count=[decrystring length];
-                               NSLog(@"\n\n解密\n%@ %d",decrystring,count);
+                              // NSLog(@"\n\n解密\n%@ %d",decrystring,count);
         
         
         
@@ -673,7 +673,7 @@ NSMutableString * newStrPublicKey = [[NSMutableString alloc] init];
             
             
      
-            NSLog(@"\n\n解密\n %d %@",i,decrystring);
+            //NSLog(@"\n\n解密\n %d %@",i,decrystring);
             
             [decryptedData appendString: decrystring ];
             
@@ -734,7 +734,7 @@ NSMutableString * newStrPublicKey = [[NSMutableString alloc] init];
         
         NSString *beforencrystring=[NSString stringWithCString:privateto  encoding:NSUTF8StringEncoding];
         
-        NSLog(@"\n解密\n%@\n",beforencrystring);
+        //NSLog(@"\n解密\n%@\n",beforencrystring);
         
         
         if(beforencrystring==nil ||[beforencrystring isEqualToString:@""])
@@ -762,7 +762,7 @@ NSMutableString * newStrPublicKey = [[NSMutableString alloc] init];
                     continue;
                 }else{
                     trueBlockSize=i;
-                    NSLog(@"\n解密\n%@\n",beforencrystring);
+                    //NSLog(@"\n解密\n%@\n",beforencrystring);
                     currentLength=currentLength+i;
                     
                            [decryptedData appendString: beforencrystring];

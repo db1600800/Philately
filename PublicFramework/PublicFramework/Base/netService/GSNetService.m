@@ -24,6 +24,8 @@
     
     NSString *actionIDkey;
 }
+
+
 DEF_SINGLETON(GSNetService)
 
 -(NSArray*)adViewsFromServerWithSizeType:(adViewSizeType)type{
@@ -233,7 +235,7 @@ DEF_SINGLETON(GSNetService)
     }
     self.lastFormName=[NSString stringWithString:formName];
     //NSLog(@"formName captured:%@",_lastFormName);
-    NSLog(@"jsonStr =%@",jsonStr);
+   // NSLog(@"jsonStr =%@",jsonStr);
     //[UIApplication sharedApplication].networkActivityIndicatorVisible = true;
     [webService invoke:self action:@selector(serviceCallback:) arg0:jsonStr];
     
@@ -261,6 +263,7 @@ DEF_SINGLETON(GSNetService)
     CPSServerImplService *webService=[CPSServerImplService  serviceWithUsername:userName andPassword: password  ];
     
     webService.requestTimeout=TIMEOUT/1000;
+    
     NSString *jsonStr=[prama JSONString];
     
     if (_delegate&&[_delegate respondsToSelector:@selector(metaMsgSentToServer:)]) {
@@ -268,7 +271,7 @@ DEF_SINGLETON(GSNetService)
     }
     self.lastFormName=[NSString stringWithString:formName];
     //NSLog(@"formName captured:%@",_lastFormName);
-    NSLog(@"jsonStr =%@",jsonStr);
+   
     //[UIApplication sharedApplication].networkActivityIndicatorVisible = true;
     [webService invoke:self  action:@selector(serviceCallback:) arg0:jsonStr];
     
@@ -283,7 +286,7 @@ DEF_SINGLETON(GSNetService)
 
 -(void)serviceCallback:(id)response{
     
-    NSLog(@"response:%@",response);
+    //NSLog(@"response:%@",response);
     //[UIApplication sharedApplication].networkActivityIndicatorVisible = false;
 
     if (_delegate) {
@@ -331,7 +334,7 @@ DEF_SINGLETON(GSNetService)
                 if (_lastFormName!=nil) {
                     [finalDic setObject:_lastFormName forKey:@"formName"];
                 }
-                NSLog(@"returnBackData=%@---->%@",_lastFormName,finalDic);
+               // NSLog(@"returnBackData=%@---->%@",_lastFormName,finalDic);
                 [_delegate netServiceReturnData:finalDic];
             }
         }

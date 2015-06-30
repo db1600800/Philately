@@ -8,6 +8,9 @@
 #import "StampTranCall.h"
 #import "SliderViewController.h"
 #import "PromptError.h"
+#import "SysBaseInfo.h"
+#import "RespondParam0004.h"
+#import "RespondParam0008.h"
 @implementation LoginViewController
 //back
 @synthesize backImageView;
@@ -62,8 +65,11 @@ StampTranCall *stampTranCall;
 
 -(void)loginButtonHandTap
 {
-[self dismissViewControllerAnimated:NO completion:^(){}];
-    [[SliderViewController sharedSliderController].navigationController popoverPresentationController];
+//[self request0008 ];
+    [self request0004 ];
+    
+//[self dismissViewControllerAnimated:NO completion:^(){}];
+//    [[SliderViewController sharedSliderController].navigationController popoverPresentationController];
  
 }
 
@@ -96,8 +102,174 @@ StampTranCall *stampTranCall;
 }
 
 
+/*会员登录0004*/
+NSString  *n0004=@"JY0004";
+/*会员登录0004*/
+-(void) request0004{
+    
+    NSString *userName= [userNameValueEditText text];
+    if(userName==nil ||[userName isEqualToString:@""])
+    {
+        [PromptError toast:@"请输入用户名"];
+        return;
+    }
+    
+    NSString *pwd= [pwdValueEditText text];
+    if(pwd==nil ||[pwd isEqualToString:@""])
+    {
+            [PromptError toast:@"请输入密码"];
+        return;
+    }
+    
+    NSString *code= [codeValueEditText text];
+    if(code==nil ||[code isEqualToString:@""])
+    {
+         [PromptError toast:@"请输入验证码"];
+        return;
+    }else if(![code isEqualToString:validateCode ])
+               {
+                   [PromptError toast:@"验证码错误,请重新输入"];
+                   [codeValueEditText setText:@""];
+                   [self onTapToGenerateCode ];
+                   return;
+               }
+    
+    NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
+    /* 登录号 备注:必填*/
+    [businessparam setValue:userName forKey:@"loginNo"];
+    /* 密码 备注:必填*/
+    [businessparam setValue:pwd forKey:@"passWord"];
+   
+    
+    
+    CstmMsg *_cstmMsg=[CstmMsg sharedInstance ];
+    SysBaseInfo *_sysBaseInfo=[SysBaseInfo sharedInstance];
+    
+    StampTranCall *stampTranCall=[StampTranCall sharedInstance ];
+    
+    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0004 business:businessparam delegate:self ];
+    
+    
+}
+
+
+
+StampTranCall *stampTranCall;
+/*会员资料标准查询0008*/
+NSString  *n0008=@"JY0008";
+/*会员资料标准查询0008*/
+-(void) request0008{
+      CstmMsg *_cstmMsg=[CstmMsg sharedInstance ];
+    
+    NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
+    /* 会员编号 备注:必填*/
+    [businessparam setValue:_cstmMsg.cstmNo forKey:@"cstmNo"];
+    /* 手机号码 备注:必填*/
+    [businessparam setValue:@"" forKey:@"mobileNo"];
+    //[serviceInvoker callWebservice:businessparam formName:n0008 ];
+    
+ 
+    SysBaseInfo *_sysBaseInfo=[SysBaseInfo sharedInstance];
+    
+    StampTranCall *stampTranCall=[StampTranCall sharedInstance ];
+    
+    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0008 business:businessparam delegate:self ];
+    
+}
+
+
 -(void) ReturnData:(MsgReturn*)msgReturn
 {
+    NSMutableArray *listData=[[NSMutableArray alloc]init];
+    /*会员登录0004*/
+    if ([msgReturn.formName isEqualToString:n0004]){
+        
+        NSDictionary *returnData=[msgReturn.map objectForKey:@"returnData"];
+        NSDictionary *returnHead=[returnData objectForKey:@"returnHead"];
+        NSString *respDesc=[returnHead objectForKey:@"respDesc"];
+        NSString *respCode=[returnHead objectForKey:@"respCode"];
+        NSDictionary *returnBody=[returnData objectForKey:@"returnBody"];
+        
+        RespondParam0004 *commonItem=[[RespondParam0004 alloc]init];
+        /* 会员编号 备注:*/
+        commonItem.cstmNo=[returnBody objectForKey:@"cstmNo"];
+        /* 用户名 备注:*/
+        commonItem.userName=[returnBody objectForKey:@"userName"];
+        CstmMsg *cstmMsg=[CstmMsg sharedInstance];
+        cstmMsg.cstmNo= commonItem.cstmNo;
+        cstmMsg.cstmName=commonItem.userName;
+        [self request0008 ];
+        
+    }
+//
+//    
+//    
+//    
+//    NSMutableArray *listData=[[NSMutableArray alloc]init];
+    /*会员资料标准查询0008*/
+    if ([msgReturn.formName isEqualToString:n0008]){
+        if(msgReturn.map==nil)
+        return;
+        
+        NSLog(@"0008 %d",[msgReturn.map count]);
+        NSDictionary *returnData=[msgReturn.map objectForKey:@"returnData"];
+        NSDictionary *returnHead=[returnData objectForKey:@"returnHead"];
+        NSString *respDesc=[returnHead objectForKey:@"respDesc"];
+        NSString *respCode=[returnHead objectForKey:@"respCode"];
+        NSDictionary *returnDataBody=[returnData objectForKey:@"returnBody"];
+        RespondParam0008 *commonItem=[[RespondParam0008 alloc]init];
+        /* 用户头像图片ID 备注:用户头像URL地址*/
+        commonItem.userPicID=[returnDataBody objectForKey:@"userPicID"];
+        /* 用户名 备注:*/
+        commonItem.userName=[returnDataBody objectForKey:@"userName"];
+        /* 手机号码 备注:注册手机号码*/
+        commonItem.mobileNo=[returnDataBody objectForKey:@"mobileNo"];
+        /* 性别 备注:0：男
+         1：女*/
+        commonItem.userSex=[returnDataBody objectForKey:@"userSex"];
+        /* 邮箱 备注:*/
+        commonItem.email=[returnDataBody objectForKey:@"email"];
+        /* 会员积分 备注:*/
+        commonItem.cstmScore=[returnDataBody objectForKey:@"cstmScore"];
+        /* 是否历史集邮统版会员 备注:0：是
+         1：否*/
+        commonItem.isStampMember=[returnDataBody objectForKey:@"isStampMember"];
+        /* 是否实名认证 备注:0：是
+         1：否*/
+        commonItem.isAutonym=[returnDataBody objectForKey:@"isAutonym"];
+        /* 姓名 备注:未经过实名验证的会员这几项为空*/
+        commonItem.cstmName=[returnDataBody objectForKey:@"cstmName"];
+        /* 身份证号码 备注:*/
+        commonItem.certNo=[returnDataBody objectForKey:@"certNo"];
+        /* 认证手机号码 备注:*/
+        commonItem.verifiMobileNo=[returnDataBody objectForKey:@"verifiMobileNo"];
+        /* 省份代号 备注:2015/6/17 增加*/
+        commonItem.provCode=[returnDataBody objectForKey:@"provCode"];
+        /* 市代号 备注:2015/6/17增加*/
+        commonItem.cityCode=[returnDataBody objectForKey:@"cityCode"];
+        /* 县代号 备注:2015/6/17增加*/
+        commonItem.countCode=[returnDataBody objectForKey:@"countCode"];
+        /* 详细地址 备注:2015/6/17增加*/
+        commonItem.detailAddress=[returnDataBody objectForKey:@"detailAddress"];
+        /* 邮编 备注:2015/6/17增加*/
+        commonItem.postCode=[returnDataBody objectForKey:@"postCode"];
+        /* 营业员联系方式（营业员编号） 备注:2015/6/17 增加*/
+        commonItem.brchMobNum=[returnDataBody objectForKey:@"brchMobNum"];
+        /* 新邮自提机构代码 备注:2015/6/17增加*/
+        commonItem.sinceBrchNo=[returnDataBody objectForKey:@"sinceBrchNo"];
+        /* 零售自提机构代码 备注:2015/6/17增加*/
+        commonItem.saleBrchNo=[returnDataBody objectForKey:@"saleBrchNo"];
+        /* 关联终端数量 备注:循环域开始*/
+        commonItem.termNum=[returnDataBody objectForKey:@"termNum"];
+        /* 关联终端类型 备注:01：adnroid
+         02：ios
+         03：微信*/
+        commonItem.termType=[returnDataBody objectForKey:@"termType"];
+        /* 关联终端编号 备注:微信类型的终端编号为Openid*/
+        commonItem.termNo=[returnDataBody objectForKey:@"termNo"];
+        /* 关联终端数量 备注:循环域结束*/
+        commonItem.termNum=[returnDataBody objectForKey:@"termNum"];
+    }
 
     
 }
@@ -157,11 +329,20 @@ StampTranCall *stampTranCall;
 
 - (IBAction)code:(id)sender {
     [loginButton becomeFirstResponder];
-    if([self.codeValueEditText.text isEqualToString:validateCode])
-    {
-        [PromptError toast:nil errorMSg:@"请输入验证码"];
-    }
+   
     
 }
+
+
+
+
+
+
 @end
+
+
+
+
+
+
 

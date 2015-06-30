@@ -72,7 +72,7 @@
 	
 	// Output the URL if logging is enabled
 	if(logging) {
-		NSLog(@"Loading: %@", url.absoluteString);
+		//NSLog(@"Loading: %@", url.absoluteString);
 	}
 	
 	// Create the request
@@ -87,7 +87,7 @@
 		[request addValue: @"text/xml; charset=utf-8" forHTTPHeaderField: @"Content-Type"];
 		[request setHTTPBody: [postData dataUsingEncoding: NSUTF8StringEncoding]];
 		if(self.logging) {
-			NSLog(@"%@", postData);
+			//NSLog(@"%@", postData);
 		}
 	}
 	
@@ -165,7 +165,7 @@
 	NSError* error;
 	if(self.logging == YES) {
 		NSString* response = [[NSString alloc] initWithData: self.receivedData encoding: NSUTF8StringEncoding];
-		NSLog(@"%@", response);
+		//NSLog(@"%@", response);
 		[response release];
 	}
 
@@ -191,7 +191,7 @@
 			if(self.handler != nil && [self.handler respondsToSelector: self.action]) {
 				[self.handler performSelector: self.action withObject: fault];
 			} else {
-				NSLog(@"SOAP Fault: %@", fault);
+				//NSLog(@"SOAP Fault: %@", fault);
 			}
 		}
 	} else {
