@@ -3,7 +3,11 @@
 
 //ios界面 object-c 
 #import <UIKit/UIKit.h>
-@interface FirstPageViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
+#import "StampTranCall.h"
+
+#import "PromptError.h"
+#import "SysBaseInfo.h"
+@interface FirstPageViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,StampTranCallDelegate>
 //table
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableDictionary *cacheCells;

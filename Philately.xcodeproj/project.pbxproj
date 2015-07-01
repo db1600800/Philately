@@ -29,6 +29,8 @@
 		5A724B361B43766300F08B0B /* RespondParam0053.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B321B43766300F08B0B /* RespondParam0053.m */; };
 		5A724B3E1B439E7100F08B0B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B3D1B439E7100F08B0B /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5A724B411B43CD7600F08B0B /* OMGToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B401B43CD7600F08B0B /* OMGToast.m */; };
+		5A724B441B43EA2E00F08B0B /* RespondParam0055.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B431B43EA2E00F08B0B /* RespondParam0055.m */; };
+		5A724B471B43EF2D00F08B0B /* SqlApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B461B43EF2D00F08B0B /* SqlApp.m */; };
 		5A73E1221B3BAC2500BAFD78 /* POST_JY.db in Resources */ = {isa = PBXBuildFile; fileRef = 5A73E1211B3BAC2500BAFD78 /* POST_JY.db */; };
 		5A73E1471B3BC4D700BAFD78 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A73E1261B3BAEEA00BAFD78 /* libsqlite3.0.dylib */; };
 		5A73E1481B3BC59000BAFD78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8639C1B2E5C2800312C89 /* CoreGraphics.framework */; };
@@ -247,6 +249,10 @@
 		5A724B3D1B439E7100F08B0B /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
 		5A724B3F1B43CD7600F08B0B /* OMGToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMGToast.h; sourceTree = "<group>"; };
 		5A724B401B43CD7600F08B0B /* OMGToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMGToast.m; sourceTree = "<group>"; };
+		5A724B421B43EA2E00F08B0B /* RespondParam0055.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0055.h; sourceTree = "<group>"; };
+		5A724B431B43EA2E00F08B0B /* RespondParam0055.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0055.m; sourceTree = "<group>"; };
+		5A724B451B43EF2D00F08B0B /* SqlApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlApp.h; sourceTree = "<group>"; };
+		5A724B461B43EF2D00F08B0B /* SqlApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqlApp.m; sourceTree = "<group>"; };
 		5A73E1211B3BAC2500BAFD78 /* POST_JY.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = POST_JY.db; sourceTree = "<group>"; };
 		5A73E1261B3BAEEA00BAFD78 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		5A73E14A1B3BC62300BAFD78 /* PublicFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PublicFramework.framework; path = "../../../Library/Developer/Xcode/DerivedData/Philately-bpeepzrqbmldacdkywhmornjmgod/Build/Products/Debug-iphonesimulator/PublicFramework.framework"; sourceTree = "<group>"; };
@@ -482,6 +488,8 @@
 		1840B5F51B31C13A00830235 /* welcome */ = {
 			isa = PBXGroup;
 			children = (
+				5A724B421B43EA2E00F08B0B /* RespondParam0055.h */,
+				5A724B431B43EA2E00F08B0B /* RespondParam0055.m */,
 				5A6C911C1B391F5E0064A7D9 /* FirstPageHeadView.h */,
 				5A6C91211B391FFB0064A7D9 /* FirstPageTableViewCell.h */,
 				5A6C91221B391FFB0064A7D9 /* FirstPageTableViewCell.m */,
@@ -792,6 +800,8 @@
 		5AD8B14F1B311E0000C9806A /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
+				5A724B451B43EF2D00F08B0B /* SqlApp.h */,
+				5A724B461B43EF2D00F08B0B /* SqlApp.m */,
 				5A724B3B1B439E7000F08B0B /* Toast */,
 				5AD8B1A41B31618E00C9806A /* SVProgressHUD */,
 				5AD8B1501B311E0000C9806A /* SDWebImage */,
@@ -1098,6 +1108,7 @@
 				5A724B351B43766300F08B0B /* RespondParam0003.m in Sources */,
 				5AD8B17C1B311E0000C9806A /* SDImageCache.m in Sources */,
 				5A91BD021B32ADE800954BA9 /* FindPwdViewController.m in Sources */,
+				5A724B441B43EA2E00F08B0B /* RespondParam0055.m in Sources */,
 				5A6C911F1B391F5E0064A7D9 /* FirstPageHeadView.m in Sources */,
 				5A333C1A1B4281C000B59AB3 /* RespondParam0008.m in Sources */,
 				5AD88E8F1B4137400055B7B9 /* ProductdetailViewController.m in Sources */,
@@ -1126,6 +1137,7 @@
 				5ACFDD221B33F4BE0007FE18 /* MenberMainViewController.m in Sources */,
 				5AD6574D1B033C97005AF1DF /* ViewController.m in Sources */,
 				5AD88E911B4137400055B7B9 /* RespondParam0026.m in Sources */,
+				5A724B471B43EF2D00F08B0B /* SqlApp.m in Sources */,
 				5AD8B18C1B311E0000C9806A /* StampTranCall.m in Sources */,
 				5AD8B1921B311F5F00C9806A /* SysBaseInfo.m in Sources */,
 				5AD88E4C1B40F4C10055B7B9 /* AddAddressViewController.m in Sources */,

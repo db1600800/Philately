@@ -6,9 +6,10 @@
 //  Copyright (c) 2015年 gdpost. All rights reserved.
 //
 
-#import "Sql.h"
+#import "SqlApp.h"
 #import "ErrorObject.h"
-@implementation Sql
+@implementation SqlApp
+
 
 
 
@@ -61,7 +62,7 @@
         //查询结果集中一条一条的遍历所有的记录，这里的数字对应的是列值,注意这里的列值
        
         while (sqlite3_step(statement) == SQLITE_ROW) {
-             row *r=[[row alloc] init ];
+             rowApp *r=[[rowApp alloc] init ];
            
             
             char *SERVICEIDchar = (char*)sqlite3_column_text(statement, 0);
@@ -115,7 +116,7 @@
         //查询结果集中一条一条的遍历所有的记录，这里的数字对应的是列值,注意这里的列值
         
         while (sqlite3_step(statement) == SQLITE_ROW) {
-            row *r=[[row alloc] init ];
+            rowApp *r=[[rowApp alloc] init ];
             
             
             char *SERVICEIDchar = (char*)sqlite3_column_text(statement, 0);
@@ -147,7 +148,7 @@
 
 
 
-@implementation row
+@implementation rowApp
 @synthesize  SERVICEID;
 @synthesize  SERVICEKEY;
 @synthesize  SERVICECODE;
