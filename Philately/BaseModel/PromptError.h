@@ -13,4 +13,5 @@
 
 +(void) changeShowErrorMsg:(MsgReturn*)errorMsg title:(NSString*)title;
 +(void) toast:(NSString*)errorMsg;
++ (PromptError *) sharedInstance;
 @end

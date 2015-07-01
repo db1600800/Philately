@@ -38,15 +38,16 @@
                                 <constraint firstAttribute="width" constant="19" id="DNn-Ir-op0"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户登录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBf-LU-7Fe">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="用户登录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBf-LU-7Fe">
                             <rect key="frame" x="260" y="20" width="80" height="24"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvf-8q-k79">
-                            <rect key="frame" x="528" y="27" width="30" height="19"/>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvf-8q-k79">
+                            <rect key="frame" x="528" y="23" width="35" height="23"/>
                             <color key="backgroundColor" red="0.99607842999999996" green="0.36078431999999999" blue="0.17647060000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="tintColor" red="1" green="0.96862744999999995" blue="0.94117649999999997" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="注册">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,7 +59,7 @@
                         <constraint firstItem="udz-KS-Kn9" firstAttribute="top" secondItem="k0T-LI-bMC" secondAttribute="top" constant="24" id="5Bl-jZ-UNK">
                             <variation key="widthClass=compact" constant="26"/>
                         </constraint>
-                        <constraint firstItem="Fvf-8q-k79" firstAttribute="top" secondItem="k0T-LI-bMC" secondAttribute="top" constant="27" id="HKx-7u-brw">
+                        <constraint firstItem="Fvf-8q-k79" firstAttribute="top" secondItem="k0T-LI-bMC" secondAttribute="top" constant="23" id="HKx-7u-brw">
                             <variation key="widthClass=compact" constant="30"/>
                         </constraint>
                         <constraint firstItem="Fvf-8q-k79" firstAttribute="bottom" secondItem="k0T-LI-bMC" secondAttribute="bottom" constant="-14" id="LGv-4s-wwt">
@@ -68,7 +69,7 @@
                             <variation key="widthClass=compact" constant="-6"/>
                         </constraint>
                         <constraint firstAttribute="centerX" secondItem="eBf-LU-7Fe" secondAttribute="centerX" id="Yz3-tx-pAT"/>
-                        <constraint firstAttribute="trailing" secondItem="Fvf-8q-k79" secondAttribute="trailing" constant="42" id="mVH-pL-aJs"/>
+                        <constraint firstAttribute="trailing" secondItem="Fvf-8q-k79" secondAttribute="trailing" constant="37" id="mVH-pL-aJs"/>
                         <constraint firstItem="eBf-LU-7Fe" firstAttribute="bottom" secondItem="k0T-LI-bMC" secondAttribute="bottom" constant="-16" id="niP-5R-QKh">
                             <variation key="widthClass=compact" constant="-6"/>
                         </constraint>

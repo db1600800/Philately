@@ -11,6 +11,7 @@
 #import "SysBaseInfo.h"
 #import "RespondParam0004.h"
 #import "RespondParam0008.h"
+#import "RegistViewController.h"
 @implementation LoginViewController
 //back
 @synthesize backImageView;
@@ -56,6 +57,11 @@ StampTranCall *stampTranCall;
     [codePicImageView addGestureRecognizer:codeButtonTap];
     codeValueEditText.delegate=self;
     
+    
+    UITapGestureRecognizer *rigistButtonTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(rigistButtonHandTap)];
+    [rigistButton addGestureRecognizer:rigistButtonTap];
+    
+    
 }
 
 -(void)backImageViewHandTap
@@ -66,12 +72,18 @@ StampTranCall *stampTranCall;
 
 -(void)loginButtonHandTap
 {
-//[self request0008 ];
     [self request0004 ];
-    
-//[self dismissViewControllerAnimated:NO completion:^(){}];
-//    [[SliderViewController sharedSliderController].navigationController popoverPresentationController];
  
+}
+
+-(void)rigistButtonHandTap
+{//注册
+    RegistViewController *registViewController=[[RegistViewController alloc]initWithNibName:@"RegistViewController" bundle:nil];
+    
+   [self presentViewController:registViewController animated:YES completion:^{
+       
+   }];
+   
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -80,26 +92,6 @@ StampTranCall *stampTranCall;
 
 -(void) setUiValue{
 
-////back
-//[backImageView setImage:[UIImage imageNamed:@"1.jpeg"]]
-//[backImageView setImageWithURL:[NSURL URLWithString:  placeholderImage:[UIImage imageNamed:@"default.jpg"]];
-////用户登录
-//[titleTextView setValue:]
-////用户名
-//[userNameTitleTextView setValue:]
-////请输入用户名或手机号码
-//[userNameValueEditText setValue:]
-////密码
-//[pwdTitleTextView setValue:]
-////请输入密码
-//[pwdValueEditText setValue:]
-////验证码
-//[codeTitleTextView setValue:]
-////请输入验证码
-//[codeValueEditText setValue:]
-////codePic
-//[codePicImageView setImage:[UIImage imageNamed:@"1.jpeg"]]
-//[codePicImageView setImageWithURL:[NSURL URLWithString:  placeholderImage:[UIImage imageNamed:@"default.jpg"]];
 }
 
 
@@ -199,20 +191,17 @@ NSString  *n0008=@"JY0008";
         CstmMsg *cstmMsg=[CstmMsg sharedInstance];
         cstmMsg.cstmNo= commonItem.cstmNo;
         cstmMsg.cstmName=commonItem.userName;
+        if(commonItem.cstmNo!=nil)
         [self request0008 ];
         
     }
-//
-//    
-//    
-//    
-//    NSMutableArray *listData=[[NSMutableArray alloc]init];
+ 
     /*会员资料标准查询0008*/
     if ([msgReturn.formName isEqualToString:n0008]){
         if(msgReturn.map==nil)
         return;
         
-        NSLog(@"0008 %d",[msgReturn.map count]);
+        NSLog(@"0008 %lu",(unsigned long)[msgReturn.map count]);
         NSDictionary *returnData=[msgReturn.map objectForKey:@"returnData"];
         NSDictionary *returnHead=[returnData objectForKey:@"returnHead"];
         NSString *respDesc=[returnHead objectForKey:@"respDesc"];
