@@ -31,7 +31,7 @@ ServiceInvoker *serviceInvoker;
        serviceInvoker=[[ServiceInvoker alloc]init];
         [serviceInvoker  setDelegate:self];
    
-       [serviceInvoker checkUpdates];
+    [serviceInvoker checkUpdates:@"stampStore_IOS" appVersion:@"1.0" ];
     
    
 }

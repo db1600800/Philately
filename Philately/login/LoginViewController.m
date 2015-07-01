@@ -194,6 +194,7 @@ NSString  *n0008=@"JY0008";
         if(commonItem.cstmNo!=nil)
         [self request0008 ];
         
+        
     }
  
     /*会员资料标准查询0008*/
@@ -207,38 +208,54 @@ NSString  *n0008=@"JY0008";
         NSString *respDesc=[returnHead objectForKey:@"respDesc"];
         NSString *respCode=[returnHead objectForKey:@"respCode"];
         NSDictionary *returnDataBody=[returnData objectForKey:@"returnBody"];
+        
+        CstmMsg *cst=[CstmMsg sharedInstance];
         RespondParam0008 *commonItem=[[RespondParam0008 alloc]init];
         /* 用户头像图片ID 备注:用户头像URL地址*/
         commonItem.userPicID=[returnDataBody objectForKey:@"userPicID"];
+        cst.userPicID=commonItem.userPicID;
         /* 用户名 备注:*/
         commonItem.userName=[returnDataBody objectForKey:@"userName"];
+          cst.userName=commonItem.userName;
         /* 手机号码 备注:注册手机号码*/
         commonItem.mobileNo=[returnDataBody objectForKey:@"mobileNo"];
+         cst.mobileNo=commonItem.mobileNo;
         /* 性别 备注:0：男
          1：女*/
         commonItem.userSex=[returnDataBody objectForKey:@"userSex"];
+         cst.userSex=commonItem.userSex;
         /* 邮箱 备注:*/
         commonItem.email=[returnDataBody objectForKey:@"email"];
+         cst.email=commonItem.email;
         /* 会员积分 备注:*/
         commonItem.cstmScore=[returnDataBody objectForKey:@"cstmScore"];
+        cst.cstmScore=[NSString stringWithFormat:@"%d",commonItem.cstmScore];
         /* 是否历史集邮统版会员 备注:0：是
          1：否*/
         commonItem.isStampMember=[returnDataBody objectForKey:@"isStampMember"];
+         cst.isStampMember=commonItem.isStampMember;
         /* 是否实名认证 备注:0：是
          1：否*/
         commonItem.isAutonym=[returnDataBody objectForKey:@"isAutonym"];
+         cst.isAutonym=commonItem.isAutonym;
         /* 姓名 备注:未经过实名验证的会员这几项为空*/
         commonItem.cstmName=[returnDataBody objectForKey:@"cstmName"];
+         cst.cstmName=commonItem.cstmName;
         /* 身份证号码 备注:*/
         commonItem.certNo=[returnDataBody objectForKey:@"certNo"];
+         cst.certNo=commonItem.certNo;
         /* 认证手机号码 备注:*/
         commonItem.verifiMobileNo=[returnDataBody objectForKey:@"verifiMobileNo"];
+         cst.verifiMobileNo=commonItem.verifiMobileNo;
         /* 省份代号 备注:2015/6/17 增加*/
         commonItem.provCode=[returnDataBody objectForKey:@"provCode"];
+       
         /* 市代号 备注:2015/6/17增加*/
         commonItem.cityCode=[returnDataBody objectForKey:@"cityCode"];
+      
         /* 县代号 备注:2015/6/17增加*/
         commonItem.countCode=[returnDataBody objectForKey:@"countCode"];
+      
         /* 详细地址 备注:2015/6/17增加*/
         commonItem.detailAddress=[returnDataBody objectForKey:@"detailAddress"];
         /* 邮编 备注:2015/6/17增加*/
@@ -259,6 +276,9 @@ NSString  *n0008=@"JY0008";
         commonItem.termNo=[returnDataBody objectForKey:@"termNo"];
         /* 关联终端数量 备注:循环域结束*/
         commonItem.termNum=[returnDataBody objectForKey:@"termNum"];
+        
+        [PromptError toast:@"登陆成功"];
+       [self dismissViewControllerAnimated:NO completion:^(){}];
     }
 
     
