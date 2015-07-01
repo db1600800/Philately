@@ -73,6 +73,7 @@
 //我的预订资格
 @property (weak, nonatomic) IBOutlet UILabel *myBookIsTextView;
 //right
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
 @end
 

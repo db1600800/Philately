@@ -84,7 +84,7 @@
     
     UITapGestureRecognizer *_left = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handTap)];
     [self.modifyPwdTextView addGestureRecognizer:_left];
-    
+    self.scroll.contentSize=CGSizeMake(320, 700);
     
 }
 
