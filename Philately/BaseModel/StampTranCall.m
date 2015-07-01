@@ -26,11 +26,11 @@
 }
 */
 
--(void)jyTranCall:(SysBaseInfo *) sysBaseInfo  cstmMsg:(CstmMsg*)cstmMsg formName:(NSString*)formName business:(NSDictionary*)business delegate:(id<StampTranCallDelegate>)delegate
+-(void)jyTranCall:(SysBaseInfo *) sysBaseInfo  cstmMsg:(CstmMsg*)cstmMsg formName:(NSString*)formName business:(NSDictionary*)business delegate:(id<StampTranCallDelegate>)delegate viewController:(UIViewController*)viewController
 {
     
 
-    
+    self.viewController=viewController;
     self.delegate=delegate;
     
     [SVProgressHUD show];
@@ -124,7 +124,10 @@
         
     }else{//错误码 非0000
     
-            [PromptError changeShowErrorMsg:msgReturn title:nil];
+        NSLog(@"%@ %@",msgReturn.errorCode,msgReturn.errorDesc);
+        
+        [self.delegate ReturnError:msgReturn];
+        [PromptError changeShowErrorMsg:msgReturn title:nil viewController:self.viewController];
     }
     
 }

@@ -23,11 +23,18 @@
 		5A6C91201B391F5E0064A7D9 /* FirstPageHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C911E1B391F5E0064A7D9 /* FirstPageHeadView.xib */; };
 		5A6C91241B391FFB0064A7D9 /* FirstPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C91221B391FFB0064A7D9 /* FirstPageTableViewCell.m */; };
 		5A6C91251B391FFB0064A7D9 /* FirstPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C91231B391FFB0064A7D9 /* FirstPageTableViewCell.xib */; };
+		5A724B331B43766300F08B0B /* RespondParam0001.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B2C1B43766300F08B0B /* RespondParam0001.m */; };
+		5A724B341B43766300F08B0B /* RespondParam0002.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B2E1B43766300F08B0B /* RespondParam0002.m */; };
+		5A724B351B43766300F08B0B /* RespondParam0003.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B301B43766300F08B0B /* RespondParam0003.m */; };
+		5A724B361B43766300F08B0B /* RespondParam0053.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B321B43766300F08B0B /* RespondParam0053.m */; };
+		5A724B3E1B439E7100F08B0B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B3D1B439E7100F08B0B /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5A724B411B43CD7600F08B0B /* OMGToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B401B43CD7600F08B0B /* OMGToast.m */; };
+		5A724B441B43EA2E00F08B0B /* RespondParam0055.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B431B43EA2E00F08B0B /* RespondParam0055.m */; };
+		5A724B471B43EF2D00F08B0B /* SqlApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B461B43EF2D00F08B0B /* SqlApp.m */; };
 		5A73E1221B3BAC2500BAFD78 /* POST_JY.db in Resources */ = {isa = PBXBuildFile; fileRef = 5A73E1211B3BAC2500BAFD78 /* POST_JY.db */; };
 		5A73E1471B3BC4D700BAFD78 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A73E1261B3BAEEA00BAFD78 /* libsqlite3.0.dylib */; };
 		5A73E1481B3BC59000BAFD78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8639C1B2E5C2800312C89 /* CoreGraphics.framework */; };
 		5A73E14C1B3BC68E00BAFD78 /* PublicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A73E14A1B3BC62300BAFD78 /* PublicFramework.framework */; };
-		5A73E14F1B3BD05D00BAFD78 /* OMGToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A73E14E1B3BD05D00BAFD78 /* OMGToast.m */; };
 		5A73E1521B3BD26C00BAFD78 /* PromptError.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A73E1511B3BD26C00BAFD78 /* PromptError.m */; };
 		5A91BD021B32ADE800954BA9 /* FindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A91BD001B32ADE800954BA9 /* FindPwdViewController.m */; };
 		5AC19E7E1B30201E00B8FA31 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC19E7C1B30201E00B8FA31 /* LoginViewController.m */; };
@@ -230,11 +237,25 @@
 		5A6C91211B391FFB0064A7D9 /* FirstPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPageTableViewCell.h; sourceTree = "<group>"; };
 		5A6C91221B391FFB0064A7D9 /* FirstPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageTableViewCell.m; sourceTree = "<group>"; };
 		5A6C91231B391FFB0064A7D9 /* FirstPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstPageTableViewCell.xib; sourceTree = "<group>"; };
+		5A724B2B1B43766300F08B0B /* RespondParam0001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0001.h; sourceTree = "<group>"; };
+		5A724B2C1B43766300F08B0B /* RespondParam0001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0001.m; sourceTree = "<group>"; };
+		5A724B2D1B43766300F08B0B /* RespondParam0002.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0002.h; sourceTree = "<group>"; };
+		5A724B2E1B43766300F08B0B /* RespondParam0002.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0002.m; sourceTree = "<group>"; };
+		5A724B2F1B43766300F08B0B /* RespondParam0003.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0003.h; sourceTree = "<group>"; };
+		5A724B301B43766300F08B0B /* RespondParam0003.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0003.m; sourceTree = "<group>"; };
+		5A724B311B43766300F08B0B /* RespondParam0053.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0053.h; sourceTree = "<group>"; };
+		5A724B321B43766300F08B0B /* RespondParam0053.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0053.m; sourceTree = "<group>"; };
+		5A724B3C1B439E7100F08B0B /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
+		5A724B3D1B439E7100F08B0B /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
+		5A724B3F1B43CD7600F08B0B /* OMGToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMGToast.h; sourceTree = "<group>"; };
+		5A724B401B43CD7600F08B0B /* OMGToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMGToast.m; sourceTree = "<group>"; };
+		5A724B421B43EA2E00F08B0B /* RespondParam0055.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0055.h; sourceTree = "<group>"; };
+		5A724B431B43EA2E00F08B0B /* RespondParam0055.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0055.m; sourceTree = "<group>"; };
+		5A724B451B43EF2D00F08B0B /* SqlApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlApp.h; sourceTree = "<group>"; };
+		5A724B461B43EF2D00F08B0B /* SqlApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqlApp.m; sourceTree = "<group>"; };
 		5A73E1211B3BAC2500BAFD78 /* POST_JY.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = POST_JY.db; sourceTree = "<group>"; };
 		5A73E1261B3BAEEA00BAFD78 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		5A73E14A1B3BC62300BAFD78 /* PublicFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PublicFramework.framework; path = "../../../Library/Developer/Xcode/DerivedData/Philately-bpeepzrqbmldacdkywhmornjmgod/Build/Products/Debug-iphonesimulator/PublicFramework.framework"; sourceTree = "<group>"; };
-		5A73E14D1B3BD05D00BAFD78 /* OMGToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMGToast.h; sourceTree = "<group>"; };
-		5A73E14E1B3BD05D00BAFD78 /* OMGToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMGToast.m; sourceTree = "<group>"; };
 		5A73E1501B3BD26C00BAFD78 /* PromptError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromptError.h; sourceTree = "<group>"; };
 		5A73E1511B3BD26C00BAFD78 /* PromptError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromptError.m; sourceTree = "<group>"; };
 		5A91BCFF1B32ADE800954BA9 /* FindPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPwdViewController.h; sourceTree = "<group>"; };
@@ -467,6 +488,8 @@
 		1840B5F51B31C13A00830235 /* welcome */ = {
 			isa = PBXGroup;
 			children = (
+				5A724B421B43EA2E00F08B0B /* RespondParam0055.h */,
+				5A724B431B43EA2E00F08B0B /* RespondParam0055.m */,
 				5A6C911C1B391F5E0064A7D9 /* FirstPageHeadView.h */,
 				5A6C91211B391FFB0064A7D9 /* FirstPageTableViewCell.h */,
 				5A6C91221B391FFB0064A7D9 /* FirstPageTableViewCell.m */,
@@ -516,9 +539,28 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5A724B3B1B439E7000F08B0B /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				5A724B3C1B439E7100F08B0B /* Toast+UIView.h */,
+				5A724B3D1B439E7100F08B0B /* Toast+UIView.m */,
+				5A724B3F1B43CD7600F08B0B /* OMGToast.h */,
+				5A724B401B43CD7600F08B0B /* OMGToast.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 		5AB36C281B27C8090066D06C /* login */ = {
 			isa = PBXGroup;
 			children = (
+				5A724B2B1B43766300F08B0B /* RespondParam0001.h */,
+				5A724B2C1B43766300F08B0B /* RespondParam0001.m */,
+				5A724B2D1B43766300F08B0B /* RespondParam0002.h */,
+				5A724B2E1B43766300F08B0B /* RespondParam0002.m */,
+				5A724B2F1B43766300F08B0B /* RespondParam0003.h */,
+				5A724B301B43766300F08B0B /* RespondParam0003.m */,
+				5A724B311B43766300F08B0B /* RespondParam0053.h */,
+				5A724B321B43766300F08B0B /* RespondParam0053.m */,
 				5A333C181B4281C000B59AB3 /* RespondParam0008.h */,
 				5A333C191B4281C000B59AB3 /* RespondParam0008.m */,
 				5A333C151B427C5900B59AB3 /* RespondParam0004.h */,
@@ -758,6 +800,9 @@
 		5AD8B14F1B311E0000C9806A /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
+				5A724B451B43EF2D00F08B0B /* SqlApp.h */,
+				5A724B461B43EF2D00F08B0B /* SqlApp.m */,
+				5A724B3B1B439E7000F08B0B /* Toast */,
 				5AD8B1A41B31618E00C9806A /* SVProgressHUD */,
 				5AD8B1501B311E0000C9806A /* SDWebImage */,
 				5AD8B1671B311E0000C9806A /* SliderViewController */,
@@ -771,8 +816,6 @@
 				5AD8B1941B31200C00C9806A /* TermTypeInfo.m */,
 				5AD8B19C1B3121CD00C9806A /* CstmMsg.h */,
 				5AD8B19D1B3121CD00C9806A /* CstmMsg.m */,
-				5A73E14D1B3BD05D00BAFD78 /* OMGToast.h */,
-				5A73E14E1B3BD05D00BAFD78 /* OMGToast.m */,
 				5A73E1501B3BD26C00BAFD78 /* PromptError.h */,
 				5A73E1511B3BD26C00BAFD78 /* PromptError.m */,
 				5AD7139C1B42689C0038F44B /* ErrorObject.h */,
@@ -1062,8 +1105,10 @@
 				5AD342B91B3CE66F008FFF19 /* RespondParam0043.m in Sources */,
 				5AD342F11B3D5020008FFF19 /* RespondParam0035.m in Sources */,
 				5AD8B1831B311E0000C9806A /* VCPhotoScrollShow.m in Sources */,
+				5A724B351B43766300F08B0B /* RespondParam0003.m in Sources */,
 				5AD8B17C1B311E0000C9806A /* SDImageCache.m in Sources */,
 				5A91BD021B32ADE800954BA9 /* FindPwdViewController.m in Sources */,
+				5A724B441B43EA2E00F08B0B /* RespondParam0055.m in Sources */,
 				5A6C911F1B391F5E0064A7D9 /* FirstPageHeadView.m in Sources */,
 				5A333C1A1B4281C000B59AB3 /* RespondParam0008.m in Sources */,
 				5AD88E8F1B4137400055B7B9 /* ProductdetailViewController.m in Sources */,
@@ -1071,6 +1116,7 @@
 				5AD342CC1B3D2AC7008FFF19 /* RespondParam0040.m in Sources */,
 				5AD342F01B3D5020008FFF19 /* RespondParam0034.m in Sources */,
 				5ACFDD121B33B9920007FE18 /* RespondParam0005.m in Sources */,
+				5A724B361B43766300F08B0B /* RespondParam0053.m in Sources */,
 				5AD8B17D1B311E0000C9806A /* SDWebImageDecoder.m in Sources */,
 				5A6C911A1B391E2D0064A7D9 /* FirstPageViewController.m in Sources */,
 				5AD88E921B4137400055B7B9 /* RespondParam0027.m in Sources */,
@@ -1078,6 +1124,7 @@
 				5ACFDD1B1B33C1390007FE18 /* RespondParam0006.m in Sources */,
 				5AD88E381B40DD190055B7B9 /* RespondParam0038.m in Sources */,
 				5AD8B1801B311E0000C9806A /* SDWebImagePrefetcher.m in Sources */,
+				5A724B331B43766300F08B0B /* RespondParam0001.m in Sources */,
 				5AD342B71B3CE66F008FFF19 /* RespondParam0041.m in Sources */,
 				5A73E1521B3BD26C00BAFD78 /* PromptError.m in Sources */,
 				5AD8B18A1B311E0000C9806A /* UIViewController+MLTransition.m in Sources */,
@@ -1090,11 +1137,13 @@
 				5ACFDD221B33F4BE0007FE18 /* MenberMainViewController.m in Sources */,
 				5AD6574D1B033C97005AF1DF /* ViewController.m in Sources */,
 				5AD88E911B4137400055B7B9 /* RespondParam0026.m in Sources */,
+				5A724B471B43EF2D00F08B0B /* SqlApp.m in Sources */,
 				5AD8B18C1B311E0000C9806A /* StampTranCall.m in Sources */,
 				5AD8B1921B311F5F00C9806A /* SysBaseInfo.m in Sources */,
 				5AD88E4C1B40F4C10055B7B9 /* AddAddressViewController.m in Sources */,
 				5AD8B1811B311E0000C9806A /* UIButton+WebCache.m in Sources */,
 				5AD88E351B40DD190055B7B9 /* ConfirmOrderFormViewController.m in Sources */,
+				5A724B3E1B439E7100F08B0B /* Toast+UIView.m in Sources */,
 				5AD6574A1B033C97005AF1DF /* PublicLibUI.xcdatamodeld in Sources */,
 				5AD8B19E1B3121CD00C9806A /* CstmMsg.m in Sources */,
 				5AD88E7F1B412D370055B7B9 /* ProductlistViewController.m in Sources */,
@@ -1111,7 +1160,9 @@
 				5AD88E371B40DD190055B7B9 /* RespondParam0037.m in Sources */,
 				5AD88E6E1B4121950055B7B9 /* RespondParam0011.m in Sources */,
 				5AD88E821B412D370055B7B9 /* RespondParam0025.m in Sources */,
+				5A724B411B43CD7600F08B0B /* OMGToast.m in Sources */,
 				5AD88E591B411B710055B7B9 /* PickUpByMyselfAddressTableViewCell.m in Sources */,
+				5A724B341B43766300F08B0B /* RespondParam0002.m in Sources */,
 				5AD88E6A1B4121950055B7B9 /* ReceiverAddressManageTableViewCell.m in Sources */,
 				5AD8B1891B311E0000C9806A /* MLTransitionAnimation.m in Sources */,
 				5AD342D91B3D4415008FFF19 /* ShoppingCarTableViewCell.m in Sources */,
@@ -1119,7 +1170,6 @@
 				5AD77C0E1B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.m in Sources */,
 				5AD8B1861B311E0000C9806A /* MainViewController.m in Sources */,
 				1840B5F91B31C16500830235 /* WelcomeViewController.m in Sources */,
-				5A73E14F1B3BD05D00BAFD78 /* OMGToast.m in Sources */,
 				5AD8B17F1B311E0000C9806A /* SDWebImageManager.m in Sources */,
 				5AD8B17B1B311E0000C9806A /* README.md in Sources */,
 				5AD8B1841B311E0000C9806A /* LeftViewController.m in Sources */,

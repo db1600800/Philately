@@ -1,21 +1,16 @@
 //
-//  Toast.h
+//  OMGToast.h
 //  Philately
 //
-//  Created by gdpost on 15/6/25.
+//  Created by gdpost on 15/7/1.
 //  Copyright (c) 2015年 gdpost. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
-
 #define DEFAULT_DISPLAY_DURATION 2.0f
-@interface OMGToast : NSObject
 
-{
-
-
+@interface OMGToast : NSObject {
     NSString *text;
     UIButton *contentView;
     CGFloat  duration;
@@ -36,19 +31,5 @@
 + (void)showWithText:(NSString *) text_
         bottomOffset:(CGFloat) bottomOffset_
             duration:(CGFloat) duration_;
-
-- (id)initWithText:(NSString *)text_;
-- (void)setDuration:(CGFloat) duration_;
-
-- (void)dismisToast;
-- (void)toastTaped:(UIButton *)sender_;
-
-- (void)showAnimation;
-- (void)hideAnimation;
-
-- (void)show;
-- (void)showFromTopOffset:(CGFloat) topOffset_;
-- (void)showFromBottomOffset:(CGFloat) bottomOffset_;
-
 
 @end

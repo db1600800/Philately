@@ -11,6 +11,7 @@
 #import <PublicFramework/MsgReturn.h>
 @interface PromptError : NSObject<UIAlertViewDelegate>
 
-+(void) changeShowErrorMsg:(MsgReturn*)errorMsg title:(NSString*)title;
-+(void) toast:(NSString*)errorMsg;
++(void) changeShowErrorMsg:(MsgReturn*)errorMsg title:(NSString*)title viewController:(UIViewController*)viewController;
+
+
 @end

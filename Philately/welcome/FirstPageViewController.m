@@ -7,6 +7,7 @@
 #import <PublicFramework/JSONKit.h>
 #import "FirstPageHeadView.h"
 #import "FirstPageTableViewCell.h"
+#import "RespondParam0055.h"
 @implementation FirstPageViewController
 //table
 
@@ -45,6 +46,8 @@ NSArray * imageArr;//图片路径字符串数组
   UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handTap)];
     
    // [self.modifyPwdTextView addGestureRecognizer:tap];
+    
+    [self request0055];
 }
 
 //-(void)handTap{
@@ -263,5 +266,73 @@ bool Tend=YES;
 }
 
 
+/*应用首页商品列表查询0055*/
+NSString  *n0055=@"0055";
+/*应用首页商品列表查询0055*/
+-(void) request0055{
+    NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
+    /* 业务代号数量 备注:必填*/
+    [businessparam setValue:@"1" forKey:@"recordNum"];
+    /* 业务代号 备注:必填*/
+    NSMutableArray *array=[[NSMutableArray alloc] init];
+    [array addObject:@""];
+    [businessparam setValue:array forKey:@"busiNo"];
+    /* 业务代号数量 备注:必填*/
+    //[businessparam setValue:@"" forKey:@"recordNum"];
+   
+
+
+SysBaseInfo *_sysBaseInfo=[SysBaseInfo sharedInstance];
+
+StampTranCall *stampTranCall=[StampTranCall sharedInstance ];
+CstmMsg *_cstmMsg=[CstmMsg sharedInstance ];
+    
+[stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0055 business:businessparam delegate:self viewController:self];
+
+}
+
+
+-(void) ReturnError:(MsgReturn*)msgReturn
+{
+}
+
+-(void) ReturnData:(MsgReturn*)msgReturn
+{
+    NSMutableArray *listData=[[NSMutableArray alloc]init];
+    /*应用首页商品列表查询0055*/
+    if ([msgReturn.formName isEqualToString:n0055]){
+        NSDictionary *returnData=[msgReturn.map objectForKey:@"returnData"];
+        NSDictionary *returnHead=[returnData objectForKey:@"returnHead"];
+        NSString *respDesc=[returnHead objectForKey:@"respDesc"];
+        NSString *respCode=[returnHead objectForKey:@"respCode"];
+        NSDictionary *returnDataBody=[returnData objectForKey:@"returnBody"];
+        
+      
+        
+        /* 总返回的商品数量 备注:循环域开始*/
+        int recordNum=[returnDataBody objectForKey:@"recordNum"];
+        
+        for (int i=0; i<recordNum; i++) {
+             RespondParam0055 *commonItem=[[RespondParam0055 alloc]init];
+        /* 业务代号 备注:*/
+        commonItem.busiNo= [((NSArray *)[returnDataBody objectForKey:@"busiNo"]) objectAtIndex:i];
+        /* 商品代号 备注:*/
+        commonItem.merchID=[((NSArray *)[returnDataBody objectForKey:@"merchID"]) objectAtIndex:i];
+        /* 商品名称 备注:*/
+        commonItem.merchName=[((NSArray *)[returnDataBody objectForKey:@"merchName"]) objectAtIndex:i];
+        /* 商品价格 备注:*/
+        commonItem.merchPrice=[[((NSArray *)[returnDataBody objectForKey:@"merchPrice"]) objectAtIndex:i] floatValue];
+        /* 图片ID 备注:*/
+        commonItem.merchPicID=[((NSArray *)[returnDataBody objectForKey:@"merchPicID"]) objectAtIndex:i];
+        }
+       
+    }
+
+
+}
+
 @end
+
+
+
 

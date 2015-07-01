@@ -1,12 +1,32 @@
 //
-//  Toast.m
+//  OMGToast.m
 //  Philately
 //
-//  Created by gdpost on 15/6/25.
+//  Created by gdpost on 15/7/1.
 //  Copyright (c) 2015年 gdpost. All rights reserved.
 //
 
 #import "OMGToast.h"
+
+#import <QuartzCore/QuartzCore.h>
+
+@interface OMGToast (private)
+
+- (id)initWithText:(NSString *)text_;
+- (void)setDuration:(CGFloat) duration_;
+
+- (void)dismisToast;
+- (void)toastTaped:(UIButton *)sender_;
+
+- (void)showAnimation;
+- (void)hideAnimation;
+
+- (void)show;
+- (void)showFromTopOffset:(CGFloat) topOffset_;
+- (void)showFromBottomOffset:(CGFloat) bottomOffset_;
+
+@end
+
 
 @implementation OMGToast
 
@@ -15,8 +35,8 @@
                                                     name:UIDeviceOrientationDidChangeNotification
                                                   object:[UIDevice currentDevice]];
    contentView = nil;
-  text = nil;
-  
+    text = nil;
+   
 }
 
 
@@ -52,7 +72,7 @@
                         action:@selector(toastTaped:)
               forControlEvents:UIControlEventTouchDown];
         contentView.alpha = 0.0f;
-      
+    
         
         duration = DEFAULT_DISPLAY_DURATION;
         
@@ -159,4 +179,5 @@
     [toast setDuration:duration_];
     [toast showFromBottomOffset:bottomOffset_];
 }
+
 @end

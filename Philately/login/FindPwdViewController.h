@@ -1,6 +1,12 @@
 //ios界面 object-c
 #import <UIKit/UIKit.h>
-@interface FindPwdViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+#import "StampTranCall.h"
+
+#import "PromptError.h"
+#import "SysBaseInfo.h"
+
+@interface FindPwdViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,StampTranCallDelegate>
 //找回新密码
 @property (weak, nonatomic) IBOutlet UIButton *findpwdButton;
 //back

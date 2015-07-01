@@ -11,6 +11,9 @@
 #import "SysBaseInfo.h"
 #import "RespondParam0004.h"
 #import "RespondParam0008.h"
+#import "RegistViewController.h"
+#import "Toast+UIView.h"
+#import "FindPwdViewController.h"
 @implementation LoginViewController
 //back
 @synthesize backImageView;
@@ -56,6 +59,25 @@ StampTranCall *stampTranCall;
     [codePicImageView addGestureRecognizer:codeButtonTap];
     codeValueEditText.delegate=self;
     
+    
+    UITapGestureRecognizer *rigistButtonTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(rigistButtonHandTap)];
+    [rigistButton addGestureRecognizer:rigistButtonTap];
+    
+    
+    [self.forgetPwdButton addTarget:self action:@selector(forgetPwdButtonclicked:) forControlEvents:UIControlEventTouchUpInside];
+  
+    
+    
+}
+
+-(void)forgetPwdButtonclicked:(UIButton *)btn{
+    
+    
+    FindPwdViewController *findPwdViewController=[[FindPwdViewController alloc ] initWithNibName:@"FindPwdViewController" bundle:nil];
+    
+    [self presentViewController:findPwdViewController animated:YES completion:^{
+        
+    }];
 }
 
 -(void)backImageViewHandTap
@@ -66,12 +88,18 @@ StampTranCall *stampTranCall;
 
 -(void)loginButtonHandTap
 {
-//[self request0008 ];
     [self request0004 ];
-    
-//[self dismissViewControllerAnimated:NO completion:^(){}];
-//    [[SliderViewController sharedSliderController].navigationController popoverPresentationController];
  
+}
+
+-(void)rigistButtonHandTap
+{//注册
+    RegistViewController *registViewController=[[RegistViewController alloc]initWithNibName:@"RegistViewController" bundle:nil];
+    
+   [self presentViewController:registViewController animated:YES completion:^{
+       
+   }];
+   
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -80,26 +108,6 @@ StampTranCall *stampTranCall;
 
 -(void) setUiValue{
 
-////back
-//[backImageView setImage:[UIImage imageNamed:@"1.jpeg"]]
-//[backImageView setImageWithURL:[NSURL URLWithString:  placeholderImage:[UIImage imageNamed:@"default.jpg"]];
-////用户登录
-//[titleTextView setValue:]
-////用户名
-//[userNameTitleTextView setValue:]
-////请输入用户名或手机号码
-//[userNameValueEditText setValue:]
-////密码
-//[pwdTitleTextView setValue:]
-////请输入密码
-//[pwdValueEditText setValue:]
-////验证码
-//[codeTitleTextView setValue:]
-////请输入验证码
-//[codeValueEditText setValue:]
-////codePic
-//[codePicImageView setImage:[UIImage imageNamed:@"1.jpeg"]]
-//[codePicImageView setImageWithURL:[NSURL URLWithString:  placeholderImage:[UIImage imageNamed:@"default.jpg"]];
 }
 
 
@@ -111,25 +119,25 @@ NSString  *n0004=@"JY0004";
     NSString *userName= [userNameValueEditText text];
     if(userName==nil ||[userName isEqualToString:@""])
     {
-        [PromptError toast:@"请输入用户名"];
+        [ self.view makeToast:@"请输入用户名" ];
         return;
     }
     
     NSString *pwd= [pwdValueEditText text];
     if(pwd==nil ||[pwd isEqualToString:@""])
     {
-            [PromptError toast:@"请输入密码"];
+            [self.view makeToast:@"请输入密码" ];
         return;
     }
     
     NSString *code= [codeValueEditText text];
     if(code==nil ||[code isEqualToString:@""])
     {
-         [PromptError toast:@"请输入验证码"];
+         [self.view makeToast:@"请输入验证码" ];
         return;
     }else if(![code isEqualToString:validateCode ])
                {
-                   [PromptError toast:@"验证码错误,请重新输入"];
+                   [self.view makeToast:@"验证码错误,请重新输入"];
                    [codeValueEditText setText:@""];
                    [self onTapToGenerateCode ];
                    return;
@@ -148,7 +156,7 @@ NSString  *n0004=@"JY0004";
     
     StampTranCall *stampTranCall=[StampTranCall sharedInstance ];
     
-    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0004 business:businessparam delegate:self ];
+    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0004 business:businessparam delegate:self viewController:self];
     
     
 }
@@ -174,10 +182,14 @@ NSString  *n0008=@"JY0008";
     
     StampTranCall *stampTranCall=[StampTranCall sharedInstance ];
     
-    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0008 business:businessparam delegate:self ];
+    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0008 business:businessparam delegate:self viewController:self];
     
 }
 
+
+-(void) ReturnError:(MsgReturn*)msgReturn
+{
+}
 
 -(void) ReturnData:(MsgReturn*)msgReturn
 {
@@ -199,21 +211,18 @@ NSString  *n0008=@"JY0008";
         CstmMsg *cstmMsg=[CstmMsg sharedInstance];
         cstmMsg.cstmNo= commonItem.cstmNo;
         cstmMsg.cstmName=commonItem.userName;
+        if(commonItem.cstmNo!=nil)
         [self request0008 ];
         
         
     }
-//
-//    
-//    
-//    
-//    NSMutableArray *listData=[[NSMutableArray alloc]init];
+ 
     /*会员资料标准查询0008*/
     if ([msgReturn.formName isEqualToString:n0008]){
         if(msgReturn.map==nil)
         return;
         
-        NSLog(@"0008 %d",[msgReturn.map count]);
+        NSLog(@"0008 %lu",(unsigned long)[msgReturn.map count]);
         NSDictionary *returnData=[msgReturn.map objectForKey:@"returnData"];
         NSDictionary *returnHead=[returnData objectForKey:@"returnHead"];
         NSString *respDesc=[returnHead objectForKey:@"respDesc"];
@@ -288,7 +297,7 @@ NSString  *n0008=@"JY0008";
         /* 关联终端数量 备注:循环域结束*/
         commonItem.termNum=[returnDataBody objectForKey:@"termNum"];
         
-        [PromptError toast:@"登陆成功"];
+        [self.view makeToast:@"登陆成功" ];
        [self dismissViewControllerAnimated:NO completion:^(){}];
     }
 

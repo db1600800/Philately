@@ -3,7 +3,13 @@
 
 //ios界面 object-c 
 #import <UIKit/UIKit.h>
-@interface RegistViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+#import "StampTranCall.h"
+
+#import "PromptError.h"
+#import "SysBaseInfo.h"
+
+@interface RegistViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,StampTranCallDelegate>
 //注册
 @property (weak, nonatomic) IBOutlet UIButton *rigistButton;
 //back
