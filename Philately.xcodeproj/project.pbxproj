@@ -27,11 +27,11 @@
 		5A724B341B43766300F08B0B /* RespondParam0002.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B2E1B43766300F08B0B /* RespondParam0002.m */; };
 		5A724B351B43766300F08B0B /* RespondParam0003.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B301B43766300F08B0B /* RespondParam0003.m */; };
 		5A724B361B43766300F08B0B /* RespondParam0053.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B321B43766300F08B0B /* RespondParam0053.m */; };
+		5A724B3E1B439E7100F08B0B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B3D1B439E7100F08B0B /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5A73E1221B3BAC2500BAFD78 /* POST_JY.db in Resources */ = {isa = PBXBuildFile; fileRef = 5A73E1211B3BAC2500BAFD78 /* POST_JY.db */; };
 		5A73E1471B3BC4D700BAFD78 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A73E1261B3BAEEA00BAFD78 /* libsqlite3.0.dylib */; };
 		5A73E1481B3BC59000BAFD78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8639C1B2E5C2800312C89 /* CoreGraphics.framework */; };
 		5A73E14C1B3BC68E00BAFD78 /* PublicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A73E14A1B3BC62300BAFD78 /* PublicFramework.framework */; };
-		5A73E14F1B3BD05D00BAFD78 /* OMGToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A73E14E1B3BD05D00BAFD78 /* OMGToast.m */; };
 		5A73E1521B3BD26C00BAFD78 /* PromptError.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A73E1511B3BD26C00BAFD78 /* PromptError.m */; };
 		5A91BD021B32ADE800954BA9 /* FindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A91BD001B32ADE800954BA9 /* FindPwdViewController.m */; };
 		5AC19E7E1B30201E00B8FA31 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC19E7C1B30201E00B8FA31 /* LoginViewController.m */; };
@@ -242,11 +242,11 @@
 		5A724B301B43766300F08B0B /* RespondParam0003.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0003.m; sourceTree = "<group>"; };
 		5A724B311B43766300F08B0B /* RespondParam0053.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespondParam0053.h; sourceTree = "<group>"; };
 		5A724B321B43766300F08B0B /* RespondParam0053.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0053.m; sourceTree = "<group>"; };
+		5A724B3C1B439E7100F08B0B /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
+		5A724B3D1B439E7100F08B0B /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
 		5A73E1211B3BAC2500BAFD78 /* POST_JY.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = POST_JY.db; sourceTree = "<group>"; };
 		5A73E1261B3BAEEA00BAFD78 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		5A73E14A1B3BC62300BAFD78 /* PublicFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PublicFramework.framework; path = "../../../Library/Developer/Xcode/DerivedData/Philately-bpeepzrqbmldacdkywhmornjmgod/Build/Products/Debug-iphonesimulator/PublicFramework.framework"; sourceTree = "<group>"; };
-		5A73E14D1B3BD05D00BAFD78 /* OMGToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMGToast.h; sourceTree = "<group>"; };
-		5A73E14E1B3BD05D00BAFD78 /* OMGToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMGToast.m; sourceTree = "<group>"; };
 		5A73E1501B3BD26C00BAFD78 /* PromptError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromptError.h; sourceTree = "<group>"; };
 		5A73E1511B3BD26C00BAFD78 /* PromptError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromptError.m; sourceTree = "<group>"; };
 		5A91BCFF1B32ADE800954BA9 /* FindPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPwdViewController.h; sourceTree = "<group>"; };
@@ -528,6 +528,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5A724B3B1B439E7000F08B0B /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				5A724B3C1B439E7100F08B0B /* Toast+UIView.h */,
+				5A724B3D1B439E7100F08B0B /* Toast+UIView.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 		5AB36C281B27C8090066D06C /* login */ = {
 			isa = PBXGroup;
 			children = (
@@ -778,6 +787,7 @@
 		5AD8B14F1B311E0000C9806A /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
+				5A724B3B1B439E7000F08B0B /* Toast */,
 				5AD8B1A41B31618E00C9806A /* SVProgressHUD */,
 				5AD8B1501B311E0000C9806A /* SDWebImage */,
 				5AD8B1671B311E0000C9806A /* SliderViewController */,
@@ -791,8 +801,6 @@
 				5AD8B1941B31200C00C9806A /* TermTypeInfo.m */,
 				5AD8B19C1B3121CD00C9806A /* CstmMsg.h */,
 				5AD8B19D1B3121CD00C9806A /* CstmMsg.m */,
-				5A73E14D1B3BD05D00BAFD78 /* OMGToast.h */,
-				5A73E14E1B3BD05D00BAFD78 /* OMGToast.m */,
 				5A73E1501B3BD26C00BAFD78 /* PromptError.h */,
 				5A73E1511B3BD26C00BAFD78 /* PromptError.m */,
 				5AD7139C1B42689C0038F44B /* ErrorObject.h */,
@@ -1118,6 +1126,7 @@
 				5AD88E4C1B40F4C10055B7B9 /* AddAddressViewController.m in Sources */,
 				5AD8B1811B311E0000C9806A /* UIButton+WebCache.m in Sources */,
 				5AD88E351B40DD190055B7B9 /* ConfirmOrderFormViewController.m in Sources */,
+				5A724B3E1B439E7100F08B0B /* Toast+UIView.m in Sources */,
 				5AD6574A1B033C97005AF1DF /* PublicLibUI.xcdatamodeld in Sources */,
 				5AD8B19E1B3121CD00C9806A /* CstmMsg.m in Sources */,
 				5AD88E7F1B412D370055B7B9 /* ProductlistViewController.m in Sources */,
@@ -1143,7 +1152,6 @@
 				5AD77C0E1B3EA07C001D1BE9 /* ShoppingCarEmptyViewController.m in Sources */,
 				5AD8B1861B311E0000C9806A /* MainViewController.m in Sources */,
 				1840B5F91B31C16500830235 /* WelcomeViewController.m in Sources */,
-				5A73E14F1B3BD05D00BAFD78 /* OMGToast.m in Sources */,
 				5AD8B17F1B311E0000C9806A /* SDWebImageManager.m in Sources */,
 				5AD8B17B1B311E0000C9806A /* README.md in Sources */,
 				5AD8B1841B311E0000C9806A /* LeftViewController.m in Sources */,

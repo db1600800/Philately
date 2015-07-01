@@ -17,6 +17,8 @@
 #import "PromptError.h"
 #import "SysBaseInfo.h"
 #import "PromptError.h"
+#import "Toast+UIView.h"
+
 @interface WelcomeViewController ()
 
 @end
@@ -70,7 +72,7 @@ ServiceInvoker *serviceInvoker;
     {    //版本检测失败
         //appver超了
         
-        [PromptError toast:msgReturn.errorDesc];
+        [self.view makeToast:msgReturn.errorDesc];
         return;
     }
     

@@ -20,8 +20,8 @@
 + (StampTranCall *) sharedInstance;
 
 @property (strong, nonatomic) id<StampTranCallDelegate>  delegate;
-
--(void)jyTranCall:(SysBaseInfo *) sysBaseInfo  cstmMsg:(CstmMsg*)cstmMsg  formName:(NSString*)formName business:(NSDictionary*)business delegate:(id<StampTranCallDelegate>)delegate;
+@property (strong, nonatomic) UIViewController *viewController;
+-(void)jyTranCall:(SysBaseInfo *) sysBaseInfo  cstmMsg:(CstmMsg*)cstmMsg  formName:(NSString*)formName business:(NSDictionary*)business delegate:(id<StampTranCallDelegate>)delegate viewController:(UIViewController*)viewController;
 
 @end
 

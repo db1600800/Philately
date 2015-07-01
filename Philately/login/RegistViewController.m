@@ -10,6 +10,9 @@
 #import "RespondParam0008.h"
 #import "RespondParam0053.h"
 #import "PromptError.h"
+
+#import "Toast+UIView.h"
+
 @implementation RegistViewController
 //注册
 @synthesize rigistButton;
@@ -82,9 +85,10 @@ NSString  *n0001=@"JY0001";
 /*用户名唯一校验0001*/
 -(void) request0001{
     
+    
     if(userNameValueEditText.text==nil || [userNameValueEditText.text isEqualToString:@""])
     {
-        //[PromptError toast:@"请输入用户名"];
+        //[self.view makeToast:@"请输入用户名"];
         return ;
     }
     
@@ -97,7 +101,7 @@ NSString  *n0001=@"JY0001";
     
     StampTranCall *stampTranCall=[StampTranCall sharedInstance ];
     
-    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0001 business:businessparam delegate:self ];
+    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0001 business:businessparam delegate:self viewController:self];
 
     
 }
@@ -118,7 +122,7 @@ NSString  *n0002=@"JY0002";
     
     StampTranCall *stampTranCall=[StampTranCall sharedInstance ];
     
-    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0002 business:businessparam delegate:self ];
+    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0002 business:businessparam delegate:self viewController:self];
 
     }
 
@@ -144,7 +148,7 @@ NSString  *n0003=@"JY0003";
     
     StampTranCall *stampTranCall=[StampTranCall sharedInstance ];
     
-    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0003 business:businessparam delegate:self ];
+    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0003 business:businessparam delegate:self viewController:self];
 }
 
 
@@ -163,7 +167,7 @@ NSString  *n0053=@"JY0053";
     
     StampTranCall *stampTranCall=[StampTranCall sharedInstance ];
     
-    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0053 business:businessparam delegate:self ];
+    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:n0053 business:businessparam delegate:self viewController:self];
 }
 
 
@@ -183,10 +187,14 @@ NSString  *nn0008=@"JY0008";
     
     StampTranCall *stampTranCall=[StampTranCall sharedInstance ];
     
-    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:nn0008 business:businessparam delegate:self ];
+    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:nn0008 business:businessparam delegate:self viewController:self];
 }
 
+PromptError *error;
 
+-(void)to
+{
+}
 
 -(void) ReturnData:(MsgReturn*)msgReturn
 {
@@ -200,7 +208,11 @@ NSString  *nn0008=@"JY0008";
         NSString *respCode=[returnHead objectForKey:@"respCode"];
         NSDictionary *returnBody=[returnData objectForKey:@"returnBody"];
         
-        [PromptError toast:@"用户名校验成功，请输入手机号"];
+        
+      
+       
+
+        [self.view makeToast:@"用户名校验成功,请输入手机号"];
         phoneValueEditText.userInteractionEnabled=YES;
         //RespondParam0001 *commonItem=[[RespondParam0001 alloc]init];
     }
@@ -315,6 +327,8 @@ NSString  *nn0008=@"JY0008";
     }
 
 }
+
+
 
 @end
 
