@@ -124,6 +124,7 @@
         
     }else{//错误码 非0000
     
+        [self.delegate ReturnError:msgReturn];
         [PromptError changeShowErrorMsg:msgReturn title:nil viewController:self.viewController];
     }
     

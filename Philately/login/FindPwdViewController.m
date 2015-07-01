@@ -245,6 +245,11 @@ NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
  }
 
 
+
+-(void) ReturnError:(MsgReturn*)msgReturn
+{
+}
+
 -(void) ReturnData:(MsgReturn*)msgReturn
 {
     

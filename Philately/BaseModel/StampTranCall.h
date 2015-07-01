@@ -33,5 +33,6 @@
 
 //业务请求返回数据
 -(void) ReturnData:(MsgReturn*)msgReturn;
+-(void) ReturnError:(MsgReturn*)msgReturn;
 
 @end

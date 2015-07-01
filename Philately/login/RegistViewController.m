@@ -334,7 +334,9 @@ NSString  *n0053=@"JY0053";
 
 
 
-
+-(void) ReturnError:(MsgReturn*)msgReturn
+{
+}
 
 -(void) ReturnData:(MsgReturn*)msgReturn
 {

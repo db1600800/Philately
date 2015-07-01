@@ -187,6 +187,10 @@ NSString  *n0008=@"JY0008";
 }
 
 
+-(void) ReturnError:(MsgReturn*)msgReturn
+{
+}
+
 -(void) ReturnData:(MsgReturn*)msgReturn
 {
     NSMutableArray *listData=[[NSMutableArray alloc]init];
