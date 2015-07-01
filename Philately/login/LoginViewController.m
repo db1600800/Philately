@@ -13,6 +13,7 @@
 #import "RespondParam0008.h"
 #import "RegistViewController.h"
 #import "Toast+UIView.h"
+#import "FindPwdViewController.h"
 @implementation LoginViewController
 //back
 @synthesize backImageView;
@@ -63,6 +64,20 @@ StampTranCall *stampTranCall;
     [rigistButton addGestureRecognizer:rigistButtonTap];
     
     
+    [self.forgetPwdButton addTarget:self action:@selector(forgetPwdButtonclicked:) forControlEvents:UIControlEventTouchUpInside];
+  
+    
+    
+}
+
+-(void)forgetPwdButtonclicked:(UIButton *)btn{
+    
+    
+    FindPwdViewController *findPwdViewController=[[FindPwdViewController alloc ] initWithNibName:@"FindPwdViewController" bundle:nil];
+    
+    [self presentViewController:findPwdViewController animated:YES completion:^{
+        
+    }];
 }
 
 -(void)backImageViewHandTap
