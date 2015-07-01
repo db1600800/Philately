@@ -10,7 +10,7 @@
 #import "RespondParam0008.h"
 #import "RespondParam0053.h"
 #import "PromptError.h"
-
+#import "OMGToast.h"
 #import "Toast+UIView.h"
 
 @implementation RegistViewController
@@ -44,6 +44,10 @@
 @synthesize pwd2TitleTextView;
 //请输入密码
 @synthesize pwd2ValueEditText;
+
+NSTimer *countDownTimer ;
+int secondsCountDown = 60;//60秒倒计时
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -53,12 +57,60 @@
  
     [self.userNameValueEditText addTarget:self action:@selector(userNameValueEditTextDidEndOnExit:) forControlEvents:UIControlEventEditingDidEndOnExit];
     
+    [self.phoneValueEditText addTarget:self action:@selector(phoneValueEditTextDidEndOnExit:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+      [self.codeValueEditText addTarget:self action:@selector(codeValueEditTextDidEndOnExit:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    
+    
+    [self.codepicButton addTarget:self action:@selector(codepicButtonclicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+       [self.pwdValueEditText addTarget:self action:@selector(pwdValueEditTextDidEndOnExit:) forControlEvents:UIControlEventEditingDidEndOnExit];
+  [self.pwd2ValueEditText addTarget:self action:@selector(pwd2ValueEditTextDidEndOnExit:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    
+    
+    [self.rigistButton addTarget:self action:@selector(rigistButtonlicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.pwd2ValueEditText addTarget:self action:@selector(pwd2ValueEditTextDidEndOnExit:) forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    UITapGestureRecognizer *singleTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backImageViewTap)];
+    [backImageView addGestureRecognizer:singleTap1];
+    
+    
     phoneValueEditText.userInteractionEnabled=NO;
     codeValueEditText.userInteractionEnabled=NO;
     pwdValueEditText.userInteractionEnabled=NO;
-    pwd2TitleTextView.userInteractionEnabled=NO;
-    
+    pwd2ValueEditText.userInteractionEnabled=NO;
+    rigistButton.userInteractionEnabled=NO;
  
+}
+
+-(void)backImageViewTap
+{
+[self dismissViewControllerAnimated:YES completion:^{
+    
+}];
+}
+
+-(void)timeFireMethod{
+    secondsCountDown--;
+     [self.codepicButton setTitle:[NSString stringWithFormat:@"%d",secondsCountDown] forState:UIControlStateNormal];
+    
+    if(secondsCountDown==0){
+        [countDownTimer invalidate];
+         self.codepicButton.userInteractionEnabled=YES;
+      [self.codepicButton setTitle:[NSString stringWithFormat:@"%@",@"获取验证码"] forState:UIControlStateNormal];
+        
+    }
+}
+
+-(void)codepicButtonclicked:(UIButton *)btn{
+   
+        countDownTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeFireMethod) userInfo:nil repeats:YES];
+    btn.userInteractionEnabled=NO;
+    [self request0053];
+   
 }
 
 
@@ -66,6 +118,63 @@
 -(void)userNameValueEditTextDidEndOnExit:(UITextField *)textField{
     [phoneValueEditText becomeFirstResponder];//把焦点给别人 键盘消失
     [self request0001];
+    
+}
+
+-(void)phoneValueEditTextDidEndOnExit:(UITextField *)textField{
+    [codeValueEditText becomeFirstResponder];//把焦点给别人 键盘消失
+    [self request0002];
+    
+}
+
+-(void)codeValueEditTextDidEndOnExit:(UITextField *)textField{
+    
+    [pwdValueEditText becomeFirstResponder];//把焦点给别人 键盘消失
+    pwdValueEditText.userInteractionEnabled=YES;
+    
+}
+
+
+-(void)pwdValueEditTextDidEndOnExit:(UITextField *)textField{
+    
+    int count=[textField.text length];
+    if(count!=6)
+    {
+       [self.view makeToast:@"请输入6位密码"];
+    }else
+    {
+    
+    [pwd2ValueEditText becomeFirstResponder];//把焦点给别人 键盘消失
+    pwd2ValueEditText.userInteractionEnabled=YES;
+    }
+    
+}
+
+
+-(void)pwd2ValueEditTextDidEndOnExit:(UITextField *)textField{
+    
+    int count=[textField.text length];
+    if(count!=6)
+    {
+        [self.view makeToast:@"请输入6位密码"];
+        
+    }else if(![pwd2ValueEditText.text isEqualToString:pwdValueEditText.text])
+    {
+     [self.view makeToast:@"两次密码输入不一致"];
+    }
+    else
+    {
+        
+        [rigistButton becomeFirstResponder];//把焦点给别人 键盘消失
+        rigistButton.userInteractionEnabled=YES;
+    }
+    
+}
+
+-(void)rigistButtonlicked:(UIButton *)btn{
+    
+  
+    [self request0003];
     
 }
 
@@ -113,9 +222,17 @@ NSString  *n0001=@"JY0001";
 NSString  *n0002=@"JY0002";
 /*手机号码唯一校验0002*/
 -(void) request0002{
+
+    if(phoneValueEditText.text==nil || [phoneValueEditText.text isEqualToString:@""])
+    {
+        //[self.view makeToast:@"请输入用户名"];
+        return ;
+    }
+
+    
     NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
     /* 手机号码 备注:必填*/
-    [businessparam setValue:@"" forKey:@"mobileNo"];
+    [businessparam setValue:phoneValueEditText.text forKey:@"mobileNo"];
     
     CstmMsg *_cstmMsg=[CstmMsg sharedInstance ];
     SysBaseInfo *_sysBaseInfo=[SysBaseInfo sharedInstance];
@@ -133,15 +250,58 @@ NSString  *n0002=@"JY0002";
 NSString  *n0003=@"JY0003";
 /*用户注册0003*/
 -(void) request0003{
+    
+    
+    if(userNameValueEditText.text==nil || [userNameValueEditText.text isEqualToString:@""])
+    {
+        [self.view makeToast:@"请输入用户名"];
+        return ;
+    }
+    
+  
+    
+    if(phoneValueEditText.text==nil || [phoneValueEditText.text isEqualToString:@""])
+    {
+    [self.view makeToast:@"请输入手机号"];
+        return;
+    }
+    
+    if(codeValueEditText.text==nil || [codeValueEditText.text isEqualToString:@""])
+    {
+        [self.view makeToast:@"请输入验证码"];
+        return;
+    }
+    
+    if(pwdValueEditText.text==nil || [pwdValueEditText.text isEqualToString:@""])
+    {
+        [self.view makeToast:@"请输入密码"];
+        return;
+    }
+    
+    
+    if(pwd2ValueEditText.text==nil || [pwd2ValueEditText.text isEqualToString:@""])
+    {
+        [self.view makeToast:@"请输入确认密码"];
+        return;
+    }
+    
+    if(![pwd2ValueEditText.text isEqualToString:pwdValueEditText.text])
+    {
+        [self.view makeToast:@"两次密码输入不一致"];
+        return;
+    }
+ 
+
+    
     NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
     /* 用户名 备注:必填*/
-    [businessparam setValue:@"" forKey:@"userName"];
+    [businessparam setValue:userNameValueEditText.text forKey:@"userName"];
     /* 手机号码 备注:必填*/
-    [businessparam setValue:@"" forKey:@"mobileNo"];
+    [businessparam setValue:phoneValueEditText.text forKey:@"mobileNo"];
     /* 密码 备注:必填*/
-    [businessparam setValue:@"" forKey:@"passWord"];
+    [businessparam setValue:pwdValueEditText.text forKey:@"passWord"];
     /* 手机验证码 备注:必填*/
-    [businessparam setValue:@"" forKey:@"verificationCode"];
+    [businessparam setValue:codeValueEditText.text forKey:@"verificationCode"];
    
     CstmMsg *_cstmMsg=[CstmMsg sharedInstance ];
     SysBaseInfo *_sysBaseInfo=[SysBaseInfo sharedInstance];
@@ -160,7 +320,7 @@ NSString  *n0053=@"JY0053";
 -(void) request0053{
     NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
     /* 手机号码 备注:必填*/
-    [businessparam setValue:@"" forKey:@"mobileNo"];
+    [businessparam setValue:phoneValueEditText.text forKey:@"mobileNo"];
     
     CstmMsg *_cstmMsg=[CstmMsg sharedInstance ];
     SysBaseInfo *_sysBaseInfo=[SysBaseInfo sharedInstance];
@@ -173,28 +333,8 @@ NSString  *n0053=@"JY0053";
 
 
 
-/*会员资料标准查询0008*/
-NSString  *nn0008=@"JY0008";
-/*会员资料标准查询0008*/
--(void) request0008{
-    NSMutableDictionary *businessparam=[[NSMutableDictionary alloc] init];
-    /* 会员编号 备注:必填*/
-    [businessparam setValue:@"" forKey:@"cstmNo"];
-    /* 手机号码 备注:必填*/
-    [businessparam setValue:@"" forKey:@"mobileNo"];
-    CstmMsg *_cstmMsg=[CstmMsg sharedInstance ];
-    SysBaseInfo *_sysBaseInfo=[SysBaseInfo sharedInstance];
-    
-    StampTranCall *stampTranCall=[StampTranCall sharedInstance ];
-    
-    [stampTranCall jyTranCall:_sysBaseInfo cstmMsg:_cstmMsg formName:nn0008 business:businessparam delegate:self viewController:self];
-}
 
-PromptError *error;
 
--(void)to
-{
-}
 
 -(void) ReturnData:(MsgReturn*)msgReturn
 {
@@ -214,7 +354,8 @@ PromptError *error;
 
         [self.view makeToast:@"用户名校验成功,请输入手机号"];
         phoneValueEditText.userInteractionEnabled=YES;
-        //RespondParam0001 *commonItem=[[RespondParam0001 alloc]init];
+      
+     
     }
     
     
@@ -228,6 +369,8 @@ PromptError *error;
         NSString *respDesc=[returnHead objectForKey:@"respDesc"];
         NSString *respCode=[returnHead objectForKey:@"respCode"];
         NSDictionary *returnBody=[returnData objectForKey:@"returnBody"];
+        [self.view makeToast:@"手机号校验成功,请获取验证码"];
+          codeValueEditText.userInteractionEnabled=YES;
        // RespondParam0002 *commonItem=[[RespondParam0002 alloc]init];
     }
     
@@ -245,6 +388,12 @@ PromptError *error;
         RespondParam0003 *commonItem=[[RespondParam0003 alloc]init];
         /* 会员编号 备注:*/
         commonItem.cstmNo=[returnDataBody objectForKey:@"cstmNo"];
+        if(commonItem.cstmNo!=nil && ![commonItem.cstmNo isEqualToString:@""])
+         [self.view makeToast:@"注册成功"];
+       
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
     }
     
     
@@ -264,68 +413,7 @@ PromptError *error;
     
     
     
-   // NSMutableArray *listData=[[NSMutableArray alloc]init];
-    /*会员资料标准查询0008*/
-    if ([msgReturn.formName isEqualToString:nn0008]){
-        NSDictionary *returnData=[msgReturn.map objectForKey:@"returnData"];
-        NSDictionary *returnHead=[returnData objectForKey:@"returnHead"];
-        NSString *respDesc=[returnHead objectForKey:@"respDesc"];
-        NSString *respCode=[returnHead objectForKey:@"respCode"];
-        NSDictionary *returnDataBody=[returnData objectForKey:@"returnBody"];
-        RespondParam0008 *commonItem=[[RespondParam0008 alloc]init];
-        /* 用户头像图片ID 备注:用户头像URL地址*/
-        commonItem.userPicID=[returnDataBody objectForKey:@"userPicID"];
-        /* 用户名 备注:*/
-        commonItem.userName=[returnDataBody objectForKey:@"userName"];
-        /* 手机号码 备注:注册手机号码*/
-        commonItem.mobileNo=[returnDataBody objectForKey:@"mobileNo"];
-        /* 性别 备注:0：男
-         1：女*/
-        commonItem.userSex=[returnDataBody objectForKey:@"userSex"];
-        /* 邮箱 备注:*/
-        commonItem.email=[returnDataBody objectForKey:@"email"];
-        /* 会员积分 备注:*/
-        commonItem.cstmScore=[returnDataBody objectForKey:@"cstmScore"];
-        /* 是否历史集邮统版会员 备注:0：是
-         1：否*/
-        commonItem.isStampMember=[returnDataBody objectForKey:@"isStampMember"];
-        /* 是否实名认证 备注:0：是
-         1：否*/
-        commonItem.isAutonym=[returnDataBody objectForKey:@"isAutonym"];
-        /* 姓名 备注:未经过实名验证的会员这几项为空*/
-        commonItem.cstmName=[returnDataBody objectForKey:@"cstmName"];
-        /* 身份证号码 备注:*/
-        commonItem.certNo=[returnDataBody objectForKey:@"certNo"];
-        /* 认证手机号码 备注:*/
-        commonItem.verifiMobileNo=[returnDataBody objectForKey:@"verifiMobileNo"];
-        /* 省份代号 备注:2015/6/17 增加*/
-        commonItem.provCode=[returnDataBody objectForKey:@"provCode"];
-        /* 市代号 备注:2015/6/17增加*/
-        commonItem.cityCode=[returnDataBody objectForKey:@"cityCode"];
-        /* 县代号 备注:2015/6/17增加*/
-        commonItem.countCode=[returnDataBody objectForKey:@"countCode"];
-        /* 详细地址 备注:2015/6/17增加*/
-        commonItem.detailAddress=[returnDataBody objectForKey:@"detailAddress"];
-        /* 邮编 备注:2015/6/17增加*/
-        commonItem.postCode=[returnDataBody objectForKey:@"postCode"];
-        /* 营业员联系方式（营业员编号） 备注:2015/6/17 增加*/
-        commonItem.brchMobNum=[returnDataBody objectForKey:@"brchMobNum"];
-        /* 新邮自提机构代码 备注:2015/6/17增加*/
-        commonItem.sinceBrchNo=[returnDataBody objectForKey:@"sinceBrchNo"];
-        /* 零售自提机构代码 备注:2015/6/17增加*/
-        commonItem.saleBrchNo=[returnDataBody objectForKey:@"saleBrchNo"];
-        /* 关联终端数量 备注:循环域开始*/
-        commonItem.termNum=[returnDataBody objectForKey:@"termNum"];
-        /* 关联终端类型 备注:01：adnroid
-         02：ios
-         03：微信*/
-        commonItem.termType=[returnDataBody objectForKey:@"termType"];
-        /* 关联终端编号 备注:微信类型的终端编号为Openid*/
-        commonItem.termNo=[returnDataBody objectForKey:@"termNo"];
-        /* 关联终端数量 备注:循环域结束*/
-        commonItem.termNum=[returnDataBody objectForKey:@"termNum"];
-    }
-
+   
 }
 
 

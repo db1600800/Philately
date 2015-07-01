@@ -28,6 +28,7 @@
 		5A724B351B43766300F08B0B /* RespondParam0003.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B301B43766300F08B0B /* RespondParam0003.m */; };
 		5A724B361B43766300F08B0B /* RespondParam0053.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B321B43766300F08B0B /* RespondParam0053.m */; };
 		5A724B3E1B439E7100F08B0B /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B3D1B439E7100F08B0B /* Toast+UIView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5A724B411B43CD7600F08B0B /* OMGToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A724B401B43CD7600F08B0B /* OMGToast.m */; };
 		5A73E1221B3BAC2500BAFD78 /* POST_JY.db in Resources */ = {isa = PBXBuildFile; fileRef = 5A73E1211B3BAC2500BAFD78 /* POST_JY.db */; };
 		5A73E1471B3BC4D700BAFD78 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A73E1261B3BAEEA00BAFD78 /* libsqlite3.0.dylib */; };
 		5A73E1481B3BC59000BAFD78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8639C1B2E5C2800312C89 /* CoreGraphics.framework */; };
@@ -244,6 +245,8 @@
 		5A724B321B43766300F08B0B /* RespondParam0053.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespondParam0053.m; sourceTree = "<group>"; };
 		5A724B3C1B439E7100F08B0B /* Toast+UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Toast+UIView.h"; sourceTree = "<group>"; };
 		5A724B3D1B439E7100F08B0B /* Toast+UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Toast+UIView.m"; sourceTree = "<group>"; };
+		5A724B3F1B43CD7600F08B0B /* OMGToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMGToast.h; sourceTree = "<group>"; };
+		5A724B401B43CD7600F08B0B /* OMGToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMGToast.m; sourceTree = "<group>"; };
 		5A73E1211B3BAC2500BAFD78 /* POST_JY.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = POST_JY.db; sourceTree = "<group>"; };
 		5A73E1261B3BAEEA00BAFD78 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		5A73E14A1B3BC62300BAFD78 /* PublicFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PublicFramework.framework; path = "../../../Library/Developer/Xcode/DerivedData/Philately-bpeepzrqbmldacdkywhmornjmgod/Build/Products/Debug-iphonesimulator/PublicFramework.framework"; sourceTree = "<group>"; };
@@ -533,6 +536,8 @@
 			children = (
 				5A724B3C1B439E7100F08B0B /* Toast+UIView.h */,
 				5A724B3D1B439E7100F08B0B /* Toast+UIView.m */,
+				5A724B3F1B43CD7600F08B0B /* OMGToast.h */,
+				5A724B401B43CD7600F08B0B /* OMGToast.m */,
 			);
 			path = Toast;
 			sourceTree = "<group>";
@@ -1143,6 +1148,7 @@
 				5AD88E371B40DD190055B7B9 /* RespondParam0037.m in Sources */,
 				5AD88E6E1B4121950055B7B9 /* RespondParam0011.m in Sources */,
 				5AD88E821B412D370055B7B9 /* RespondParam0025.m in Sources */,
+				5A724B411B43CD7600F08B0B /* OMGToast.m in Sources */,
 				5AD88E591B411B710055B7B9 /* PickUpByMyselfAddressTableViewCell.m in Sources */,
 				5A724B341B43766300F08B0B /* RespondParam0002.m in Sources */,
 				5AD88E6A1B4121950055B7B9 /* ReceiverAddressManageTableViewCell.m in Sources */,
