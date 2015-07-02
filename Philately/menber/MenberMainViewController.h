@@ -20,6 +20,7 @@
 
 //我的订单pic
 @property (weak, nonatomic) IBOutlet UIImageView *myOrderFormImageView;
+@property (weak, nonatomic) IBOutlet UILabel *myOrder;
 //待支付
 @property (weak, nonatomic) IBOutlet UIButton *waitPayButton;
 //待收货
@@ -74,6 +75,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *myBookIsTextView;
 //right
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *waitAllSegment;
 
 @end
 

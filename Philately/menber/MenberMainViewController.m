@@ -6,6 +6,8 @@
 #import <Foundation/Foundation.h>
 #import <PublicFramework/JSONKit.h>
 #import "UpdatePwdViewController.h"
+#import "OrderFormListViewController.h"
+
 @implementation MenberMainViewController
 //我的账户
 @synthesize titleTextView;
@@ -84,21 +86,79 @@
     
     UITapGestureRecognizer *_left = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handTap)];
     [self.modifyPwdTextView addGestureRecognizer:_left];
+    
+    
     self.scroll.contentSize=CGSizeMake(320, 700);
+    
+    UITapGestureRecognizer *myOrderGestutre = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(myOrderTap)];
+    [self.myOrder addGestureRecognizer:myOrderGestutre];
+    
+    
+    
+    self.waitAllSegment.segmentedControlStyle = UISegmentedControlStylePlain;
+   
+    //瞬时单击
+    //segmentedControl.momentary = YES; //按钮被按下后很快恢复，默认为选中状态就一直保持
+    
+    //初始化默认片段
+     self.waitAllSegment.selectedSegmentIndex = 0; //初始指定第0个选中
+    
+    [ self.waitAllSegment addTarget:self action:@selector(controlPressed:) forControlEvents:UIControlEventValueChanged];
+    
+    
+ 
     
 }
 
-UpdatePwdViewController *updatePwdViewController;
+
+-(void) viewWillAppear:(BOOL)animated{
+    
+    CstmMsg *cst=[CstmMsg sharedInstance];
+    [userNameTextView setText:cst.cstmName];
+    
+}
+
+//SegmentedControl触发的动作
+
+-(void)controlPressed:(id)sender{
+    
+    UISegmentedControl *control = (UISegmentedControl *)sender;
+    
+    if (control ==  self.waitAllSegment) {
+        
+        int x = control.selectedSegmentIndex;
+        
+        /*添加代码，对片段变化做出响应*/
+        if(x==0)
+        {//待支付
+            
+        }else if (x==1)
+        {//待收货
+            
+        }else if(x==3)
+        {//全部订单
+            
+        }
+        
+    }
+    
+}
+
+
+-(void)myOrderTap
+{
+    OrderFormListViewController *orderFormListViewController=[[OrderFormListViewController alloc ] initWithNibName:@"OrderFormListViewController" bundle:nil];
+      [self presentViewController:orderFormListViewController animated:NO completion:^{}];
+}
+
 -(void)handTap
 {
-     updatePwdViewController=[[UpdatePwdViewController alloc] initWithNibName:@"UpdatePwdViewController" bundle:nil];
+     UpdatePwdViewController *updatePwdViewController=[[UpdatePwdViewController alloc] initWithNibName:@"UpdatePwdViewController" bundle:nil];
     //[self.navigationController pushViewController:updatePwdViewController animated:NO];
    [self presentViewController:updatePwdViewController animated:NO completion:^{}];
   
 }
 
--(void) viewWillAppear:(BOOL)animated{
-}
 
 
 -(void) setUiValue{

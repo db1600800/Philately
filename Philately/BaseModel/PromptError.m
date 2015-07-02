@@ -8,7 +8,7 @@
 
 #import "PromptError.h"
 
-#import "Sql.h"
+#import "SqlApp.h"
 #import "ErrorObject.h"
 #import "Toast+UIView.h"
 @implementation PromptError
@@ -16,7 +16,7 @@
 +(void) changeShowErrorMsg:(MsgReturn*)errorMsg title:(NSString*)title viewController:(UIViewController*)viewController;
 {
     
-    Sql *sql=[[Sql alloc] init];
+    SqlApp *sql=[[SqlApp alloc] init];
    
     ErrorObject *error1=[sql selectPM_CODEERRORMSG:errorMsg.errorCode];
     if(error1==nil || (error1!=nil && error1.errorDesc==nil))

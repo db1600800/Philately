@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A333C0D1B42771000B59AB3 /* Sql.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A333C0B1B42771000B59AB3 /* Sql.h */; };
+		5A333C0D1B42771000B59AB3 /* Sql.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A333C0B1B42771000B59AB3 /* Sql.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A333C0E1B42771000B59AB3 /* Sql.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A333C0C1B42771000B59AB3 /* Sql.m */; };
 		5A333C111B42774600B59AB3 /* ErrorObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A333C0F1B42774600B59AB3 /* ErrorObject.h */; };
 		5A333C121B42774600B59AB3 /* ErrorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A333C101B42774600B59AB3 /* ErrorObject.m */; };
@@ -830,6 +830,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A333C0D1B42771000B59AB3 /* Sql.h in Headers */,
 				5A67729B1B16FF17002541BE /* JSONKit.h in Headers */,
 				5AD6A0D11B1843F6004F2FD7 /* OperatorMsg.h in Headers */,
 				5A6773451B16FF18002541BE /* WebConfig.h in Headers */,
@@ -899,7 +900,6 @@
 				5A6772D21B16FF18002541BE /* NSData+Base64.h in Headers */,
 				5A6772DB1B16FF18002541BE /* blowfish.h in Headers */,
 				5A6772CD1B16FF17002541BE /* PersisctencesData.h in Headers */,
-				5A333C0D1B42771000B59AB3 /* Sql.h in Headers */,
 				5A6772ED1B16FF18002541BE /* ebcdic.h in Headers */,
 				5A6773101B16FF18002541BE /* srp.h in Headers */,
 				5AC19E781B3009CF00B8FA31 /* zip.h in Headers */,
