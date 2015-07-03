@@ -3,7 +3,10 @@
 
 //ios界面 object-c 
 #import <UIKit/UIKit.h>
-@interface UpdatePwdViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import "StampTranCall.h"
+#import "PromptError.h"
+#import "SysBaseInfo.h"
+@interface UpdatePwdViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,StampTranCallDelegate>
 //确定
 @property (weak, nonatomic) IBOutlet UIButton *okButton;
 //back
